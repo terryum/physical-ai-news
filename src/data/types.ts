@@ -29,18 +29,22 @@ export interface Item {
   starred: boolean;
 }
 
+export type SortBy = "latest" | "deadline";
+
 export interface Filters {
-  itemType: SourceType | "all";
+  itemType: SourceType;
   priorities: Priority[];
   tiers: Tier[];
   dateRange: "today" | "7d" | "30d" | "all";
   search: string;
+  sortBy: SortBy;
 }
 
 export const DEFAULT_FILTERS: Filters = {
-  itemType: "all",
+  itemType: "gov",
   priorities: ["P0", "P1"],
   tiers: ["T0", "T1", "T2", "T3"],
   dateRange: "30d",
   search: "",
+  sortBy: "latest",
 };

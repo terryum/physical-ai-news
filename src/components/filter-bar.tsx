@@ -2,7 +2,7 @@
 
 import { Input } from "@/components/ui/input";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import type { Filters, SourceType, Priority, Tier } from "@/data/types";
+import type { Filters, SourceType, Priority, Tier, SortBy } from "@/data/types";
 
 const priorityLabel: Record<string, string> = {
   P0: "필독",
@@ -26,24 +26,37 @@ interface FilterBarProps {
 export function FilterBar({ filters, onChange, counts }: FilterBarProps) {
   return (
     <div className="space-y-3 rounded-lg border bg-card p-4">
-      {/* Row 1: Type + Search */}
+      {/* Row 1: Type + Sort + Search */}
       <div className="flex flex-wrap items-center gap-3">
         <ToggleGroup
           value={[filters.itemType]}
           onValueChange={(v) => {
-            const val = v[v.length - 1] as SourceType | "all" | undefined;
+            const val = v[v.length - 1] as SourceType | undefined;
             if (val) onChange({ ...filters, itemType: val });
           }}
           className="gap-1"
         >
-          <ToggleGroupItem value="all" size="sm" className="text-xs px-3">
-            전체 ({counts.total})
-          </ToggleGroupItem>
           <ToggleGroupItem value="gov" size="sm" className="text-xs px-3">
             공고 ({counts.gov})
           </ToggleGroupItem>
           <ToggleGroupItem value="news" size="sm" className="text-xs px-3">
             뉴스 ({counts.news})
+          </ToggleGroupItem>
+        </ToggleGroup>
+
+        <ToggleGroup
+          value={[filters.sortBy]}
+          onValueChange={(v) => {
+            const val = v[v.length - 1] as SortBy | undefined;
+            if (val) onChange({ ...filters, sortBy: val });
+          }}
+          className="gap-0.5"
+        >
+          <ToggleGroupItem value="latest" size="sm" className="text-xs px-2 h-7">
+            최신순
+          </ToggleGroupItem>
+          <ToggleGroupItem value="deadline" size="sm" className="text-xs px-2 h-7">
+            마감일순
           </ToggleGroupItem>
         </ToggleGroup>
 
