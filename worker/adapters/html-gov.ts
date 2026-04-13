@@ -4,12 +4,14 @@ import { RawItem, SourceConfig } from "../types";
 
 /**
  * 그룹 D: 정부 사이트 HTML 파서
- * - 사이트마다 HTML 구조가 다르므로 siteId별 파서 함수를 내부에 매핑
- * - 파싱 실패 시 에러를 기록하되 전체 크롤링은 중단하지 않음
+ * 사이트마다 URL과 HTML 구조가 다르므로 siteId별 전용 파서를 매핑.
+ * 전용 파서가 없으면 범용 테이블 파서 시도.
  */
 export const htmlGovAdapter: CrawlerAdapter = {
   async fetchItems(config: SourceConfig): Promise<RawItem[]> {
-    const listUrl = (config.list_url as string) || (config.search_url as string) || config.url;
+    // 전용 설정이 있는 사이트는 URL을 오버라이드
+    const siteConfig = SITE_CONFIGS[config.id];
+    const listUrl = siteConfig?.url ?? (config.list_url as string) ?? config.url;
 
     try {
       const res = await fetch(listUrl, {
@@ -18,6 +20,7 @@ export const htmlGovAdapter: CrawlerAdapter = {
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
           Accept: "text/html,application/xhtml+xml",
         },
+        signal: AbortSignal.timeout(10000),
       });
 
       if (!res.ok) {
@@ -27,9 +30,8 @@ export const htmlGovAdapter: CrawlerAdapter = {
 
       const html = await res.text();
       const $ = cheerio.load(html);
-      const baseUrl = config.url.replace(/\/$/, "");
+      const baseUrl = (siteConfig?.base ?? config.url).replace(/\/$/, "");
 
-      // siteId별 전용 파서가 있으면 사용, 없으면 범용 파서
       const parser = siteSpecificParsers[config.id];
       if (parser) {
         const items = parser($, baseUrl, config);
@@ -37,7 +39,6 @@ export const htmlGovAdapter: CrawlerAdapter = {
         return items;
       }
 
-      // 범용 파서: 테이블 또는 리스트 기반 공고 목록 추출
       const items = genericParser($, baseUrl, config);
       console.log(`[${config.id}] 범용파서 → ${items.length}건`);
       return items;
@@ -48,32 +49,175 @@ export const htmlGovAdapter: CrawlerAdapter = {
   },
 };
 
+/** 사이트별 올바른 URL과 베이스 설정 */
+const SITE_CONFIGS: Record<string, { url: string; base: string }> = {
+  kiria: {
+    url: "https://www.kiria.org/portal/info/portalInfoBusinessList.do",
+    base: "https://www.kiria.org",
+  },
+  kiat: {
+    url: "https://www.kiat.or.kr/front/board/boardContentsListAjax.do?board_id=90",
+    base: "https://www.kiat.or.kr",
+  },
+  motie: {
+    url: "https://www.motir.go.kr/kor/article/ATCLc01b2801b",
+    base: "https://www.motir.go.kr",
+  },
+  keit: {
+    url: "https://www.keit.re.kr/menu.es?mid=a10305010000",
+    base: "https://www.keit.re.kr",
+  },
+  msit: {
+    url: "https://www.msit.go.kr/bbs/list.do?sCode=user&mId=113&mPid=112",
+    base: "https://www.msit.go.kr",
+  },
+  nia: {
+    url: "https://www.nia.or.kr/site/nia_kor/ex/bbs/List.do?cbIdx=39485",
+    base: "https://www.nia.or.kr",
+  },
+};
+
 type SiteParser = (
   $: cheerio.CheerioAPI,
   baseUrl: string,
   config: SourceConfig
 ) => RawItem[];
 
-/** 사이트별 전용 파서 매핑 */
+/** 사이트별 전용 파서 */
 const siteSpecificParsers: Record<string, SiteParser> = {
-  // KIRIA: 로봇산업진흥원 사업공고
+  // KIRIA: 테이블에 접수기간 컬럼 포함
   kiria: ($, baseUrl, config) => {
     const items: RawItem[] = [];
     $("table tbody tr").each((_, tr) => {
       const $tr = $(tr);
-      const $a = $tr.find("td a").first();
-      const title = $a.text().trim();
-      const href = $a.attr("href") ?? "";
-      const dateText = $tr.find("td").last().text().trim();
+      const cells = $tr.find("td");
+      if (cells.length < 3) return;
 
-      if (!title || !href) return;
-      const url = href.startsWith("http") ? href : `${baseUrl}${href}`;
+      const $a = cells.find("a").first();
+      const title = $a.text().trim();
+      if (!title) return;
+
+      // onclick="fn_update('650')" 등에서 ID 추출
+      const onclick = $a.attr("onclick") ?? "";
+      const idMatch = onclick.match(/['"](\d+)['"]/);
+      const url = idMatch
+        ? `${baseUrl}/portal/info/portalInfoBusinessDetail.do?busiSeq=${idMatch[1]}`
+        : baseUrl;
+
+      // 접수기간 컬럼 (YYYY-MM-DD ~ YYYY-MM-DD)
+      let deadlineAt: string | undefined;
+      cells.each((_, td) => {
+        const text = $(td).text().trim();
+        const rangeMatch = text.match(/(\d{4}-\d{2}-\d{2})\s*~\s*(\d{4}-\d{2}-\d{2})/);
+        if (rangeMatch) {
+          deadlineAt = rangeMatch[2];
+        }
+      });
+
+      // 작성일
+      const dateText = cells.last().prev().text().trim();
+
       items.push({
         sourceId: config.id,
         title,
         url,
         publishedAt: parseDateGeneric(dateText),
-        agency: config.name,
+        deadlineAt,
+        agency: "KIRIA",
+      });
+    });
+    return items;
+  },
+
+  // KIAT: AJAX 응답 HTML (테이블)
+  kiat: ($, baseUrl, config) => {
+    const items: RawItem[] = [];
+    $("table tbody tr, tr").each((_, tr) => {
+      const $tr = $(tr);
+      const cells = $tr.find("td");
+      if (cells.length < 4) return;
+
+      const $a = cells.find("a").first();
+      let title = $a.text().trim();
+      if (!title) {
+        // a태그가 없으면 두 번째 td에서 직접 추출
+        title = cells.eq(1).text().trim();
+      }
+      if (!title || title.length < 5) return;
+
+      // onclick에서 contents_id 추출
+      const onclick = $a.attr("onclick") ?? cells.eq(1).find("a").attr("onclick") ?? "";
+      const idMatch = onclick.match(/['"](\d+)['"]/);
+      const url = idMatch
+        ? `${baseUrl}/front/board/boardContentsView.do?board_id=90&contents_id=${idMatch[1]}`
+        : baseUrl;
+
+      // 공고일
+      let publishedAt: string | undefined;
+      // 접수기간에서 마감일 추출
+      let deadlineAt: string | undefined;
+      cells.each((_, td) => {
+        const text = $(td).text().trim();
+        // 단독 날짜 (공고일)
+        const singleDate = text.match(/^(\d{4}-\d{2}-\d{2})$/);
+        if (singleDate && !publishedAt) {
+          publishedAt = singleDate[1];
+        }
+        // 범위 날짜 (접수기간)
+        const rangeMatch = text.match(/(\d{4}-\d{2}-\d{2})\s*~\s*(\d{4}-\d{2}-\d{2})/);
+        if (rangeMatch) {
+          deadlineAt = rangeMatch[2];
+        }
+      });
+
+      items.push({
+        sourceId: config.id,
+        title,
+        url,
+        publishedAt: publishedAt ? new Date(publishedAt).toISOString() : undefined,
+        deadlineAt,
+        agency: "KIAT",
+      });
+    });
+    return items;
+  },
+
+  // 산업부 (motir.go.kr)
+  motie: ($, baseUrl, config) => {
+    const items: RawItem[] = [];
+    $("table tbody tr, .board-list tbody tr, tr").each((_, tr) => {
+      const $tr = $(tr);
+      const cells = $tr.find("td");
+      if (cells.length < 3) return;
+
+      const $a = cells.find("a").first();
+      const title = $a.text().trim();
+      if (!title || title.length < 5) return;
+
+      const onclick = $a.attr("onclick") ?? "";
+      const idMatch = onclick.match(/['"]([^'"]+)['"]/);
+      const href = $a.attr("href");
+      const url = href && href !== "#"
+        ? resolveUrl(href, baseUrl)
+        : idMatch
+          ? `${baseUrl}/kor/article/ATCLc01b2801b/${idMatch[1]}`
+          : baseUrl;
+
+      let publishedAt: string | undefined;
+      cells.each((_, td) => {
+        const text = $(td).text().trim();
+        const dateMatch = text.match(/(\d{4}-\d{2}-\d{2})/);
+        if (dateMatch && !publishedAt) {
+          publishedAt = dateMatch[1];
+        }
+      });
+
+      items.push({
+        sourceId: config.id,
+        title,
+        url,
+        publishedAt: publishedAt ? new Date(publishedAt).toISOString() : undefined,
+        agency: "산업부",
       });
     });
     return items;
@@ -82,52 +226,76 @@ const siteSpecificParsers: Record<string, SiteParser> = {
   // SMTECH: 중소기업기술개발사업 공고
   smtech: ($, baseUrl, config) => {
     const items: RawItem[] = [];
-    $("table tbody tr, .board-list tbody tr").each((_, tr) => {
+    $("table tbody tr").each((_, tr) => {
       const $tr = $(tr);
-      const $a = $tr.find("td a, td .title a").first();
+      const $a = $tr.find("td a").first();
       const title = $a.text().trim();
       const href = $a.attr("href") ?? "";
-      const dateCells = $tr.find("td");
-      const dateText = dateCells.length >= 4 ? dateCells.eq(3).text().trim() : "";
-
       if (!title || !href) return;
-      const url = href.startsWith("http") ? href : `${baseUrl}${href}`;
+
+      const url = resolveUrl(href, baseUrl);
+      const cells = $tr.find("td");
+
+      // 접수기간에서 마감일 추출
+      let deadlineAt: string | undefined;
+      let publishedAt: string | undefined;
+      cells.each((_, td) => {
+        const text = $(td).text().trim();
+        const rangeMatch = text.match(/(\d{4}[.\-/]\d{2}[.\-/]\d{2})\s*~\s*(\d{4}[.\-/]\d{2}[.\-/]\d{2})/);
+        if (rangeMatch) {
+          deadlineAt = rangeMatch[2].replace(/\./g, "-").replace(/\//g, "-");
+        }
+        const dateMatch = text.match(/^(\d{4}[.\-/]\d{2}[.\-/]\d{2})$/);
+        if (dateMatch && !publishedAt) {
+          publishedAt = dateMatch[1].replace(/\./g, "-").replace(/\//g, "-");
+        }
+      });
+
       items.push({
         sourceId: config.id,
         title,
         url,
-        publishedAt: parseDateGeneric(dateText),
-        agency: config.name,
+        publishedAt: parseDateGeneric(publishedAt ?? ""),
+        deadlineAt,
+        agency: "SMTECH",
       });
     });
     return items;
   },
 
-  // 과기정통부
-  msit: ($, baseUrl, config) => {
+  // NIA: 이슈분석/공지사항 게시판
+  nia: ($, baseUrl, config) => {
     const items: RawItem[] = [];
-    $(".board_list tbody tr, .bbs_list tbody tr").each((_, tr) => {
+    $("table tbody tr, .board_list tbody tr").each((_, tr) => {
       const $tr = $(tr);
-      const $a = $tr.find("td.title a, td a").first();
+      const $a = $tr.find("a").first();
       const title = $a.text().trim();
       const href = $a.attr("href") ?? "";
-      const dateText = $tr.find("td.date, td:nth-child(4)").text().trim();
+      if (!title || title.length < 5) return;
 
-      if (!title || !href) return;
-      const url = href.startsWith("http") ? href : `${baseUrl}${href}`;
+      const url = resolveUrl(href, baseUrl);
+      let publishedAt: string | undefined;
+      $tr.find("td").each((_, td) => {
+        const text = $(td).text().trim();
+        const dateMatch = text.match(/(\d{4}[.\-/]\d{2}[.\-/]\d{2})/);
+        if (dateMatch && !publishedAt) {
+          publishedAt = dateMatch[1];
+        }
+      });
+
       items.push({
         sourceId: config.id,
         title,
         url,
-        publishedAt: parseDateGeneric(dateText),
-        agency: config.name,
+        publishedAt: parseDateGeneric(publishedAt ?? ""),
+        agency: "NIA",
       });
     });
     return items;
   },
 };
 
-/** 범용 파서: 테이블 또는 리스트 기반 공고 목록 */
+/** 범용 파서: 테이블 기반 공고 목록 */
 function genericParser(
   $: cheerio.CheerioAPI,
   baseUrl: string,
@@ -136,7 +304,6 @@ function genericParser(
   const items: RawItem[] = [];
   const seenUrls = new Set<string>();
 
-  // 전략 1: 테이블 tbody tr
   $("table tbody tr").each((_, tr) => {
     const $tr = $(tr);
     const $a = $tr.find("a").first();
@@ -148,11 +315,16 @@ function genericParser(
     if (seenUrls.has(url)) return;
     seenUrls.add(url);
 
-    // 날짜: 마지막 td 또는 날짜 패턴이 있는 td
     let dateText = "";
+    let deadlineAt: string | undefined;
     $tr.find("td").each((_, td) => {
       const t = $(td).text().trim();
-      if (/\d{4}[.\-/]\d{1,2}[.\-/]\d{1,2}/.test(t)) {
+      // 범위 날짜 (접수기간)
+      const rangeMatch = t.match(/(\d{4}[.\-/]\d{2}[.\-/]\d{2})\s*~\s*(\d{4}[.\-/]\d{2}[.\-/]\d{2})/);
+      if (rangeMatch) {
+        deadlineAt = rangeMatch[2].replace(/\./g, "-").replace(/\//g, "-");
+      }
+      if (/^\d{4}[.\-/]\d{1,2}[.\-/]\d{1,2}$/.test(t)) {
         dateText = t;
       }
     });
@@ -162,31 +334,10 @@ function genericParser(
       title,
       url,
       publishedAt: parseDateGeneric(dateText),
+      deadlineAt,
       agency: config.name,
     });
   });
-
-  // 전략 2: 테이블이 비었으면 리스트 기반
-  if (items.length === 0) {
-    $(".board_list li, .bbs_list li, .list-item, ul.list > li").each((_, li) => {
-      const $li = $(li);
-      const $a = $li.find("a").first();
-      const title = $a.text().trim();
-      const href = $a.attr("href") ?? "";
-      if (!title || title.length < 3 || !href) return;
-
-      const url = resolveUrl(href, baseUrl);
-      if (seenUrls.has(url)) return;
-      seenUrls.add(url);
-
-      items.push({
-        sourceId: config.id,
-        title,
-        url,
-        agency: config.name,
-      });
-    });
-  }
 
   return items;
 }
