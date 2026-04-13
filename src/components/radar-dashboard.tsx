@@ -117,16 +117,13 @@ export function RadarDashboard({
         if (a.starred !== b.starred) return a.starred ? -1 : 1;
 
         if (filters.sortBy === "deadline") {
-          // 마감일순: 마감일 있는 것 먼저, 마감일 가까운 순
+          // 마감일순: 마감일 가까운 순 (마감일 없는 것은 맨 뒤)
           const aDeadline = a.deadlineAt ? new Date(a.deadlineAt).getTime() : Infinity;
           const bDeadline = b.deadlineAt ? new Date(b.deadlineAt).getTime() : Infinity;
-          if (aDeadline !== bDeadline) return aDeadline - bDeadline;
+          return aDeadline - bDeadline;
         }
 
-        // 최신순 (기본): 중요도 → 게시일
-        const pOrder = { P0: 0, P1: 1, P2: 2 };
-        if (pOrder[a.priority] !== pOrder[b.priority])
-          return pOrder[a.priority] - pOrder[b.priority];
+        // 최신순: 게시일 내림차순
         return (
           new Date(b.publishedAt).getTime() -
           new Date(a.publishedAt).getTime()

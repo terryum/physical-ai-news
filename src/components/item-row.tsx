@@ -43,12 +43,21 @@ interface ItemRowProps {
 
 function formatDate(iso: string) {
   const d = new Date(iso);
-  return `${String(d.getMonth() + 1).padStart(2, "0")}.${String(d.getDate()).padStart(2, "0")}`;
+  return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, "0")}.${String(d.getDate()).padStart(2, "0")}`;
+}
+
+function daysUntil(iso: string): number {
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
+  const target = new Date(iso);
+  target.setHours(0, 0, 0, 0);
+  return Math.ceil((target.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
 }
 
 export function ItemRow({ item, onToggleRead, onToggleStar }: ItemRowProps) {
-  const canonicalUrl =
-    item.links?.[0]?.url ?? "#";
+  const canonicalUrl = item.links?.[0]?.url ?? "#";
+  const isGov = item.itemType === "gov";
+  const daysLeft = item.deadlineAt ? daysUntil(item.deadlineAt) : null;
 
   return (
     <div
@@ -82,12 +91,10 @@ export function ItemRow({ item, onToggleRead, onToggleStar }: ItemRowProps) {
 
         {/* Content */}
         <div className="flex-1 min-w-0">
+          {/* Title row */}
           <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-xs text-muted-foreground shrink-0">
-              {formatDate(item.publishedAt)}
-            </span>
             <Badge variant="outline" className="text-[10px] px-1.5 py-0 h-5 shrink-0">
-              {item.itemType === "gov" ? "공고" : "뉴스"}
+              {isGov ? "공고" : "뉴스"}
             </Badge>
             <a
               href={canonicalUrl}
@@ -109,11 +116,34 @@ export function ItemRow({ item, onToggleRead, onToggleStar }: ItemRowProps) {
             </Badge>
             <span className="text-xs text-muted-foreground">{item.sourceName}</span>
 
-            {item.deadlineAt && (
-              <span className="text-xs text-muted-foreground">
+            {/* 게시일 */}
+            <span className="text-xs text-muted-foreground">
+              게시 {formatDate(item.publishedAt)}
+            </span>
+
+            {/* 마감일 (공고만) */}
+            {isGov && item.deadlineAt && (
+              <span
+                className={`text-xs font-medium ${
+                  daysLeft !== null && daysLeft <= 7
+                    ? "text-red-600 dark:text-red-400"
+                    : daysLeft !== null && daysLeft <= 14
+                      ? "text-amber-600 dark:text-amber-400"
+                      : "text-muted-foreground"
+                }`}
+              >
                 마감 {formatDate(item.deadlineAt)}
+                {daysLeft !== null && daysLeft >= 0 && (
+                  <span className="ml-1">
+                    ({daysLeft === 0 ? "오늘" : `D-${daysLeft}`})
+                  </span>
+                )}
+                {daysLeft !== null && daysLeft < 0 && (
+                  <span className="ml-1 text-muted-foreground">(종료)</span>
+                )}
               </span>
             )}
+
             {item.budgetKrwOk && (
               <span className="text-xs text-muted-foreground">
                 {item.budgetKrwOk}억원
