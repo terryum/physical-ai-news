@@ -50,7 +50,16 @@ export const htmlGovAdapter: CrawlerAdapter = {
 };
 
 /** 사이트별 올바른 URL과 베이스 설정 */
+/** SROME과 KEIT의 입찰은 다름 — SROME은 R&D 과제공고 */
 const SITE_CONFIGS: Record<string, { url: string; base: string }> = {
+  srome: {
+    url: "https://srome.keit.re.kr/srome/biz/perform/opnnPrpsl/retrieveTaskAnncmListView.do?prgmId=XPG201040000",
+    base: "https://srome.keit.re.kr",
+  },
+  srome_demand: {
+    url: "https://srome.keit.re.kr/srome/biz/perform/opnnPrpsl/retrieveDmndSrvyLstView.do?prgmId=XPG201010000",
+    base: "https://srome.keit.re.kr",
+  },
   kiria: {
     url: "https://www.kiria.org/portal/info/portalInfoBusinessList.do",
     base: "https://www.kiria.org",
@@ -85,6 +94,57 @@ type SiteParser = (
 
 /** 사이트별 전용 파서 */
 const siteSpecificParsers: Record<string, SiteParser> = {
+  // SROME: KEIT R&D 과제공고
+  // a태그 onclick="f_detail('I20594', '2026')" 에서 ID 추출
+  // 접수기간은 페이지 텍스트에서 "접수기간YYYY-MM-DD HH:MM ~ YYYY-MM-DD HH:MM" 패턴
+  srome: ($, baseUrl, config) => {
+    const items: RawItem[] = [];
+
+    // 공고 제목 + ID 추출
+    $("a[onclick*='f_detail']").each((_, el) => {
+      const $a = $(el);
+      const title = $a.text().trim();
+      if (!title || title.length < 10) return;
+
+      const onclick = $a.attr("onclick") ?? "";
+      const idMatch = onclick.match(/f_detail\(\s*'([^']+)'\s*,\s*'([^']+)'/);
+      const taskId = idMatch ? idMatch[1] : "";
+      const year = idMatch ? idMatch[2] : "";
+
+      const url = taskId
+        ? `${baseUrl}/srome/biz/perform/opnnPrpsl/retrieveTaskAnncmDetailView.do?taskAnncmSeq=${taskId}&bsnsYear=${year}`
+        : baseUrl;
+
+      items.push({
+        sourceId: config.id,
+        title,
+        url,
+        agency: "KEIT/SROME",
+      });
+    });
+
+    // 접수기간/등록일 추출 (텍스트에서 순서대로 매칭)
+    const bodyText = $("body").text();
+    const deadlineMatches = [...bodyText.matchAll(/접수기간(\d{4}-\d{2}-\d{2})\s*\d{2}:\d{2}\s*~\s*(\d{4}-\d{2}-\d{2})/g)];
+    const regDateMatches = [...bodyText.matchAll(/등록일(\d{4}-\d{2}-\d{2})/g)];
+
+    deadlineMatches.forEach((m, i) => {
+      if (i < items.length) {
+        items[i].deadlineAt = m[2]; // 끝 날짜 = 마감일
+      }
+    });
+    regDateMatches.forEach((m, i) => {
+      if (i < items.length) {
+        items[i].publishedAt = new Date(m[1]).toISOString();
+      }
+    });
+
+    return items;
+  },
+
+  // SROME 수요조사 (같은 HTML 구조)
+  srome_demand: (...args) => siteSpecificParsers.srome(...args),
+
   // KIRIA: 테이블에 접수기간 컬럼 포함
   kiria: ($, baseUrl, config) => {
     const items: RawItem[] = [];

@@ -156,7 +156,7 @@
   search_url: https://www.etnews.com/news/search.html
   schedule: "0 */3 * * *"
   keywords: ["제조AI", "스마트팩토리", "로봇 제조", "피지컬AI"]
-  enabled: true
+  enabled: false
 
 - id: hellot
   name: 헬로티
@@ -168,7 +168,7 @@
   search_url: https://www.hellot.net/news/search
   schedule: "0 */3 * * *"
   keywords: ["제조AI", "스마트팩토리", "로봇", "자동화"]
-  enabled: true
+  enabled: false
 
 - id: hankyung
   name: 한국경제
@@ -180,8 +180,8 @@
   search_url: https://search.hankyung.com/search/news
   schedule: "0 */4 * * *"
   keywords: ["제조AI", "스마트팩토리", "피지컬AI"]
-  enabled: true
-  notes: "검색 서브도메인 분리. 네이버 API 보조로 커버 가능."
+  enabled: false
+  notes: "검색 서브도메인 분리. 네이버 API가 커버. WAF 차단 가능성."
 
 - id: msit
   name: 과기정통부
@@ -192,7 +192,7 @@
   url: https://www.msit.go.kr
   list_url: https://www.msit.go.kr/bbs/list.do?sCode=user&mId=113&mPid=112
   schedule: "0 */6 * * *"
-  enabled: true
+  enabled: false
   notes: "사전예고가 IRIS보다 1~3일 선행."
 
 - id: motie
@@ -228,7 +228,7 @@
   url: https://www.keit.re.kr
   list_url: https://www.keit.re.kr/boardView.es?mid=a10305010000&bid=0031
   schedule: "0 */6 * * *"
-  enabled: true
+  enabled: false
   notes: "산업부 R&D RFP 원천."
 
 - id: kiat
@@ -251,7 +251,7 @@
   url: https://www.nipa.kr
   list_url: https://www.nipa.kr/main/selectBbsList.do?bbsId=BBS01
   schedule: "0 */6 * * *"
-  enabled: true
+  enabled: false
   notes: "AI바우처, SW융합 사업."
 
 - id: kiria
@@ -286,7 +286,7 @@
   phase: fast
   url: https://www.tipa.or.kr
   schedule: "0 */6 * * *"
-  enabled: true
+  enabled: false
 
 - id: nia
   name: NIA
@@ -297,7 +297,7 @@
   url: https://www.nia.or.kr
   list_url: https://www.nia.or.kr/site/nia_kor/ex/bbs/List.do?cbIdx=39485
   schedule: "0 */6 * * *"
-  enabled: true
+  enabled: false
 
 - id: gbsa
   name: GBSA (경기도)
@@ -308,7 +308,7 @@
   url: https://www.gbsa.or.kr
   list_url: https://www.gbsa.or.kr/biz/announcement.do
   schedule: "0 */6 * * *"
-  enabled: true
+  enabled: false
   notes: "경기도 자체사업. 코스맥스 소재지."
 
 - id: rndia
@@ -319,7 +319,7 @@
   phase: fast
   url: https://www.rndia.or.kr
   schedule: "0 */6 * * *"
-  enabled: true
+  enabled: false
   notes: "국가 R&D 과제, 연구산업."
 
 # ── 그룹 E: Playwright 필수 (느린 소스) ──
@@ -335,15 +335,26 @@
   notes: "POST AJAX + 세션. 범부처 R&D 통합. 최중요 Discovery."
 
 - id: srome
-  name: SROME (KEIT 과제관리)
+  name: SROME 과제공고
   type: gov
-  group: E
+  group: D
   authority: canonical
-  phase: slow
+  phase: fast
   url: https://srome.keit.re.kr
   schedule: "0 */6 * * *"
   enabled: true
-  notes: "완전 동적. 과제공고 목록."
+  notes: "KEIT R&D 과제공고."
+
+- id: srome_demand
+  name: SROME 수요조사
+  type: gov
+  group: D
+  authority: canonical
+  phase: fast
+  url: https://srome.keit.re.kr
+  schedule: "0 */6 * * *"
+  enabled: true
+  notes: "KEIT 기술수요조사."
 
 - id: smart_factory
   name: 스마트공장 사업관리
