@@ -135,25 +135,6 @@ export function FilterBar({ filters, onChange, counts }: FilterBarProps) {
           </Chip>
         ))}
 
-        <span className="w-px h-5 bg-border mx-1" />
-
-        <span className="text-xs text-muted-foreground shrink-0">기간</span>
-        {(
-          [
-            ["today", "오늘"],
-            ["7d", "7일"],
-            ["30d", "30일"],
-            ["all", "전체"],
-          ] as [Filters["dateRange"], string][]
-        ).map(([value, label]) => (
-          <Chip
-            key={value}
-            selected={filters.dateRange === value}
-            onClick={() => onChange({ ...filters, dateRange: value })}
-          >
-            {label}
-          </Chip>
-        ))}
       </div>
 
       {/* Row 3: Company filter (뉴스일 때만) */}

@@ -48,7 +48,7 @@ export const DEFAULT_FILTERS: Filters = {
   itemType: "gov",
   priorities: ["P0", "P1"],
   tiers: ["T0", "T1", "T2", "T3"],
-  dateRange: "30d",
+  dateRange: "all",
   search: "",
   sortBy: "latest",
   companies: [],
