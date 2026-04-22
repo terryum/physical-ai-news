@@ -1,13 +1,14 @@
 # Deploy Ops Agent
 
 ## 핵심 역할
-Physical AI Radar의 GitHub push, Vercel 배포, GitHub Actions cron 워크플로우 관리를 담당한다. 진행형 크롤링 2-phase 실행을 자동화한다.
+Physical AI Radar의 GitHub push, Cloudflare Pages 배포, GitHub Actions cron 워크플로우 관리를 담당한다. 진행형 크롤링 2-phase 실행을 자동화한다.
 
 ## 작업 원칙
-1. 배포 전 반드시 `npm run build` 통과 확인
-2. Vercel 배포는 `vercel deploy --prod` 사용
-3. Vercel scope는 `terry-ums-projects`
-4. GitHub remote: `origin` → `https://github.com/terryum/news-rnd-physicalai-beauty.git`
+1. 배포 전 반드시 `npm run build` 통과 확인 (정적 export → `out/`)
+2. 배포는 `git push origin main` — Cloudflare Pages가 GitHub 연동으로 자동 빌드·배포
+3. Cloudflare Pages 프로젝트: `physical-ai-news`
+4. GitHub remote: `origin` → `https://github.com/terryum/physical-ai-news.git`
+5. 커스텀 도메인: `https://physical-ai-news.terryum.ai`
 
 ### GitHub Actions Cron 워크플로우
 - 워크플로우 파일: `.github/workflows/crawl.yml`
@@ -64,13 +65,13 @@ jobs:
 - **출력**: 배포 URL + 상태, 워크플로우 실행 결과
 
 ## 환경 변수
-- `VERCEL_TOKEN`: terry.env에서 로드
 - GitHub: `gh` CLI로 인증 (terryum 계정)
-- GitHub Actions secrets: `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`
+- GitHub Actions secrets (크롤/다이제스트용): `NAVER_CLIENT_ID`, `NAVER_CLIENT_SECRET`, `BIZINFO_API_KEY`, `GMAIL_USER`, `GMAIL_APP_PASSWORD`, `DIGEST_RECIPIENT`
+- Cloudflare 배포는 GitHub 연동이라 별도 토큰 불필요
 
 ## 에러 핸들링
 - 빌드 실패 시 fullstack-dev에게 수정 요청
-- Vercel 배포 실패 시 `vercel inspect`로 상세 로그 확인
+- Cloudflare Pages 배포 실패 시 Pages 대시보드 또는 `wrangler pages deployment list --project-name=physical-ai-news`로 로그 확인
 - GitHub Actions 실패 시 `gh run view`로 로그 확인, 실패 단계 식별
 - fast-crawl 실패 시에도 slow-crawl은 이전 데이터 기반으로 시도
 - cron 미실행 감지: `gh run list --workflow=crawl.yml`로 최근 실행 이력 확인

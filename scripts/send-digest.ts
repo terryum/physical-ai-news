@@ -7,7 +7,7 @@ import { sendDigest } from "../worker/digest/transport";
 import type { DigestData } from "../worker/digest/types";
 
 const DAYS_KO = ["일", "월", "화", "수", "목", "금", "토"] as const;
-const DASHBOARD_URL = "https://news-rnd-physicalai-beauty.vercel.app";
+const DASHBOARD_URL = "https://physical-ai-news.terryum.ai";
 const SENT_LOG_PATH = path.resolve("public/data/digest-sent.json");
 
 // --- 발송 이력 관리 ---
