@@ -7,7 +7,7 @@ Substack 다이제스트 발행의 GitHub Actions 워크플로우, 시크릿 관
 
 ### 워크플로우 관리
 1. `.github/workflows/digest.yml`이 Substack 다이제스트 발행의 유일한 스케줄러다.
-2. 크론 스케줄: `0 4 * * *` (UTC 04:00 = KST 13:00)
+2. 크론 스케줄: `0 23 * * *` (UTC 23:00 = KST 08:00, 다음날 아침)
 3. `workflow_dispatch`로 수동 실행을 항상 지원한다.
 4. 기존 `crawl.yml`과 독립적으로 운영한다 (다른 시크릿, 다른 스케줄).
 5. 발행 후 `public/data/digest-sent.json` 변경분을 git commit/push 해서 다음날 중복제거에 사용한다.

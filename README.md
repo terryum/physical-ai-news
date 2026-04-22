@@ -38,7 +38,7 @@ npx wrangler pages deploy out --project-name=physical-ai-news --branch=main
 | Workflow | 스케줄 (UTC) | 역할 |
 |---|---|---|
 | `.github/workflows/crawl.yml` | `0 22 * * *` (KST 07:00) | 어댑터 실행 → `items.json` 커밋 → 자동 재배포 트리거 |
-| `.github/workflows/digest.yml` | `0 4 * * *` (KST 13:00) | Substack 퍼블리케이션에 다이제스트 발행 → 구독자 이메일 자동 발송 |
+| `.github/workflows/digest.yml` | `0 23 * * *` (KST 08:00) | Substack 퍼블리케이션에 다이제스트 발행 → 구독자 이메일 자동 발송 |
 | `.github/workflows/deploy.yml` | push to `main` | `npm run build` → `wrangler pages deploy` |
 
 ## Secrets & Variables (GitHub Actions)
@@ -55,6 +55,6 @@ npx wrangler pages deploy out --project-name=physical-ai-news --branch=main
 ## Substack 구독 흐름
 
 1. 방문자가 홈페이지 상단 구독 폼에 이메일 입력 → Substack으로 바로 제출
-2. 매일 KST 13:00 `digest.yml`이 Substack에 글 발행
+2. 매일 KST 08:00 `digest.yml`이 Substack에 글 발행
 3. Substack이 구독자 전원에게 이메일 발송 (기사 링크는 원본 URL로 직접 이동)
 4. 이메일 하단 "더 많은 소식 보기 →" 링크로 대시보드 유도

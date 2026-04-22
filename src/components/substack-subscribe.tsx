@@ -18,7 +18,7 @@ export function SubstackSubscribe() {
         </a>
       </div>
       <p className="mb-3 text-xs text-muted-foreground">
-        매일 오후 1시, 당일 클리핑을 이메일로 받아보세요.
+        매일 오전 8시, 당일 클리핑을 이메일로 받아보세요.
       </p>
       <iframe
         src={embed}

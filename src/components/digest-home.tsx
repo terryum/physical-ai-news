@@ -276,7 +276,7 @@ export function DigestHome({ items, lastUpdated }: DigestHomeProps) {
             {dateStr} ({dayOfWeek}) 일일 클리핑
           </p>
           <p className="text-xs text-muted-foreground mt-0.5">
-            매일 오후 1시 Substack으로 발행되는 뉴스레터와 동일한 내용입니다
+            매일 오전 8시 Substack으로 발행되는 뉴스레터와 동일한 내용입니다
           </p>
         </div>
         {lastUpdated && (
