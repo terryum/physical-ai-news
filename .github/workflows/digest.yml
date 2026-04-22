@@ -1,4 +1,4 @@
-name: Daily Digest Email
+name: Daily Digest (Substack)
 
 on:
   schedule:
@@ -9,9 +9,9 @@ permissions:
   contents: write
 
 jobs:
-  send-digest:
+  publish-substack:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -19,11 +19,10 @@ jobs:
           node-version: '22'
           cache: 'npm'
       - run: npm ci
-      - name: Send daily digest email
+      - name: Publish daily digest to Substack
         env:
-          GMAIL_USER: ${{ secrets.GMAIL_USER }}
-          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-          DIGEST_RECIPIENT: ${{ secrets.DIGEST_RECIPIENT }}
+          SUBSTACK_COOKIE: ${{ secrets.SUBSTACK_COOKIE }}
+          NEXT_PUBLIC_SUBSTACK_URL: ${{ vars.NEXT_PUBLIC_SUBSTACK_URL }}
         run: npx tsx scripts/send-digest.ts
       - name: Save sent history for dedup
         run: |

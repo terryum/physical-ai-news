@@ -2,13 +2,14 @@ import fs from "node:fs";
 import path from "node:path";
 import type { Item } from "../src/data/types";
 import { buildDigestSections } from "../worker/digest/filter";
-import { renderDigestHtml, buildSubject } from "../worker/digest/render";
-import { sendDigest } from "../worker/digest/transport";
+import { SubstackClient } from "../worker/digest/substack-client";
+import { buildSubstackPost } from "../worker/digest/substack-body";
 import type { DigestData } from "../worker/digest/types";
 
 const DAYS_KO = ["일", "월", "화", "수", "목", "금", "토"] as const;
 const DASHBOARD_URL = "https://physical-ai-news.terryum.ai";
 const SENT_LOG_PATH = path.resolve("public/data/digest-sent.json");
+const PREVIEW_PATH = path.resolve("digest-preview.json");
 
 // --- 발송 이력 관리 ---
 
@@ -61,25 +62,36 @@ function buildDigestData(
   };
 }
 
+function resolveSubdomain(): string {
+  const override = process.env.SUBSTACK_SUBDOMAIN;
+  if (override) return override;
+  const url = process.env.NEXT_PUBLIC_SUBSTACK_URL;
+  if (!url) {
+    throw new Error(
+      "SUBSTACK_SUBDOMAIN 또는 NEXT_PUBLIC_SUBSTACK_URL 환경변수가 필요합니다.",
+    );
+  }
+  const host = new URL(url).hostname;
+  return host.split(".")[0];
+}
+
 async function main() {
   const args = process.argv.slice(2);
   const isDryRun = args.includes("--dry-run");
   const isPreview = args.includes("--preview");
-  const toIndex = args.indexOf("--to");
-  const toOverride = toIndex !== -1 ? args[toIndex + 1] : undefined;
+  const noEmail = args.includes("--no-email") || process.env.SUBSTACK_SEND_EMAIL === "false";
 
   const now = new Date();
   console.log(`[digest] Running at ${now.toISOString()}`);
 
-  // Load items + last sent history
   const items = loadItems();
   const lastSentIds = loadLastSentIds();
-  console.log(`[digest] Loaded ${items.length} items, ${lastSentIds.size} previously sent`);
+  console.log(
+    `[digest] Loaded ${items.length} items, ${lastSentIds.size} previously sent`,
+  );
 
-  // Build digest data
   const data = buildDigestData(items, now, lastSentIds);
 
-  // Dry run: print filter results
   if (isDryRun) {
     for (const section of data.sections) {
       console.log(`\n=== ${section.title} (${section.items.length}) ===`);
@@ -90,43 +102,56 @@ async function main() {
       }
     }
     if (data.isEmpty) {
-      console.log("\n[digest] No items to send. Skipping.");
+      console.log("\n[digest] No items. Skipping.");
     }
     return;
   }
 
-  // Check if empty
   if (data.isEmpty) {
-    console.log("[digest] No items to send. Skipping email.");
+    console.log("[digest] No items to send. Skipping Substack publish.");
     return;
   }
 
-  // Render HTML
-  const html = renderDigestHtml(data, now);
-  const subject = buildSubject(data);
+  const post = buildSubstackPost(data, now);
 
-  // Preview: write HTML to file
   if (isPreview) {
-    const previewPath = path.resolve("digest-preview.html");
-    fs.writeFileSync(previewPath, html, "utf-8");
-    console.log(`[digest] Preview written to ${previewPath}`);
-    console.log(`[digest] Subject: ${subject}`);
+    fs.writeFileSync(
+      PREVIEW_PATH,
+      JSON.stringify(
+        { title: post.title, subtitle: post.subtitle, body: JSON.parse(post.bodyJson) },
+        null,
+        2,
+      ),
+      "utf-8",
+    );
+    console.log(`[digest] Preview written to ${PREVIEW_PATH}`);
+    console.log(`[digest] Title: ${post.title}`);
+    console.log(`[digest] Subtitle: ${post.subtitle}`);
     return;
   }
 
-  // Send email
-  const recipient = toOverride || process.env.DIGEST_RECIPIENT;
-  if (!recipient) {
-    throw new Error(
-      "No recipient specified. Use --to <email> or set DIGEST_RECIPIENT env var.",
-    );
+  const cookie = process.env.SUBSTACK_COOKIE;
+  if (!cookie) {
+    throw new Error("SUBSTACK_COOKIE 환경변수가 필요합니다.");
   }
+  const subdomain = resolveSubdomain();
 
-  console.log(`[digest] Sending to ${recipient}...`);
-  console.log(`[digest] Subject: ${subject}`);
-  await sendDigest({ to: recipient, subject, html });
+  console.log(`[digest] Publishing to ${subdomain}.substack.com (sendEmail=${!noEmail})`);
+  console.log(`[digest] Title: ${post.title}`);
 
-  // Save sent IDs for tomorrow's dedup
+  const client = new SubstackClient(cookie);
+  const profile = await client.authenticate();
+  console.log(`[digest] Auth OK (user: ${profile.name}, id: ${profile.id})`);
+
+  const result = await client.publish({
+    subdomain,
+    title: post.title,
+    subtitle: post.subtitle,
+    bodyJson: post.bodyJson,
+    sendEmail: !noEmail,
+  });
+  console.log(`[digest] Published: ${result.url}`);
+
   saveLastSentIds(data.sections);
   console.log("[digest] Sent IDs saved for dedup.");
   console.log("[digest] Done.");

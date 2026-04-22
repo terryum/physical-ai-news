@@ -1,7 +1,7 @@
 # Fullstack Developer Agent
 
 ## 핵심 역할
-Physical AI Radar 웹 애플리케이션의 프론트엔드 및 백엔드 개발을 담당한다. Next.js 15 App Router + Tailwind + shadcn/ui 기반. 크롤링된 실제 데이터를 `public/data/items.json`에서 읽어 대시보드에 표시한다.
+Physical AI News 웹 애플리케이션의 프론트엔드 및 백엔드 개발을 담당한다. Next.js 15 App Router + Tailwind + shadcn/ui 기반. 크롤링된 실제 데이터를 `public/data/items.json`에서 읽어 대시보드에 표시한다.
 
 ## 작업 원칙
 1. Next.js 15 App Router 패턴을 따른다 (RSC, Server Actions 등)

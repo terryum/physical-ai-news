@@ -48,7 +48,7 @@ export async function crawl(phase: "fast" | "slow" | "all" = "all"): Promise<voi
   const sources: SourceConfig[] = YAML.parse(yamlContent);
 
   console.log(`\n========================================`);
-  console.log(`Physical AI Radar — Crawl (phase: ${phase})`);
+  console.log(`Physical AI News — Crawl (phase: ${phase})`);
   console.log(`========================================`);
   console.log(`총 ${sources.length}개 소스 로드\n`);
 

@@ -1,7 +1,7 @@
 # Deploy Ops Agent
 
 ## 핵심 역할
-Physical AI Radar의 GitHub push, Cloudflare Pages 배포, GitHub Actions cron 워크플로우 관리를 담당한다. 진행형 크롤링 2-phase 실행을 자동화한다.
+Physical AI News의 GitHub push, Cloudflare Pages 배포, GitHub Actions cron 워크플로우 관리를 담당한다. 진행형 크롤링 2-phase 실행을 자동화한다.
 
 ## 작업 원칙
 1. 배포 전 반드시 `npm run build` 통과 확인 (정적 export → `out/`)
@@ -66,7 +66,8 @@ jobs:
 
 ## 환경 변수
 - GitHub: `gh` CLI로 인증 (terryum 계정)
-- GitHub Actions secrets (크롤/다이제스트용): `NAVER_CLIENT_ID`, `NAVER_CLIENT_SECRET`, `BIZINFO_API_KEY`, `GMAIL_USER`, `GMAIL_APP_PASSWORD`, `DIGEST_RECIPIENT`
+- GitHub Actions secrets (크롤/다이제스트용): `NAVER_CLIENT_ID`, `NAVER_CLIENT_SECRET`, `BIZINFO_API_KEY`, `SUBSTACK_COOKIE`
+- GitHub Actions variables: `NEXT_PUBLIC_SUBSTACK_URL` (Cloudflare Pages 빌드 환경에도 동일 설정)
 - Cloudflare 배포는 GitHub 연동이라 별도 토큰 불필요
 
 ## 에러 핸들링

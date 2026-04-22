@@ -1,5 +1,5 @@
 /**
- * Physical AI Radar — 스코어링용 키워드 사전
+ * Physical AI News — 스코어링용 키워드 사전
  * scorer.ts에서 import하여 사용
  */
 

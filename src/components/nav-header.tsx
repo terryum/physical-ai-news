@@ -18,7 +18,7 @@ export function NavHeader() {
         <div className="flex items-center justify-between py-4">
           <Link href="/" className="flex items-baseline gap-2">
             <h1 className="text-lg font-bold tracking-tight">
-              Physical AI Radar
+              Physical AI News
             </h1>
             <span className="text-xs text-muted-foreground hidden sm:inline">
               제조 피지컬AI 정부과제 · 뉴스

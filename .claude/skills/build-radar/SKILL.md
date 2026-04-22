@@ -1,9 +1,9 @@
 ---
 name: build-radar
-description: "Physical AI Radar 전체 파이프라인을 오케스트레이션하는 스킬. 크롤링 → 큐레이션 → UI 빌드 → 배포까지 4개 에이전트를 조율한다. '레이더 빌드', '대시보드 만들어줘', '웹사이트 구축', 'Physical AI Radar', '전체 파이프라인', '풀 빌드', 'full build', '처음부터 빌드', '전체 실행' 키워드가 나오면 이 스킬을 사용할 것."
+description: "Physical AI News 전체 파이프라인을 오케스트레이션하는 스킬. 크롤링 → 큐레이션 → UI 빌드 → 배포까지 4개 에이전트를 조율한다. '레이더 빌드', '대시보드 만들어줘', '웹사이트 구축', 'Physical AI News', '전체 파이프라인', '풀 빌드', 'full build', '처음부터 빌드', '전체 실행' 키워드가 나오면 이 스킬을 사용할 것."
 ---
 
-# Physical AI Radar Build Orchestrator
+# Physical AI News Build Orchestrator
 
 제조 피지컬AI 정부과제·뉴스 수집 대시보드를 빌드하고 배포하는 통합 오케스트레이터.
 

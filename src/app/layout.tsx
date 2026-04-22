@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Physical AI Radar",
+  title: "Physical AI News",
   description: "제조 피지컬AI 정부과제·뉴스 자동 수집 대시보드",
 };
 
