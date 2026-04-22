@@ -22,7 +22,10 @@ jobs:
 
       - run: npm ci
 
-      - run: npm run build
+      - name: Build
+        env:
+          NEXT_PUBLIC_SUBSTACK_URL: ${{ vars.NEXT_PUBLIC_SUBSTACK_URL }}
+        run: npm run build
 
       - name: Deploy to Cloudflare Pages
         env:
