@@ -27,6 +27,75 @@ export interface ScoredItem extends RawItem {
   relatedArticles?: { title: string; url: string; sourceId: string }[];
 }
 
+// 해외 트렌딩용 영어 키워드 (Tier 판별)
+const T0_EN = [
+  "humanoid",
+  "embodied",
+  "manipulation",
+  "physical ai",
+  "dexterous",
+  "robot foundation",
+  "vla ",
+  "vision-language-action",
+  "grasping",
+];
+const T1_EN = [
+  "robot",
+  "robotics",
+  "llm",
+  "agent",
+  "rlhf",
+  "vision-language",
+  "foundation model",
+  "diffusion policy",
+  "autonomous",
+];
+const T2_EN = ["gpt", "claude", "gemini", "openai", "anthropic", "deepmind", "meta ai"];
+
+/**
+ * 해외 트렌딩 아이템 스코어링.
+ * - 한국어 키워드 가중치 사용 안 함
+ * - upstream popularity (HN points, Reddit ups) 기반 + 영어 키워드 tier 분류
+ */
+export function scoreTrendingItem(item: RawItem): ScoredItem {
+  const text = `${item.title} ${item.description ?? ""}`.toLowerCase();
+  const matchedKeywords: string[] = [];
+
+  // upstream popularity → 점수 (0~50)
+  const points = item.points ?? 0;
+  let score = Math.min(50, Math.floor(points / 10));
+
+  // 영어 키워드 보너스
+  if (matchesAny(text, T0_EN)) {
+    score += 30;
+    matchedKeywords.push("physicalAI(en)");
+  }
+  if (matchesAny(text, T1_EN)) {
+    score += 15;
+    matchedKeywords.push("robotics/llm(en)");
+  }
+
+  let tier: Tier;
+  if (matchesAny(text, T0_EN)) tier = "T0";
+  else if (matchesAny(text, T1_EN)) tier = "T1";
+  else if (matchesAny(text, T2_EN)) tier = "T2";
+  else tier = "T3";
+
+  // Priority: 점수 + tier 기반
+  let priority: Priority;
+  if (tier === "T0" && score >= 50) priority = "P0";
+  else if ((tier === "T0" || tier === "T1") && score >= 25) priority = "P1";
+  else priority = "P2";
+
+  return {
+    ...item,
+    score,
+    tier,
+    priority,
+    matchedKeywords,
+  };
+}
+
 /**
  * RawItem에 대해 스코어링을 수행하고 Tier/Priority를 결정한다.
  */
@@ -144,7 +213,19 @@ function matchesAny(text: string, keywords: string[]): boolean {
   return keywords.some((kw) => text.includes(kw.toLowerCase()));
 }
 
-/** 여러 아이템을 일괄 스코어링 */
-export function scoreItems(items: RawItem[]): ScoredItem[] {
-  return items.map(scoreItem);
+/** 여러 아이템을 일괄 스코어링.
+ * trendingSourceIds가 주어지면 해당 sourceId 항목은 trending 룰셋을 사용한다.
+ */
+export function scoreItems(
+  items: RawItem[],
+  trendingSourceIds?: Set<string>,
+): ScoredItem[] {
+  if (!trendingSourceIds || trendingSourceIds.size === 0) {
+    return items.map(scoreItem);
+  }
+  return items.map((item) =>
+    trendingSourceIds.has(item.sourceId)
+      ? scoreTrendingItem(item)
+      : scoreItem(item),
+  );
 }

@@ -88,6 +88,18 @@ function newsRow(item: Item): ProseNode {
   ]);
 }
 
+function trendingRow(item: Item): ProseNode {
+  const url = getCanonicalUrl(item);
+  const meta: string[] = [item.sourceName];
+  if (item.points) meta.push(`▲ ${item.points}`);
+  if (item.commentCount) meta.push(`💬 ${item.commentCount}`);
+  return paragraph([
+    textNode(item.title, [linkMark(url)]),
+    hardBreak(),
+    textNode(meta.join(" · "), [{ type: "em" }]),
+  ]);
+}
+
 function relatedRow(title: string, url: string): ProseNode {
   return paragraph([
     textNode("└ ", [{ type: "em" }]),
@@ -105,6 +117,8 @@ function sectionNodes(section: DigestSection, now: Date, isDeadline: boolean): P
       nodes.push(deadlineRow(item, now));
     } else if (item.itemType === "gov") {
       nodes.push(govRow(item));
+    } else if (item.itemType === "trending") {
+      nodes.push(trendingRow(item));
     } else {
       nodes.push(newsRow(item));
       if (item.relatedArticles && item.relatedArticles.length > 0) {

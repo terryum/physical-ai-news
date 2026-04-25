@@ -20,7 +20,7 @@ const tierLabel: Record<string, string> = {
 interface FilterBarProps {
   filters: Filters;
   onChange: (filters: Filters) => void;
-  counts: { total: number; gov: number; news: number };
+  counts: { total: number; gov: number; news: number; trending: number };
 }
 
 function Chip({
@@ -85,6 +85,12 @@ export function FilterBar({ filters, onChange, counts }: FilterBarProps) {
         >
           뉴스 ({counts.news})
         </Chip>
+        <Chip
+          selected={filters.itemType === "trending"}
+          onClick={() => onChange({ ...filters, itemType: "trending" })}
+        >
+          해외 트렌딩 ({counts.trending})
+        </Chip>
 
         <span className="w-px h-5 bg-border mx-1" />
 
@@ -94,13 +100,23 @@ export function FilterBar({ filters, onChange, counts }: FilterBarProps) {
         >
           최신순
         </Chip>
-        <Chip
-          selected={filters.sortBy === "deadline"}
-          onClick={() => onChange({ ...filters, sortBy: "deadline" })}
-        >
-          마감일순
-        </Chip>
-        {filters.sortBy === "deadline" && (
+        {filters.itemType === "gov" && (
+          <Chip
+            selected={filters.sortBy === "deadline"}
+            onClick={() => onChange({ ...filters, sortBy: "deadline" })}
+          >
+            마감일순
+          </Chip>
+        )}
+        {filters.itemType === "trending" && (
+          <Chip
+            selected={filters.sortBy === "popular"}
+            onClick={() => onChange({ ...filters, sortBy: "popular" })}
+          >
+            인기순
+          </Chip>
+        )}
+        {filters.itemType === "gov" && filters.sortBy === "deadline" && (
           <label className="inline-flex cursor-pointer items-center gap-1.5 px-1 text-xs text-muted-foreground hover:text-foreground">
             <input
               type="checkbox"

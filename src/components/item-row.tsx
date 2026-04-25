@@ -57,7 +57,9 @@ function daysUntil(iso: string): number {
 export function ItemRow({ item, onToggleRead, onToggleStar }: ItemRowProps) {
   const canonicalUrl = item.links?.[0]?.url ?? "#";
   const isGov = item.itemType === "gov";
+  const isTrending = item.itemType === "trending";
   const daysLeft = item.deadlineAt ? daysUntil(item.deadlineAt) : null;
+  const typeLabel = isGov ? "공고" : isTrending ? "트렌딩" : "뉴스";
 
   return (
     <div
@@ -94,7 +96,7 @@ export function ItemRow({ item, onToggleRead, onToggleStar }: ItemRowProps) {
           {/* Title row */}
           <div className="flex items-center gap-2 flex-wrap">
             <Badge variant="outline" className="text-[10px] px-1.5 py-0 h-5 shrink-0">
-              {isGov ? "공고" : "뉴스"}
+              {typeLabel}
             </Badge>
             <a
               href={canonicalUrl}
@@ -120,6 +122,14 @@ export function ItemRow({ item, onToggleRead, onToggleStar }: ItemRowProps) {
             <span className="text-xs text-muted-foreground">
               게시 {formatDate(item.publishedAt)}
             </span>
+
+            {/* points/comments (트렌딩만) */}
+            {isTrending && (item.points || item.commentCount) ? (
+              <span className="text-xs text-muted-foreground">
+                {item.points ? <span className="mr-2">▲ {item.points}</span> : null}
+                {item.commentCount ? <span>💬 {item.commentCount}</span> : null}
+              </span>
+            ) : null}
 
             {/* 마감일 (공고만) */}
             {isGov && item.deadlineAt && (

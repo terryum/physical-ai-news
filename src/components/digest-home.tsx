@@ -59,6 +59,19 @@ function filterNews(items: Item[], now: Date): Item[] {
     .slice(0, 20);
 }
 
+const HOURS_72_TRENDING = 72 * 60 * 60 * 1000;
+function filterTrending(items: Item[], now: Date): Item[] {
+  const nowMs = now.getTime();
+  return items
+    .filter(
+      (i) =>
+        i.itemType === "trending" &&
+        nowMs - new Date(i.publishedAt).getTime() < HOURS_72_TRENDING,
+    )
+    .sort((a, b) => (b.points ?? 0) - (a.points ?? 0))
+    .slice(0, 7);
+}
+
 // --- Date helpers ---
 
 const DAYS_KO = ["일", "월", "화", "수", "목", "금", "토"] as const;
@@ -158,6 +171,30 @@ function DeadlineRow({ item, now }: { item: Item; now: Date }) {
   );
 }
 
+function TrendingRow({ item, idx }: { item: Item; idx: number }) {
+  const url = item.links?.[0]?.url ?? "#";
+  return (
+    <div className="px-4 py-2 border-b border-border/50 last:border-b-0 hover:bg-accent/30 transition-colors">
+      <div className="flex items-baseline gap-2">
+        <span className="shrink-0 text-xs text-muted-foreground w-5 text-right">{idx + 1}.</span>
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-foreground hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-2"
+        >
+          {item.title}
+        </a>
+      </div>
+      <div className="mt-0.5 flex items-center gap-2 text-xs text-muted-foreground pl-7">
+        <span>{item.sourceName}</span>
+        {item.points ? <span>▲ {item.points}</span> : null}
+        {item.commentCount ? <span>💬 {item.commentCount}</span> : null}
+      </div>
+    </div>
+  );
+}
+
 function NewsRow({ item, idx }: { item: Item; idx: number }) {
   const url = item.links?.[0]?.url ?? "#";
   return (
@@ -202,6 +239,7 @@ function DigestSectionCard({ section, now }: { section: DigestSection; now: Date
 
   const isDeadline = section.color === "#dc2626";
   const isNews = section.color === "#16a34a";
+  const isTrending = section.color === "#7c3aed";
 
   return (
     <div className="rounded-lg border bg-card overflow-hidden">
@@ -210,6 +248,8 @@ function DigestSectionCard({ section, now }: { section: DigestSection; now: Date
         {section.items.map((item, idx) =>
           isDeadline ? (
             <DeadlineRow key={item.id} item={item} now={now} />
+          ) : isTrending ? (
+            <TrendingRow key={item.id} item={item} idx={idx} />
           ) : isNews ? (
             <NewsRow key={item.id} item={item} idx={idx} />
           ) : (
@@ -262,6 +302,13 @@ export function DigestHome({ items, lastUpdated }: DigestHomeProps) {
       items: filterNews(items, now),
       linkHref: "/news",
       linkLabel: "전체 뉴스 보기",
+    },
+    {
+      title: "🌍 해외 트렌딩",
+      color: "#7c3aed",
+      items: filterTrending(items, now),
+      linkHref: "/trending",
+      linkLabel: "전체 트렌딩 보기",
     },
   ];
 

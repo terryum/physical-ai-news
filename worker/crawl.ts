@@ -9,6 +9,10 @@ import { googleRssAdapter } from "./adapters/google-rss";
 import { namuCmsAdapter } from "./adapters/namu-cms";
 import { htmlGovAdapter } from "./adapters/html-gov";
 import { bizinfoAdapter } from "./adapters/bizinfo";
+import { genericRssAdapter } from "./adapters/generic-rss";
+import { hackernewsAdapter } from "./adapters/hackernews";
+import { redditAdapter } from "./adapters/reddit";
+import { hfPapersAdapter } from "./adapters/hf-papers";
 import { scoreItems, ScoredItem } from "./pipeline/scorer";
 import { dedup } from "./pipeline/dedup";
 import { normalizeUrl, parseDate } from "./pipeline/normalize";
@@ -25,6 +29,8 @@ const adapterByGroup: Record<string, CrawlerAdapter> = {
   B: googleRssAdapter,
   C: namuCmsAdapter,
   D: htmlGovAdapter,
+  F: genericRssAdapter, // 해외 트렌딩 RSS (arXiv, The Robot Report, IEEE Spectrum)
+  G: redditAdapter, // 그룹 G 기본은 Reddit. HN/HF는 ID 기반 매핑.
 };
 
 // 그룹 A 소스별 어댑터 매핑
@@ -33,6 +39,12 @@ const groupAAdapters: Record<string, CrawlerAdapter> = {
   bizinfo: bizinfoAdapter,
 };
 const SUPPORTED_A_SOURCES = new Set(Object.keys(groupAAdapters));
+
+// 그룹 G 내 ID별 어댑터 (Reddit 외에 HN, HF 등 JSON/스크레이핑 소스)
+const groupGAdapters: Record<string, CrawlerAdapter> = {
+  hackernews: hackernewsAdapter,
+  hf_daily_papers: hfPapersAdapter,
+};
 
 /**
  * 메인 크롤 오케스트레이터
@@ -78,7 +90,12 @@ export async function crawl(phase: "fast" | "slow" | "all" = "all"): Promise<voi
     // 병렬 실행
     const results = await Promise.allSettled(
       runnableFast.map(async (source) => {
-        const adapter = source.group === "A" ? groupAAdapters[source.id] : adapterByGroup[source.group];
+        const adapter =
+          source.group === "A"
+            ? groupAAdapters[source.id]
+            : source.group === "G"
+              ? groupGAdapters[source.id] ?? redditAdapter
+              : adapterByGroup[source.group];
         try {
           const items = await adapter.fetchItems(source);
           return { sourceId: source.id, items };
@@ -106,8 +123,11 @@ export async function crawl(phase: "fast" | "slow" | "all" = "all"): Promise<voi
       publishedAt: item.publishedAt ? parseDate(item.publishedAt) ?? item.publishedAt : undefined,
     }));
 
-    // 스코어링
-    const scored = scoreItems(normalized);
+    // 스코어링 (trending 소스는 영어 키워드 + upstream popularity 사용)
+    const trendingSourceIds = new Set(
+      sources.filter((s) => s.type === "trending").map((s) => s.id),
+    );
+    const scored = scoreItems(normalized, trendingSourceIds);
 
     // 중복 제거
     const deduped = dedup(scored);
@@ -120,8 +140,16 @@ export async function crawl(phase: "fast" | "slow" | "all" = "all"): Promise<voi
     console.log(`  스코어링: ${scored.length}건`);
     console.log(`  중복제거: ${deduped.length}건\n`);
 
+    // 소스 ID → itemType 맵 (sources.yaml의 type 필드 우선)
+    const sourceTypeMap = new Map<string, "gov" | "news" | "trending">();
+    for (const s of sources) {
+      sourceTypeMap.set(s.id, s.type);
+    }
+
     // Item 형태로 변환하여 저장
-    const outputItems = deduped.map(toOutputItem);
+    const outputItems = deduped.map((item) =>
+      toOutputItem(item, sourceTypeMap),
+    );
 
     // fast crawl은 전체 교체 (이전 중복이 다시 들어오는 것 방지)
     // 단, read/starred 상태는 유지
@@ -165,10 +193,18 @@ export async function crawl(phase: "fast" | "slow" | "all" = "all"): Promise<voi
 }
 
 /** ScoredItem을 출력용 Item 형태로 변환 */
-function toOutputItem(item: ScoredItem): OutputItem {
+function toOutputItem(
+  item: ScoredItem,
+  sourceTypeMap: Map<string, "gov" | "news" | "trending">,
+): OutputItem {
+  // sources.yaml에 등록된 type을 우선. 없으면 기존 휴리스틱(gov 키워드/허용 ID).
+  const itemType =
+    sourceTypeMap.get(item.sourceId) ??
+    (item.sourceId.includes("gov") || isGovSource(item.sourceId) ? "gov" : "news");
+
   return {
     id: generateId(item),
-    itemType: item.sourceId.includes("gov") || isGovSource(item.sourceId) ? "gov" : "news",
+    itemType,
     title: item.title,
     publishedAt: item.publishedAt ?? new Date().toISOString(),
     deadlineAt: item.deadlineAt,
@@ -180,6 +216,9 @@ function toOutputItem(item: ScoredItem): OutputItem {
     matchedKeywords: item.matchedKeywords,
     matchedCompanies: [],
     region: item.region,
+    points: item.points,
+    commentCount: item.commentCount,
+    lang: item.lang,
     links: [{ label: "원문", url: item.url, kind: "canonical" as const }],
     relatedArticles: item.relatedArticles?.map((ra) => ({
       title: ra.title,
@@ -193,7 +232,7 @@ function toOutputItem(item: ScoredItem): OutputItem {
 
 interface OutputItem {
   id: string;
-  itemType: "gov" | "news";
+  itemType: "gov" | "news" | "trending";
   title: string;
   publishedAt: string;
   deadlineAt?: string;
@@ -205,6 +244,9 @@ interface OutputItem {
   matchedKeywords: string[];
   matchedCompanies: string[];
   region?: string;
+  points?: number;
+  commentCount?: number;
+  lang?: "ko" | "en";
   links: Array<{ label: string; url: string; kind: string }>;
   relatedArticles?: Array<{ title: string; url: string; sourceName: string }>;
   read: boolean;

@@ -136,6 +136,22 @@ export function filterTodayNews(items: Item[], now: Date): Item[] {
 }
 
 /**
+ * 섹션 4: 해외 트렌딩
+ * trending, 최근 72시간, 인기순(points), 최대 7개
+ */
+export function filterTrending(items: Item[], now: Date): Item[] {
+  const nowMs = now.getTime();
+  return items
+    .filter(
+      (item) =>
+        item.itemType === "trending" &&
+        nowMs - new Date(item.publishedAt).getTime() < HOURS_72,
+    )
+    .sort((a, b) => (b.points ?? 0) - (a.points ?? 0))
+    .slice(0, 7);
+}
+
+/**
  * 전체 다이제스트 섹션을 생성한다.
  */
 export function buildDigestSections(
@@ -158,6 +174,11 @@ export function buildDigestSections(
       title: "오늘의 주요 뉴스",
       items: filterTodayNews(items, now),
       color: "#16a34a",
+    },
+    {
+      title: "🌍 해외 트렌딩",
+      items: filterTrending(items, now),
+      color: "#7c3aed",
     },
   ];
 }

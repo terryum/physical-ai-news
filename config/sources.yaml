@@ -377,3 +377,123 @@
   schedule: "0 */6 * * *"
   enabled: true
   notes: "과기정통부 ICT R&D. RFP 원문은 여기만."
+
+# ── 그룹 F: 해외 트렌딩 (RSS / API) ──
+# Hacker News, Reddit, arXiv, The Robot Report, IEEE Spectrum, Hugging Face Daily Papers
+# 모두 무료·인증 불필요. Reddit은 GH Actions IP 403 가능성 있어 KR-VM 권장.
+
+- id: hackernews
+  name: Hacker News
+  type: trending
+  group: G
+  authority: discovery
+  phase: fast
+  url: https://hn.algolia.com/api/v1/search
+  schedule: "0 */3 * * *"
+  keywords: ["humanoid", "robotics", "physical AI", "embodied", "manipulation", "LLM agent", "foundation model"]
+  enabled: true
+  notes: "Algolia search. 최근 7일 + points >= 50 필터링."
+
+- id: reddit_ml
+  name: r/MachineLearning
+  type: trending
+  group: G
+  authority: discovery
+  phase: fast
+  url: https://www.reddit.com/r/MachineLearning/top.json?t=day&limit=25
+  schedule: "0 */6 * * *"
+  enabled: true
+  notes: "Reddit JSON. KR-VM에서만 안정적 (CF/GH IP 403 가능)."
+
+- id: reddit_localllama
+  name: r/LocalLLaMA
+  type: trending
+  group: G
+  authority: discovery
+  phase: fast
+  url: https://www.reddit.com/r/LocalLLaMA/top.json?t=day&limit=25
+  schedule: "0 */6 * * *"
+  enabled: true
+  notes: "오픈소스 LLM 트렌드."
+
+- id: reddit_robotics
+  name: r/robotics
+  type: trending
+  group: G
+  authority: discovery
+  phase: fast
+  url: https://www.reddit.com/r/robotics/top.json?t=day&limit=25
+  schedule: "0 */6 * * *"
+  enabled: true
+
+- id: reddit_singularity
+  name: r/singularity
+  type: trending
+  group: G
+  authority: discovery
+  phase: fast
+  url: https://www.reddit.com/r/singularity/top.json?t=day&limit=25
+  schedule: "0 */6 * * *"
+  enabled: true
+
+- id: arxiv_cs_ai
+  name: arXiv cs.AI
+  type: trending
+  group: F
+  authority: canonical
+  phase: fast
+  url: http://export.arxiv.org/rss/cs.AI
+  schedule: "0 9 * * *"
+  enabled: true
+
+- id: arxiv_cs_ro
+  name: arXiv cs.RO
+  type: trending
+  group: F
+  authority: canonical
+  phase: fast
+  url: http://export.arxiv.org/rss/cs.RO
+  schedule: "0 9 * * *"
+  enabled: true
+
+- id: arxiv_cs_lg
+  name: arXiv cs.LG
+  type: trending
+  group: F
+  authority: canonical
+  phase: fast
+  url: http://export.arxiv.org/rss/cs.LG
+  schedule: "0 9 * * *"
+  enabled: true
+
+- id: robot_report
+  name: The Robot Report
+  type: trending
+  group: F
+  authority: canonical
+  phase: fast
+  url: https://www.therobotreport.com/feed/
+  schedule: "0 */6 * * *"
+  enabled: true
+
+- id: ieee_spectrum_robotics
+  name: IEEE Spectrum Robotics
+  type: trending
+  group: F
+  authority: canonical
+  phase: fast
+  url: https://spectrum.ieee.org/feeds/topic/robotics.rss
+  schedule: "0 */6 * * *"
+  enabled: true
+
+- id: hf_daily_papers
+  name: Hugging Face Daily Papers
+  type: trending
+  group: G
+  authority: canonical
+  phase: fast
+  url: https://huggingface.co/papers
+  schedule: "0 10 * * *"
+  enabled: true
+  notes: "공식 API 없음. NEXT_DATA JSON 또는 카드 스크레이핑."
+

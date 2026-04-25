@@ -30,7 +30,7 @@ interface RadarDashboardProps {
   initialItems: Item[];
   dataSource: "crawled" | "seed";
   lastUpdated: string | null;
-  defaultItemType?: "gov" | "news";
+  defaultItemType?: "gov" | "news" | "trending";
 }
 
 export function RadarDashboard({
@@ -42,6 +42,7 @@ export function RadarDashboard({
   const [filters, setFilters] = useState<Filters>({
     ...DEFAULT_FILTERS,
     ...(defaultItemType ? { itemType: defaultItemType } : {}),
+    ...(defaultItemType === "trending" ? { sortBy: "popular" as const } : {}),
   });
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [readIds, setReadIds, readHydrated] = useLocalStorage<string[]>(
@@ -137,6 +138,10 @@ export function RadarDashboard({
           return aDeadline - bDeadline;
         }
 
+        if (filters.sortBy === "popular") {
+          return (b.points ?? 0) - (a.points ?? 0);
+        }
+
         // 최신순: 게시일 내림차순
         return (
           new Date(b.publishedAt).getTime() -
@@ -162,6 +167,7 @@ export function RadarDashboard({
       total: items.length,
       gov: items.filter((i) => i.itemType === "gov").length,
       news: items.filter((i) => i.itemType === "news").length,
+      trending: items.filter((i) => i.itemType === "trending").length,
     }),
     [items]
   );

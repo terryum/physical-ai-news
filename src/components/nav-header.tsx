@@ -7,6 +7,7 @@ const NAV_ITEMS = [
   { href: "/", label: "오늘의 클리핑" },
   { href: "/gov", label: "전체 공고" },
   { href: "/news", label: "전체 뉴스" },
+  { href: "/trending", label: "해외 트렌딩" },
 ] as const;
 
 export function NavHeader() {

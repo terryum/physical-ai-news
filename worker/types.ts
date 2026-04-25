@@ -8,13 +8,17 @@ export interface RawItem {
   region?: string;
   description?: string;
   agency?: string; // 기관명
+  // Trending-only
+  points?: number;
+  commentCount?: number;
+  lang?: "ko" | "en";
 }
 
 export interface SourceConfig {
   id: string;
   name: string;
-  type: "gov" | "news";
-  group: "A" | "B" | "C" | "D" | "E";
+  type: "gov" | "news" | "trending";
+  group: "A" | "B" | "C" | "D" | "E" | "F" | "G";
   authority: "canonical" | "discovery";
   phase: "fast" | "slow";
   url: string;

@@ -1,4 +1,4 @@
-export type SourceType = "gov" | "news";
+export type SourceType = "gov" | "news" | "trending";
 export type Tier = "T0" | "T1" | "T2" | "T3";
 export type Priority = "P0" | "P1" | "P2";
 export type LinkKind = "canonical" | "mirror" | "apply" | "related";
@@ -34,9 +34,13 @@ export interface Item {
   relatedArticles?: RelatedArticle[];
   read: boolean;
   starred: boolean;
+  // Trending-only metadata
+  points?: number;
+  commentCount?: number;
+  lang?: "ko" | "en";
 }
 
-export type SortBy = "latest" | "deadline";
+export type SortBy = "latest" | "deadline" | "popular";
 
 export const COMPANY_FILTERS = ["코스맥스", "콜마", "아모레퍼시픽", "LG생건"] as const;
 export type CompanyFilter = (typeof COMPANY_FILTERS)[number];
