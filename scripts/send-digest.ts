@@ -99,7 +99,8 @@ async function main() {
       for (const item of section.items) {
         const deadline = item.deadlineAt ? ` [마감: ${item.deadlineAt}]` : "";
         const fresh = lastSentIds.has(item.id) ? " (어제 발송)" : " (신규)";
-        console.log(`  - ${item.title}${deadline}${fresh}`);
+        const title = item.titleKo ?? item.title;
+        console.log(`  - ${title}${deadline}${fresh}`);
       }
     }
     if (data.isEmpty) {

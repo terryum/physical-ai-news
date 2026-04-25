@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { Item } from "@/data/types";
-import { SubstackSubscribe } from "@/components/substack-subscribe";
+import { useLocalStorage } from "@/hooks/use-local-storage";
 
 // --- Digest filter logic (mirrors worker/digest/filter.ts) ---
 
@@ -152,7 +152,17 @@ interface DigestSection {
   linkLabel: string;
 }
 
-function SectionHeader({ title, color, count }: { title: string; color: string; count: number }) {
+function SectionHeader({
+  title,
+  color,
+  count,
+  rightSlot,
+}: {
+  title: string;
+  color: string;
+  count: number;
+  rightSlot?: React.ReactNode;
+}) {
   return (
     <div
       className="flex items-center gap-2 rounded-t-lg px-4 py-2.5"
@@ -160,6 +170,38 @@ function SectionHeader({ title, color, count }: { title: string; color: string; 
     >
       <span className="font-semibold text-sm">{title}</span>
       <span className="text-xs text-muted-foreground">({count})</span>
+      {rightSlot && <div className="ml-auto">{rightSlot}</div>}
+    </div>
+  );
+}
+
+function LangToggle({
+  lang,
+  onChange,
+}: {
+  lang: "ko" | "en";
+  onChange: (l: "ko" | "en") => void;
+}) {
+  return (
+    <div className="flex items-center gap-0.5 rounded-md border bg-card p-0.5 text-[11px]">
+      <button
+        type="button"
+        onClick={() => onChange("ko")}
+        className={`px-1.5 py-0.5 rounded cursor-pointer transition-colors ${
+          lang === "ko" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"
+        }`}
+      >
+        한국어
+      </button>
+      <button
+        type="button"
+        onClick={() => onChange("en")}
+        className={`px-1.5 py-0.5 rounded cursor-pointer transition-colors ${
+          lang === "en" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"
+        }`}
+      >
+        EN
+      </button>
     </div>
   );
 }
@@ -223,8 +265,10 @@ function DeadlineRow({ item, now }: { item: Item; now: Date }) {
   );
 }
 
-function TrendingRow({ item, idx }: { item: Item; idx: number }) {
+function TrendingRow({ item, idx, lang }: { item: Item; idx: number; lang: "ko" | "en" }) {
   const url = item.links?.[0]?.url ?? "#";
+  const showKo = lang === "ko" && item.titleKo;
+  const displayTitle = showKo ? item.titleKo! : item.title;
   return (
     <div className="px-4 py-2 border-b border-border/50 last:border-b-0 hover:bg-accent/30 transition-colors">
       <div className="flex items-baseline gap-2">
@@ -235,9 +279,14 @@ function TrendingRow({ item, idx }: { item: Item; idx: number }) {
           rel="noopener noreferrer"
           className="text-sm text-foreground hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-2"
         >
-          {item.title}
+          {displayTitle}
         </a>
       </div>
+      {showKo && (
+        <div className="mt-0.5 pl-7 text-[11px] text-muted-foreground/70 truncate" title={item.title}>
+          {item.title}
+        </div>
+      )}
       <div className="mt-0.5 flex items-center gap-2 text-xs text-muted-foreground pl-7">
         <span>{item.sourceName}</span>
         {item.points ? <span>▲ {item.points}</span> : null}
@@ -286,7 +335,17 @@ function NewsRow({ item, idx }: { item: Item; idx: number }) {
   );
 }
 
-function DigestSectionCard({ section, now }: { section: DigestSection; now: Date }) {
+function DigestSectionCard({
+  section,
+  now,
+  trendingLang,
+  onTrendingLangChange,
+}: {
+  section: DigestSection;
+  now: Date;
+  trendingLang: "ko" | "en";
+  onTrendingLangChange: (l: "ko" | "en") => void;
+}) {
   if (section.items.length === 0) return null;
 
   const isDeadline = section.color === "#dc2626";
@@ -295,13 +354,22 @@ function DigestSectionCard({ section, now }: { section: DigestSection; now: Date
 
   return (
     <div className="rounded-lg border bg-card overflow-hidden">
-      <SectionHeader title={section.title} color={section.color} count={section.items.length} />
+      <SectionHeader
+        title={section.title}
+        color={section.color}
+        count={section.items.length}
+        rightSlot={
+          isTrending ? (
+            <LangToggle lang={trendingLang} onChange={onTrendingLangChange} />
+          ) : undefined
+        }
+      />
       <div>
         {section.items.map((item, idx) =>
           isDeadline ? (
             <DeadlineRow key={item.id} item={item} now={now} />
           ) : isTrending ? (
-            <TrendingRow key={item.id} item={item} idx={idx} />
+            <TrendingRow key={item.id} item={item} idx={idx} lang={trendingLang} />
           ) : isNews ? (
             <NewsRow key={item.id} item={item} idx={idx} />
           ) : (
@@ -358,6 +426,9 @@ export function DigestHome({ items, lastUpdated }: DigestHomeProps) {
   const today = startOfDay(new Date());
   const [selectedDate, setSelectedDate] = useState<Date>(today);
   const isToday = isSameDay(selectedDate, today);
+  const [trendingLangStored, setTrendingLangStored, trendingLangHydrated] =
+    useLocalStorage<"ko" | "en">("radar-trending-lang", "ko");
+  const trendingLang = trendingLangHydrated ? trendingLangStored : "ko";
 
   // 필터에 전달할 "now"는 선택된 날짜의 23:59 — 그 날 발행된 모든 항목 포함
   const filterNow = useMemo(() => endOfDay(selectedDate), [selectedDate]);
@@ -448,9 +519,6 @@ export function DigestHome({ items, lastUpdated }: DigestHomeProps) {
         매일 오전 8시 Substack으로 발행되는 뉴스레터와 동일한 내용입니다
       </p>
 
-      {/* Substack subscribe */}
-      <SubstackSubscribe />
-
       {/* Sections */}
       {allEmpty ? (
         <div className="rounded-lg border bg-card py-16 text-center text-muted-foreground">
@@ -458,7 +526,13 @@ export function DigestHome({ items, lastUpdated }: DigestHomeProps) {
         </div>
       ) : (
         sections.map((section) => (
-          <DigestSectionCard key={section.title} section={section} now={filterNow} />
+          <DigestSectionCard
+            key={section.title}
+            section={section}
+            now={filterNow}
+            trendingLang={trendingLang}
+            onTrendingLangChange={setTrendingLangStored}
+          />
         ))
       )}
     </div>

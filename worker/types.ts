@@ -12,6 +12,7 @@ export interface RawItem {
   points?: number;
   commentCount?: number;
   lang?: "ko" | "en";
+  titleKo?: string;
 }
 
 export interface SourceConfig {

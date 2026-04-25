@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { SubstackSubscribe } from "@/components/substack-subscribe";
 
 const NAV_ITEMS = [
   { href: "/", label: "오늘의 클리핑" },
@@ -16,15 +17,16 @@ export function NavHeader() {
   return (
     <header className="border-b bg-card">
       <div className="mx-auto max-w-4xl px-4">
-        <div className="flex items-center justify-between py-4">
-          <Link href="/" className="flex items-baseline gap-2">
-            <h1 className="text-lg font-bold tracking-tight">
+        <div className="flex items-center justify-between py-4 gap-3">
+          <Link href="/" className="flex items-baseline gap-2 min-w-0">
+            <h1 className="text-lg font-bold tracking-tight truncate">
               Physical AI News
             </h1>
-            <span className="text-xs text-muted-foreground hidden sm:inline">
+            <span className="text-xs text-muted-foreground hidden md:inline">
               제조 피지컬AI 정부과제 · 뉴스
             </span>
           </Link>
+          <SubstackSubscribe variant="header" />
         </div>
         <nav className="flex gap-1 -mb-px">
           {NAV_ITEMS.map(({ href, label }) => {

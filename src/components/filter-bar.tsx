@@ -21,6 +21,8 @@ interface FilterBarProps {
   filters: Filters;
   onChange: (filters: Filters) => void;
   counts: { total: number; gov: number; news: number; trending: number };
+  trendingLang?: "ko" | "en";
+  onTrendingLangChange?: (lang: "ko" | "en") => void;
 }
 
 function Chip({
@@ -47,7 +49,13 @@ function Chip({
   );
 }
 
-export function FilterBar({ filters, onChange, counts }: FilterBarProps) {
+export function FilterBar({
+  filters,
+  onChange,
+  counts,
+  trendingLang = "ko",
+  onTrendingLangChange,
+}: FilterBarProps) {
   const togglePriority = (p: Priority) => {
     const next = filters.priorities.includes(p)
       ? filters.priorities.filter((x) => x !== p)
@@ -109,12 +117,31 @@ export function FilterBar({ filters, onChange, counts }: FilterBarProps) {
           </Chip>
         )}
         {filters.itemType === "trending" && (
-          <Chip
-            selected={filters.sortBy === "popular"}
-            onClick={() => onChange({ ...filters, sortBy: "popular" })}
-          >
-            인기순
-          </Chip>
+          <>
+            <Chip
+              selected={filters.sortBy === "popular"}
+              onClick={() => onChange({ ...filters, sortBy: "popular" })}
+            >
+              인기순
+            </Chip>
+            {onTrendingLangChange && (
+              <>
+                <span className="w-px h-5 bg-border mx-1" />
+                <Chip
+                  selected={trendingLang === "ko"}
+                  onClick={() => onTrendingLangChange("ko")}
+                >
+                  한국어
+                </Chip>
+                <Chip
+                  selected={trendingLang === "en"}
+                  onClick={() => onTrendingLangChange("en")}
+                >
+                  English
+                </Chip>
+              </>
+            )}
+          </>
         )}
         {filters.itemType === "gov" && filters.sortBy === "deadline" && (
           <label className="inline-flex cursor-pointer items-center gap-1.5 px-1 text-xs text-muted-foreground hover:text-foreground">

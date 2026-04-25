@@ -68,50 +68,56 @@ function isDomainOnlyUrl(url: string): boolean {
 }
 
 /**
- * 유사 기사 그루핑
- * 제목에서 핵심 주체(인물명/기업명)와 핵심 토픽을 추출하고,
- * 동일 주체+토픽 조합의 기사들은 점수가 가장 높은 1건만 남김.
+ * 유사 기사 그루핑 + 크로스소스 부스트.
+ * 같은 entity 또는 같은 fingerprint를 공유하면 한 그룹으로 묶고,
+ * 그룹 내 서로 다른 sourceId 수가 N개일 때 (N-1) × CROSS_SOURCE_BOOST 점수를 가산한다.
  */
+const CROSS_SOURCE_BOOST = 15;
+
+const ENTITY_PATTERNS = [
+  // 한국 — 인물/기업
+  "정의선", "현대차", "현대자동차",
+  "엔비디아", "nvidia", "젠슨황",
+  "삼성전자", "LG전자", "SK",
+  "테슬라", "tesla", "일론머스크",
+  "보스턴다이나믹스", "boston dynamics", "figure", "1x", "unitree",
+  "코스맥스", "한국콜마", "아모레퍼시픽", "LG생활건강", "코스메카",
+  "구글", "google", "딥마인드", "deepmind",
+  "오픈ai", "openai", "앤쓰로픽", "anthropic",
+  // 글로벌 AI — 모델/제품/연구자
+  "gpt-5", "gpt-4", "claude", "gemini", "llama", "deepseek", "qwen",
+  "mistral", "grok",
+  "rt-2", "rt-x", "vla", "octo", "pi-zero", "π0",
+  "perplexity", "cursor", "devin",
+  "karpathy", "lecun", "sutton", "hinton",
+  "humanoid", "manipulation", "embodied",
+];
+
 function groupSimilarArticles(items: ScoredItem[]): ScoredItem[] {
-  // 핵심 주체 키워드 (같은 사건에 대한 중복 기사를 그루핑)
-  const entityPatterns = [
-    "정의선", "현대차", "현대자동차",
-    "엔비디아", "nvidia", "젠슨황",
-    "삼성전자", "LG전자", "SK",
-    "테슬라", "tesla", "일론머스크",
-    "보스턴다이나믹스", "figure", "1x",
-    "코스맥스", "한국콜마", "아모레퍼시픽", "LG생활건강", "코스메카",
-    "구글", "google", "딥마인드",
-    "오픈ai", "openai", "앤쓰로픽", "anthropic",
-  ];
-
-  // 토픽 키워드
-  const topicPatterns = [
-    "투자", "인수", "파트너십", "제휴", "MOU",
-    "출시", "공개", "발표", "선보",
-    "GTC", "CES", "MWC",
-    "실적", "매출", "영업이익",
-  ];
-
-  // 각 기사에서 주체 기반 그루핑 (주체가 있으면 그룹핑, 토픽 없어도)
   const groupMap = new Map<string, ScoredItem[]>();
   const ungrouped: ScoredItem[] = [];
 
   for (const item of items) {
     const titleLower = item.title.toLowerCase();
-    const entities = entityPatterns.filter((e) => titleLower.includes(e.toLowerCase()));
+    const entities = ENTITY_PATTERNS.filter((e) =>
+      titleLower.includes(e.toLowerCase()),
+    );
+
+    let key: string | undefined;
+    const dateKey = item.publishedAt ? item.publishedAt.slice(0, 10) : "nodate";
 
     if (entities.length > 0) {
-      // 주체 기반 그루핑 — 같은 주체의 기사는 같은 그룹으로
-      // 발행일이 같은 날(±1일)인 기사끼리만 묶음
-      const dateKey = item.publishedAt ? item.publishedAt.slice(0, 10) : "nodate";
-      const key = `${entities[0].toLowerCase()}:${dateKey}`;
+      key = `entity:${entities[0].toLowerCase()}:${dateKey}`;
+    } else {
+      // entity가 없으면 제목 fingerprint로 매칭 (같은 논문/사건이 여러 소스에 등장하는 경우)
+      const fp = titleFingerprint(item.title);
+      if (fp) key = `fp:${fp}`;
+    }
+
+    if (key) {
       const existing = groupMap.get(key);
-      if (existing) {
-        existing.push(item);
-      } else {
-        groupMap.set(key, [item]);
-      }
+      if (existing) existing.push(item);
+      else groupMap.set(key, [item]);
     } else {
       ungrouped.push(item);
     }
@@ -125,33 +131,65 @@ function groupSimilarArticles(items: ScoredItem[]): ScoredItem[] {
   return result;
 }
 
-/** 같은 그룹의 아이템을 하나로 병합 (점수 최고 기준, 관련기사 최대 2개 보존) */
+/**
+ * 제목 핵심구 fingerprint — 같은 논문/사건이 여러 소스에 나올 때 매칭용.
+ * 정규화된 제목의 처음 의미 있는 4단어를 합친다 (불용어/태그 제외).
+ */
+const STOPWORDS = new Set([
+  "a", "an", "the", "is", "are", "was", "were", "be", "been", "and", "or",
+  "of", "to", "in", "on", "for", "with", "by", "from", "at", "as", "this",
+  "that", "via", "using", "new", "show", "hn", "shows", "we", "our",
+]);
+
+function titleFingerprint(title: string): string | null {
+  const norm = title
+    .toLowerCase()
+    .replace(/^[\[【][^\]】]*[\]】]\s*/, "")
+    .replace(/[^\p{L}\p{N}\s-]/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!norm) return null;
+  const words = norm.split(" ").filter((w) => w && !STOPWORDS.has(w));
+  if (words.length < 3) return null;
+  return words.slice(0, 4).join(" ");
+}
+
+/**
+ * 같은 그룹의 아이템을 하나로 병합 — 점수 최고 기준 + 크로스소스 부스트 가산.
+ * 그룹 내 서로 다른 sourceId 수가 1보다 크면 (uniqSources - 1) × BOOST를 score에 더한다.
+ */
 function mergeGroup(group: ScoredItem[]): ScoredItem {
   if (group.length === 1) return group[0];
 
   group.sort((a, b) => b.score - a.score);
   const parent = { ...group[0] };
   const related: { title: string; url: string; sourceId: string }[] = [];
+  const sourceIds = new Set<string>([parent.sourceId]);
 
   for (let i = 1; i < group.length; i++) {
     const child = group[i];
+    sourceIds.add(child.sourceId);
     if (!parent.publishedAt && child.publishedAt) parent.publishedAt = child.publishedAt;
     if (!parent.budgetKrwOk && child.budgetKrwOk) parent.budgetKrwOk = child.budgetKrwOk;
     if (!parent.deadlineAt && child.deadlineAt) parent.deadlineAt = child.deadlineAt;
     if (!parent.description && child.description) parent.description = child.description;
     if (!parent.region && child.region) parent.region = child.region;
+    if (!parent.points && child.points) parent.points = child.points;
+    if (!parent.commentCount && child.commentCount) parent.commentCount = child.commentCount;
     const childKeywords = child.matchedKeywords ?? [];
     for (const kw of childKeywords) {
       if (!parent.matchedKeywords.includes(kw)) parent.matchedKeywords.push(kw);
     }
-    // 관련 기사로 보존 (URL이 다른 것만, 최대 2개)
     if (related.length < 2 && child.url !== parent.url) {
       related.push({ title: child.title, url: child.url, sourceId: child.sourceId });
     }
   }
 
-  if (related.length > 0) {
-    parent.relatedArticles = related;
+  if (related.length > 0) parent.relatedArticles = related;
+
+  if (sourceIds.size > 1) {
+    parent.score += (sourceIds.size - 1) * CROSS_SOURCE_BOOST;
+    parent.matchedKeywords.push(`크로스소스+${sourceIds.size}`);
   }
 
   return parent;

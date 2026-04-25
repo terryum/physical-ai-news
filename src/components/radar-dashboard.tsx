@@ -39,11 +39,15 @@ export function RadarDashboard({
   lastUpdated,
   defaultItemType,
 }: RadarDashboardProps) {
+  const [trendingLangStored, setTrendingLangStored, trendingLangHydrated] =
+    useLocalStorage<"ko" | "en">("radar-trending-lang", "ko");
   const [filters, setFilters] = useState<Filters>({
     ...DEFAULT_FILTERS,
     ...(defaultItemType ? { itemType: defaultItemType } : {}),
     ...(defaultItemType === "trending" ? { sortBy: "popular" as const } : {}),
   });
+  // localStorage hydrate 후 filters.trendingLang 동기화
+  const trendingLang = trendingLangHydrated ? trendingLangStored : "ko";
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [readIds, setReadIds, readHydrated] = useLocalStorage<string[]>(
     "radar-read",
@@ -194,7 +198,13 @@ export function RadarDashboard({
 
   return (
     <div className="space-y-4">
-      <FilterBar filters={filters} onChange={handleFilterChange} counts={counts} />
+      <FilterBar
+        filters={filters}
+        onChange={handleFilterChange}
+        counts={counts}
+        trendingLang={trendingLang}
+        onTrendingLangChange={setTrendingLangStored}
+      />
 
       <div className="flex items-center justify-between px-1">
         <p className="text-sm text-muted-foreground">
@@ -218,6 +228,7 @@ export function RadarDashboard({
                 item={item}
                 onToggleRead={toggleRead}
                 onToggleStar={toggleStar}
+                trendingLang={trendingLang}
               />
             ))}
             {hasMore && (

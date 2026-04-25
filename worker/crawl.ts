@@ -16,6 +16,7 @@ import { hfPapersAdapter } from "./adapters/hf-papers";
 import { scoreItems, ScoredItem } from "./pipeline/scorer";
 import { dedup } from "./pipeline/dedup";
 import { normalizeUrl, parseDate } from "./pipeline/normalize";
+import { translateTrending } from "./pipeline/translate";
 
 // ESM/CJS 호환 __dirname 결정
 const __dirnameCompat =
@@ -146,21 +147,45 @@ export async function crawl(phase: "fast" | "slow" | "all" = "all"): Promise<voi
       sourceTypeMap.set(s.id, s.type);
     }
 
-    // Item 형태로 변환하여 저장
-    const outputItems = deduped.map((item) =>
+    // Item 형태로 변환
+    const allOutputItems = deduped.map((item) =>
       toOutputItem(item, sourceTypeMap),
     );
 
+    // itemType별 캡 — score 내림차순 후 상위 N건만 유지
+    const CAP: Record<string, number> = {
+      gov: Infinity,
+      news: 100,
+      trending: 100,
+    };
+    const outputItems: OutputItem[] = [];
+    for (const t of ["gov", "news", "trending"] as const) {
+      const sub = allOutputItems
+        .filter((i) => i.itemType === t)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, CAP[t]);
+      console.log(
+        `  [cap] ${t}: ${allOutputItems.filter((i) => i.itemType === t).length} → ${sub.length}`,
+      );
+      outputItems.push(...sub);
+    }
+
     // fast crawl은 전체 교체 (이전 중복이 다시 들어오는 것 방지)
-    // 단, read/starred 상태는 유지
+    // 단, read/starred 상태와 기존 titleKo 캐시는 유지
     const existingItems = loadExistingItems(outputPath);
     const readState = new Map<string, { read: boolean; starred: boolean }>();
+    const prevTranslations = new Map<string, string>();
     for (const item of existingItems) {
       if (item.read || item.starred) {
         readState.set(item.id, { read: item.read, starred: item.starred });
       }
+      if (item.titleKo) prevTranslations.set(item.id, item.titleKo);
     }
-    const final = outputItems.map((item) => {
+
+    // 트렌딩 한국어 번역 (캡 적용 후 ≤100건만 대상). API key 미설정 시 스킵.
+    const translated = await translateTrending(outputItems, prevTranslations);
+
+    const final = translated.map((item) => {
       const state = readState.get(item.id);
       if (state) return { ...item, ...state };
       return item;
@@ -219,6 +244,7 @@ function toOutputItem(
     points: item.points,
     commentCount: item.commentCount,
     lang: item.lang,
+    titleKo: item.titleKo,
     links: [{ label: "원문", url: item.url, kind: "canonical" as const }],
     relatedArticles: item.relatedArticles?.map((ra) => ({
       title: ra.title,
@@ -247,6 +273,7 @@ interface OutputItem {
   points?: number;
   commentCount?: number;
   lang?: "ko" | "en";
+  titleKo?: string;
   links: Array<{ label: string; url: string; kind: string }>;
   relatedArticles?: Array<{ title: string; url: string; sourceName: string }>;
   read: boolean;

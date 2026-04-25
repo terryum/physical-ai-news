@@ -38,6 +38,7 @@ export interface Item {
   points?: number;
   commentCount?: number;
   lang?: "ko" | "en";
+  titleKo?: string; // 트렌딩 한국어 번역 캐시
 }
 
 export type SortBy = "latest" | "deadline" | "popular";
@@ -54,6 +55,7 @@ export interface Filters {
   sortBy: SortBy;
   companies: CompanyFilter[];
   includeExpired: boolean;
+  trendingLang: "ko" | "en";
 }
 
 export const DEFAULT_FILTERS: Filters = {
@@ -65,4 +67,5 @@ export const DEFAULT_FILTERS: Filters = {
   sortBy: "latest",
   companies: [],
   includeExpired: false,
+  trendingLang: "ko",
 };

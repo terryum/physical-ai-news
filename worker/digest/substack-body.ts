@@ -90,11 +90,14 @@ function newsRow(item: Item): ProseNode {
 
 function trendingRow(item: Item): ProseNode {
   const url = getCanonicalUrl(item);
+  // 디지스트는 한국어 구독자 대상 — titleKo가 있으면 한국어, 원문은 메타에 함께 표기
+  const titleDisplay = item.titleKo || item.title;
   const meta: string[] = [item.sourceName];
   if (item.points) meta.push(`▲ ${item.points}`);
   if (item.commentCount) meta.push(`💬 ${item.commentCount}`);
+  if (item.titleKo) meta.push(item.title);
   return paragraph([
-    textNode(item.title, [linkMark(url)]),
+    textNode(titleDisplay, [linkMark(url)]),
     hardBreak(),
     textNode(meta.join(" · "), [{ type: "em" }]),
   ]);

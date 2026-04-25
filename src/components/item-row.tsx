@@ -39,6 +39,7 @@ interface ItemRowProps {
   item: Item;
   onToggleRead: (id: string) => void;
   onToggleStar: (id: string) => void;
+  trendingLang?: "ko" | "en";
 }
 
 function formatDate(iso: string) {
@@ -54,12 +55,14 @@ function daysUntil(iso: string): number {
   return Math.ceil((target.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
 }
 
-export function ItemRow({ item, onToggleRead, onToggleStar }: ItemRowProps) {
+export function ItemRow({ item, onToggleRead, onToggleStar, trendingLang = "ko" }: ItemRowProps) {
   const canonicalUrl = item.links?.[0]?.url ?? "#";
   const isGov = item.itemType === "gov";
   const isTrending = item.itemType === "trending";
   const daysLeft = item.deadlineAt ? daysUntil(item.deadlineAt) : null;
   const typeLabel = isGov ? "공고" : isTrending ? "트렌딩" : "뉴스";
+  const displayTitle =
+    isTrending && trendingLang === "ko" && item.titleKo ? item.titleKo : item.title;
 
   return (
     <div
@@ -104,9 +107,14 @@ export function ItemRow({ item, onToggleRead, onToggleStar }: ItemRowProps) {
               rel="noopener noreferrer"
               className="text-sm font-medium truncate hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-2"
             >
-              {item.title}
+              {displayTitle}
             </a>
           </div>
+          {isTrending && trendingLang === "ko" && item.titleKo && (
+            <div className="mt-0.5 text-[11px] text-muted-foreground/70 truncate" title={item.title}>
+              {item.title}
+            </div>
+          )}
 
           {/* Meta row */}
           <div className="mt-1.5 flex items-center gap-2 flex-wrap">

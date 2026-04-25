@@ -28,6 +28,9 @@ jobs:
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
           BIZINFO_API_KEY: ${{ secrets.BIZINFO_API_KEY }}
+          BIZROUTER_BASE_URL: ${{ secrets.BIZROUTER_BASE_URL }}
+          BIZROUTER_API_KEY: ${{ secrets.BIZROUTER_API_KEY }}
+          BIZROUTER_TRANSLATE_MODEL: ${{ secrets.BIZROUTER_TRANSLATE_MODEL }}
         run: npx tsx scripts/crawl-fast.ts
 
       - name: Commit and push crawled data
