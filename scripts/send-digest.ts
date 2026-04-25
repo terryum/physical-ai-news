@@ -1,3 +1,4 @@
+import "./_proxy-bootstrap";
 import fs from "node:fs";
 import path from "node:path";
 import type { Item } from "../src/data/types";

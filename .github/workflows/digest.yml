@@ -1,8 +1,9 @@
 name: Daily Digest (Substack)
 
 on:
-  schedule:
-    - cron: '0 23 * * *'  # UTC 23:00 = KST 08:00 (다음날 아침)
+  # Scheduled cron runs from Oracle Cloud Seoul VM (KR IP required to pass
+  # Cloudflare in front of Substack). Manual dispatch is kept for ad-hoc runs
+  # via SUBSTACK_COOKIE + HTTPS_PROXY secrets.
   workflow_dispatch:
 
 permissions:
@@ -23,6 +24,7 @@ jobs:
         env:
           SUBSTACK_COOKIE: ${{ secrets.SUBSTACK_COOKIE }}
           NEXT_PUBLIC_SUBSTACK_URL: ${{ vars.NEXT_PUBLIC_SUBSTACK_URL }}
+          HTTPS_PROXY: ${{ secrets.HTTPS_PROXY }}
         run: npx tsx scripts/send-digest.ts
       - name: Save sent history for dedup
         run: |
