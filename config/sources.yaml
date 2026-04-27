@@ -438,7 +438,23 @@
   phase: fast
   url: https://hn.algolia.com/api/v1/search
   schedule: "0 */3 * * *"
-  keywords: ["humanoid", "robotics", "physical AI", "embodied", "manipulation", "LLM agent", "foundation model"]
+  keywords:
+    - "humanoid"
+    - "robotics"
+    - "physical AI"
+    - "embodied"
+    - "manipulation"
+    - "LLM agent"
+    - "foundation model"
+    # 일반 AI/LLM 트렌드 (2026-04-27 추가 — verify-trending-coverage 분석으로 HN_QUERY_FILTER 47% 차지)
+    - "GPT"
+    - "Claude"
+    - "Gemini"
+    - "OpenAI"
+    - "Anthropic"
+    - "DeepMind"
+    - "AI agent"
+    - "AI model"
   enabled: true
   notes: "Algolia search. 최근 7일 + points >= 50 필터링."
 
@@ -448,10 +464,10 @@
   group: G
   authority: discovery
   phase: fast
-  url: https://www.reddit.com/r/MachineLearning/top.json?t=day&limit=25
+  url: https://www.reddit.com/r/MachineLearning/top.json?limit=50
   schedule: "0 */6 * * *"
   enabled: true
-  notes: "Reddit JSON. KR-VM에서만 안정적 (CF/GH IP 403 가능)."
+  notes: "Reddit JSON. 어댑터가 t=day + t=week 둘 다 호출 후 dedup."
 
 - id: reddit_localllama
   name: r/LocalLLaMA
@@ -459,7 +475,7 @@
   group: G
   authority: discovery
   phase: fast
-  url: https://www.reddit.com/r/LocalLLaMA/top.json?t=day&limit=25
+  url: https://www.reddit.com/r/LocalLLaMA/top.json?limit=50
   schedule: "0 */6 * * *"
   enabled: true
   notes: "오픈소스 LLM 트렌드."
@@ -470,7 +486,7 @@
   group: G
   authority: discovery
   phase: fast
-  url: https://www.reddit.com/r/robotics/top.json?t=day&limit=25
+  url: https://www.reddit.com/r/robotics/top.json?limit=50
   schedule: "0 */6 * * *"
   enabled: true
 
@@ -480,9 +496,31 @@
   group: G
   authority: discovery
   phase: fast
-  url: https://www.reddit.com/r/singularity/top.json?t=day&limit=25
+  url: https://www.reddit.com/r/singularity/top.json?limit=50
   schedule: "0 */6 * * *"
   enabled: true
+
+- id: reddit_futurology
+  name: r/Futurology
+  type: trending
+  group: G
+  authority: discovery
+  phase: fast
+  url: https://www.reddit.com/r/Futurology/top.json?limit=50
+  schedule: "0 */6 * * *"
+  enabled: true
+  notes: "AI 사회·노동 영향 화제 (2026-04-27 추가 — Meta layoff/AI labor 같은 화제 잡힘)."
+
+- id: reddit_artificial
+  name: r/artificial
+  type: trending
+  group: G
+  authority: discovery
+  phase: fast
+  url: https://www.reddit.com/r/artificial/top.json?limit=50
+  schedule: "0 */6 * * *"
+  enabled: true
+  notes: "일반 AI 디스코스 (2026-04-27 추가)."
 
 - id: arxiv_cs_ai
   name: arXiv cs.AI
