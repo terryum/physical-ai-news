@@ -2,7 +2,6 @@ import type { Item } from "../../src/data/types";
 import type { DigestSection } from "./types";
 
 const HOURS_72 = 72 * 60 * 60 * 1000;
-const HOURS_48 = 48 * 60 * 60 * 1000;
 const DAYS_14 = 14 * 24 * 60 * 60 * 1000;
 
 const COSMAX_TITLE_KEYWORDS = [
@@ -120,7 +119,7 @@ export function filterDeadlineApproaching(
 
 /**
  * 섹션 3: 오늘의 주요 뉴스
- * news, P0, 최근 48시간, 최대 20개
+ * news, P0+P1, 최근 72시간, 최대 20개. P0 우선 정렬.
  */
 export function filterTodayNews(items: Item[], now: Date): Item[] {
   const nowMs = now.getTime();
@@ -128,10 +127,13 @@ export function filterTodayNews(items: Item[], now: Date): Item[] {
     .filter(
       (item) =>
         item.itemType === "news" &&
-        item.priority === "P0" &&
-        nowMs - new Date(item.publishedAt).getTime() < HOURS_48,
+        (item.priority === "P0" || item.priority === "P1") &&
+        nowMs - new Date(item.publishedAt).getTime() < HOURS_72,
     )
-    .sort((a, b) => b.score - a.score)
+    .sort((a, b) => {
+      if (a.priority !== b.priority) return a.priority === "P0" ? -1 : 1;
+      return b.score - a.score;
+    })
     .slice(0, 20);
 }
 

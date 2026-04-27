@@ -8,7 +8,6 @@ import { TrendingThumb } from "@/components/trending-thumb";
 import { TrendingHelp } from "@/components/trending-help";
 
 const HOURS_72 = 72 * 60 * 60 * 1000;
-const HOURS_48 = 48 * 60 * 60 * 1000;
 const DAYS_14 = 14 * 24 * 60 * 60 * 1000;
 
 const COSMAX_KEYWORDS = [
@@ -57,12 +56,16 @@ function filterNews(items: Item[], now: Date): Item[] {
       const pubMs = new Date(i.publishedAt).getTime();
       return (
         i.itemType === "news" &&
-        i.priority === "P0" &&
+        (i.priority === "P0" || i.priority === "P1") &&
         pubMs <= nowMs &&
-        nowMs - pubMs < HOURS_48
+        nowMs - pubMs < HOURS_72
       );
     })
-    .sort((a, b) => b.score - a.score)
+    .sort((a, b) => {
+      // P0 먼저, 그 다음 score 내림차순
+      if (a.priority !== b.priority) return a.priority === "P0" ? -1 : 1;
+      return b.score - a.score;
+    })
     .slice(0, 20);
 }
 

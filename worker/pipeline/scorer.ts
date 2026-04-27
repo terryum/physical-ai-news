@@ -207,12 +207,11 @@ function determineTier(text: string, score: number): Tier {
   return "T3";
 }
 
-/** Priority 분류 — 엄격 기준 (하루 최대 30개 내외 목표) */
+/** Priority 분류 — 한국 짧은 뉴스 제목 특성상 한두 버킷만 hit 하는 경우가 많아 임계값 한 단계 낮춤 (2026-04-27) */
 function determinePriority(tier: Tier, score: number): Priority {
-  // P0 (필독): 화장품·제조 직결 + 높은 점수만
-  // T0(피지컬AI)이면서 score >= 40, 또는 화장품 키워드 포함하며 score >= 35
-  if (tier === "T0" && score >= 40) return "P0";
-  if (tier === "T1" && score >= 45) return "P0";
+  // P0 (필독): T0 면 피지컬AI 직접 언급(+30) 한 건만으로도 도달, T1 은 두 버킷 매칭
+  if (tier === "T0" && score >= 30) return "P0";
+  if (tier === "T1" && score >= 40) return "P0";
 
   // P1 (참고): 관련성 있는 것들
   if ((tier === "T0" || tier === "T1") && score >= 20) return "P1";
