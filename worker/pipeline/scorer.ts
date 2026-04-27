@@ -14,6 +14,7 @@ import {
   POLITICS_NOISE,
   T0_KEYWORDS,
   T1_KEYWORDS,
+  K_HUMANOID,
 } from "./keywords";
 
 export type Tier = "T0" | "T1" | "T2" | "T3";
@@ -126,6 +127,12 @@ export function scoreItem(item: RawItem): ScoredItem {
   if (matchesAny(text, GOV_SUPPORT)) {
     score += 25;
     matchedKeywords.push("정부지원");
+  }
+
+  // +20: K-휴머노이드 컨소시엄 (코스맥스 가입사)
+  if (matchesAny(text, K_HUMANOID)) {
+    score += 20;
+    matchedKeywords.push("K휴머노이드");
   }
 
   // +15: 화장품 제조 키워드

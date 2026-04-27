@@ -266,6 +266,54 @@
   enabled: true
   notes: "로봇 실증·보급 사업 원천. 필수."
 
+- id: kiria_noti
+  name: KIRIA 공지사항
+  type: gov
+  group: D
+  authority: canonical
+  phase: fast
+  url: https://www.kiria.org
+  list_url: https://www.kiria.org/portal/info/portalInfoNotiList.do
+  schedule: "0 */6 * * *"
+  enabled: true
+  notes: "KIRIA 공지사항 게시판 (사업공고와 별개 채널)."
+
+- id: korea_robot_assoc
+  name: 한국AI로봇산업협회
+  type: gov
+  group: D
+  authority: canonical
+  phase: fast
+  url: https://www.korearobot.or.kr
+  list_url: https://www.korearobot.or.kr/information/notice.htm
+  schedule: "0 */6 * * *"
+  enabled: true
+  notes: "협회 공지·행사·대회·세미나. K-휴머노이드 컨텍스트 필수 소스."
+
+- id: kros
+  name: 한국로봇학회 (KROS) 공지
+  type: gov
+  group: D
+  authority: canonical
+  phase: fast
+  url: https://kros.org
+  list_url: https://kros.org/Board/Board.asp?b_Cate=BBS1
+  schedule: "0 */6 * * *"
+  enabled: true
+  notes: "학회 공지·학술대회·논문공모 등 (BBS1)."
+
+- id: kros_bbs2
+  name: 한국로봇학회 (KROS) 학술
+  type: gov
+  group: D
+  authority: canonical
+  phase: fast
+  url: https://kros.org
+  list_url: https://kros.org/Board/Board.asp?b_Cate=BBS2
+  schedule: "0 */6 * * *"
+  enabled: true
+  notes: "학회 학술 게시판 (BBS2)."
+
 - id: smtech
   name: SMTECH
   type: gov

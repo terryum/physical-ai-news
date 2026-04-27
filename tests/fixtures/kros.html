@@ -1,0 +1,817 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<title>한국로봇학회</title>
+
+<!link rel=stylesheet type="text/css" href='/ssi/new_style.css'>
+<link href="/css/contents_css.css" rel="stylesheet" type="text/css" />
+<link href="/JS/SimpleLightBox.css" rel="stylesheet" type="text/css" />
+<link href="/JS/member/section.css" rel="stylesheet" type="text/css" />
+<link href="/JS/BntType1/common.css" rel="stylesheet" type="text/css" />
+
+<script language="javascript" src="/JS/homepage.js"></script>
+<script language="javascript" src="/JS/Ajax.js"></script>
+<script language="javascript" src="/JS/FormValidate.js"></script>
+<script language="javascript" src="/JS/SimpleLightBox.js"></script>
+<script language="javascript" src="/JS/Calendar/LayerCalendar.js"></script>
+<script src="/include/insertFlash.js" type="text/javascript"></script>
+<script language="javascript" src="/JS/Member/section.js"></script>
+<script language="javascript" src="/JS/Member/MemberCommon.js?1"></script>
+<script language="JavaScript" src="/JS/jquery-1.11.1.js" type="text/javascript"></script>
+
+<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<!-- 반응형 s -->
+
+  <!-- Favicons -->
+  <link href="/images/main/favicon.png" rel="icon">
+  <link href="/images/main/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="/JS/Skin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="/JS/Skin/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/JS/Skin/animate/animate.min.css" rel="stylesheet">
+  <link href="/JS/Skin/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="/JS/Skin/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="/JS/Skin/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="/css/style.css?20250923" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+<!-- 반응형 e -->
+	
+
+
+<script>
+	function _redirect() {
+		var __tmp_protocol = 'https://';
+		var __tmp_href = window.location.href.toLowerCase(); 
+		
+		if( __tmp_href.indexOf('www.') > -1 || __tmp_href.indexOf(__tmp_protocol) < 0 ) { 
+			__tmp_href = __tmp_href.replace( 'http://', '' );
+			__tmp_href = __tmp_href.replace( 'https://', '' );
+			__tmp_href = __tmp_href.replace( 'www.', '' );
+			console.log( __tmp_protocol + __tmp_href );
+			window.location.href = __tmp_protocol + __tmp_href ;
+		}
+
+	} _redirect();
+</script>
+
+
+<script src="/CKEDITOR/ckeditor.js"></script>
+
+<Script language="javascript">
+
+function login(){
+	var form = document.FmLogin;
+
+	if(form.MbrId.value == ""){
+		alert('아이디를 입력하세요');
+		form.MbrId.focus();
+		return false;
+	}
+
+	if(form.MbrPwd.value == ""){
+		alert('비밀번호를 입력하세요');
+		form.MbrPwd.focus();
+		return false;
+	}
+
+
+	form.action = "/Member/Process/Login.asp";
+	form.submit();
+}
+
+</script>
+
+<script type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function bluring(){ 
+if(event.srcElement.tagName=="A"||event.srcElement.tagName=="IMG") 
+
+document.body.focus(); 
+} 
+document.onfocusin=bluring; 
+//-->
+</script>
+
+
+</head>
+
+
+<!-- 반응형 js S -->
+
+<!-- JavaScript Libraries -->
+	  <script src="/JS/Skin/jquery/jquery.min.js"></script>
+	  <script src="/JS/Skin/jquery/jquery-migrate.min.js"></script>
+	  <script src="/JS/Skin/bootstrap/js/bootstrap.bundle.min.js"></script>
+	  <script src="/JS/Skin/easing/easing.min.js"></script>
+	  <script src="/JS/Skin/superfish/hoverIntent.js"></script>
+	  <script src="/JS/Skin/superfish/superfish.min.js"></script>
+	  <script src="/JS/Skin/wow/wow.min.js"></script>
+	  <script src="/JS/Skin/waypoints/waypoints.min.js"></script>
+	  <script src="/JS/Skin/counterup/counterup.min.js"></script>
+	  <script src="/JS/Skin/owlcarousel/owl.carousel.min.js"></script>
+	  <script src="/JS/Skin/isotope/isotope.pkgd.min.js"></script>
+	  <script src="/JS/Skin/lightbox/js/lightbox.min.js"></script>
+	  <script src="/JS/Skin/touchSwipe/jquery.touchSwipe.min.js"></script>
+	  <!-- Contact Form JavaScript File -->
+	  <script src="/js/skin/contactform.js"></script>
+
+	  <!-- Template Main Javascript File -->
+	  <script src="/js/main.js"></script>
+
+<!-- 반응형 js E -->
+
+<!-- 반응형 tab s -->
+<script type="text/javascript">
+
+$(document).ready(function() {
+    var $tabButtonItem = $('#tab-button li'),
+        $tabSelect = $('#tab-select'),
+        $tabContents = $('.tab-contents'),
+        activeClass = 'is-active';
+
+  $tabButtonItem.first().addClass(activeClass);
+  $tabContents.not(':first').hide();
+
+  // button
+  $tabButtonItem.find('a').on('click', function(e) {
+    var target = $(this).attr('href');
+
+    $tabButtonItem.removeClass(activeClass);
+    $(this).parent().addClass(activeClass);
+    $tabSelect.val(target);
+    $tabContents.hide();
+    $(target).show();
+    e.preventDefault();
+  });
+
+  // select
+  $tabSelect.on('change', function() {
+    var target = $(this).val(),
+        targetSelectNum = $(this).prop('selectedIndex');
+
+    $tabButtonItem.removeClass(activeClass);
+    $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
+    $tabContents.hide();
+    $(target).show();
+  });
+});
+</script>
+<!-- 반응형 tab e -->
+
+
+<!-- 반응형 search s -->
+
+<script type="text/javascript">
+/*
+$(document).ready(function(e){
+    $('.search-panel .dropdown-menu').find('a').click(function(e) {
+		e.preventDefault();
+		var param = $(this).attr("href").replace("#","");
+		var concept = $(this).text();
+		$('.search-panel span#search_concept').text(concept);
+		$('.input-group #search_param').val(param);
+	});
+});
+*/
+</script>
+
+<!-- 반응형 search e -->
+
+<body margin="0" onLoad="MM_preloadImages('/maintest/images/N_top_logout.gif','/maintest/images/N_menu_01_r.gif','/maintest/images/N_menu_02_r.gif','/maintest/images/N_menu_03_r.gif','/maintest/images/N_menu_04_r.gif','/maintest/images/N_menu_05_r.gif','/maintest/images/N_menu_06_r.gif','/maintest/images/N_menu_07_r.gif')">
+
+	
+<div id="SLB_film" style="z-index: 99997; position:absolute; display:none; width:100%; height:100%; background-color:#000000; filter:Alpha(opacity=60); opacity:0.6; -moz-opacity:0.6;"></div>
+<div id="SLB_content" onclick="fn_Lightbox();" align="center" style="z-index: 99999; position:absolute;"></div>
+<div id="SLB_loading" onclick="fn_Lightbox();"><img src="/JS/progress.gif" border="0" width="60" height="60" border="0" alt="Loading..." /></div>
+
+	
+	<header id="header">
+    <div class="container">
+		<div class="row">
+			<div class="col-md-5 col-sm-12 col-xs-12">
+				<div id="logo" class="pull-left">
+					<a href="/"><img src="/images/main/logo.gif?2" alt="" title="" /></a>
+				  </div>
+
+				<a href="/eng" target=""><img src="/images/main/eng.png" class="eng_btn"></a>
+			</div>
+
+			<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="top_menu">
+					<ul>
+					
+						<li class="top_line logingout"><a href="/member/member01.asp"><img src="/images/main/member_in.gif"></a></li>	
+						<li class="top_line logingout"><a href="/member/login.asp"><img src="/images/main/login.png"></a></li>
+					
+
+						<li style="display:none"><a href="https://www.facebook.com/kmsm.or.kr" target="_blank"><img src="/images/main/face.png"></a></li>
+						<li class="top_line"><a href="/eng" target=""><img src="/images/main/eng.png"></a></li>
+					</ul>
+				
+					<div class="cb"></div>
+					<!--<!-- search s -->
+					<form name="frmSearch" id="frmSearch"  method="get" action="/search">
+					<div class="input-groups" style="display:none;">
+						<div class="input-group-btn search-panel">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+								<span id="search_concept">Site</span> <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu search_menu" role="menu">
+							  <li><a href="#site">사이트</a></li>
+							  <li><a href="#member" onclick="location.href='/member/member03.asp';">회원정보</a></li>
+							  <li><a href="#journal" onclick="location.href='/journal/journal05.asp';">논문</a></li>
+							</ul>
+						</div>
+							<!-- <input type="hidden" name="search_param" value="all" id="search_param"> -->
+							<input type="text" class="form-control" name="x" placeholder="Search">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="submit"  ><span class="glyphicon glyphicon-search"></span></button>
+							</span>
+					</div>
+					</form>
+					<!-- search e -->
+
+				</div>
+			</div>
+			
+		</div>
+    </div>
+  </header><!-- #header -->
+
+
+	<!-- #nav-menu-container S -->
+	<div class="container_nav">
+	<nav id="nav-menu-container">
+			<ul class="nav-menu">
+			  <li class="mobile-user"><img src="/images/main/logo.gif"></li>
+			  <li class="menu-has-children"><a href="/intro/sub_intro01.asp">학회소개</a>
+				<ul>
+				    <li><a href="/intro/sub_intro01.asp">학회소개</a></li>
+					<li><a href="/intro/sub_intro02.asp">회장 인사말</a></li>
+					<li><a href="/intro/sub_intro03.asp">학회연혁</a></li>
+					<li><a href="/intro/sub_intro04.asp">학회정관 및 규정</a></li>
+					<li><a href="/intro/sub_intro05.asp">포상제도</a></li>
+					<li><a href="/intro/sub_intro06.asp">임원진 및 위원회</a></li>
+					<li><a href="/intro/sub_intro07.asp">연구회/지부</a></li>
+					<li><a href="/intro/sub_intro08.asp">위치 및 연락처</a></li>
+				</ul>
+			  </li>
+			  <li class="menu-has-children"><a href="/conference/conference01_1.asp?AC=0">학술대회</a>
+				<ul>
+				<li><a href="/conference/conference01_1.asp?AC=0">국내학술대회</a></li>
+				<li><a href="/conference/conference01_1.asp?AC=1">국제학술대회</a></li>
+				<li><a href="/conference/conference01_1.asp?AC=2">인공지능 및 로보틱스 여름/겨울학교</a></li>
+				<li><a href="/conference/conference01_1.asp?AC=4">전문가 심포지엄</a></li>
+				<li><a href="/conference/conference01_1.asp?AC=3">워크샵</a></li>
+				</ul>
+			  </li>
+			  <li class="menu-has-children"><a href="/journal/journal01.asp">간행물</a>
+				<ul>
+					<li><a href="/journal/journal01.asp">학회지</a></li>
+					<li><a href="/journal/journal03.asp">로봇학회 논문지</a></li>
+					<!-- <li><a href="/Board/Board.asp?b_Cate=BBS9">로봇학회 논문지 열람</a></li>
+					<li><a href="/Board/Board.asp?b_Cate=BBS8">로봇학회 논문지 특집논문 안내</a></li> -->
+					<li><a href="http://www.springer.com/engineering/robotics/journal/11370" target="_blank">Intelligent Service Robotics</a></li>
+				</ul>
+			  </li>
+			  <li class="menu-has-children"><a href="/Board/Board.asp?b_Cate=BBS1">학회소식</a>	
+				 <ul>
+					<li><a href="/Board/Board.asp?b_Cate=BBS1">학회소식</a></li>
+					<li><a href="/Board/Board.asp?b_Cate=BBS5">뉴스레터</a></li>
+					<!-- <li><a href="/Board/Board.asp?b_Cate=BBS7">지식나눔 </a></li> -->
+					<li><a href="/Board/Board.asp?b_Cate=BBS2">행사안내</a></li>
+					<li><a href="/Board/Board.asp?b_Cate=BBS6">채용공고</a></li>
+
+				</ul>
+			  </li>
+			  <!--<li class="menu-has-children"><a href="/information/information01.asp">라이브러리 </a>	
+				 <ul>
+					<li><a href="/information/information01.asp">로봇역사</a></li>
+
+				</ul>
+			  </li>-->
+
+
+
+			  <li class="menu-has-children"><a href="/member/member01.asp">회원안내</a>
+				<ul>
+					<li><a href="/member/member01.asp">회원가입 안내</a></li>
+					<li><a href="/member/member01_2.asp">특별회원</a></li>
+					<li><a href="/member/member01_4.asp">단체회원</a></li>
+				</ul>
+			  </li>
+			  
+			</ul>
+	</nav><!-- #nav-menu-container E -->
+	</div>
+<!-- 실제내용 시작 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<link href="/css/css.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="/JS/Board.js"></script>
+
+
+<script language="JavaScript" src="/JS/KNEditor.js"></script>
+
+
+</head>
+
+
+	<div id="sub_top" style="background-image:url(/images/sub/sub_bg04.gif);">
+		<div class="container">
+			<h1>
+				학회소식
+			</h1>
+			<h4>
+				Korea Robotics Society
+			</h4>
+		</div>
+	</div>
+
+
+
+<div id="conf">
+	<div class="container">
+		
+		 <div class="row">
+			<div class="col-lg-2">
+				<div class="sub_left_menu">
+	<div class="left_title">
+		<i class="fa fa-newspaper-o" aria-hidden="true"></i><br/>
+		학회소식
+	</div>
+	<ul>
+		 <a href="/Board/Board.asp?b_Cate=BBS1"><li>학회소식</li></a>
+		 <a href="/Board/Board.asp?b_Cate=BBS5"><li>뉴스레터</li></a>
+		 <!-- <a href="/Board/Board.asp?b_Cate=BBS7"><li>지식나눔</li></a> -->
+		 <a href="/Board/Board.asp?b_Cate=BBS2"><li>행사안내</li></a>
+		 <a href="/Board/Board.asp?b_Cate=BBS6"><li>채용공고</li></a>
+
+	</ul>
+
+</div>
+			</div>
+
+			<div class="col-lg-10 col-md-12">
+				<div class="sub_contents">
+					<div class="sub_title">
+						
+							<p><span><i class="fa fa-home" aria-hidden="true"></i> &nbsp; &#62; &nbsp; 학회소식 &nbsp; &#62;</span> &nbsp; 학회소식</p>
+						
+
+
+						<div class="cb"></div>
+						<h2>학회소식</h2>
+						
+					</div>
+
+
+						
+
+
+
+				  <table width="100%"  border="0" cellspacing="0" cellpadding="0" >
+					<tr>
+					<TD valign="top">
+															
+
+				<!------------------------------------------------------------------------------------------------------------->
+									      
+         
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+			    
+				<!--
+                <tr>
+                  <td background="/image/sub/main_table_middle_left.gif">&nbsp;</td>
+                  <td align="center"><img src="/image/sub/" width="638" height="144" /></td>
+                  <td background="/image/sub/main_table_middle_right.gif">&nbsp;</td>
+                </tr>
+				-->
+				<tr>
+					<td>
+<!----------------------------------------------------------------------------------------------------------------------->
+ 
+
+ 
+
+				<table align="center" width="100%" cellpadding="0" cellspacing="0" border="0" class="board01">
+					<thead>
+						<tr>
+						  <th width="10%">번호</th>
+						  <th width="52%">제목</th>
+						  <th width="15%">작성자</th>
+						  <th width="15%">등록일</th>
+						  <th width="8%">조회수</th>
+						</tr>
+					</thead>
+
+					<tbody>
+					
+					<tr> 
+						<td align="center"><strong>[공지]</strong></td>
+						<td style="text-align:left;">
+						
+						<a href="/board/board.asp?b_code=2489&Action=content&GotoPage=1&B_CATE=BBS1">
+						
+						<strong>2026년 연회비 납부 안내</strong></a>		
+											
+						</td>
+						<td align="center"><strong>사무국3</strong></td>
+						<td align="center"><strong>2026-01-02</strong></td>
+						<td align="center"><strong>1283</strong></td>
+					</tr>
+					
+					<tr> 
+						<td align="center"><strong>[공지]</strong></td>
+						<td style="text-align:left;">
+						
+						<a href="/board/board.asp?b_code=2462&Action=content&GotoPage=1&B_CATE=BBS1">
+						
+						<strong>Intelligent Service Robotics 저널 Robotics 분야 Q2 랭크(+최근 게재 논문 목록) </strong></a>		
+											
+						</td>
+						<td align="center"><strong>사무국3</strong></td>
+						<td align="center"><strong>2025-06-23</strong></td>
+						<td align="center"><strong>2231</strong></td>
+					</tr>
+					
+					<tr> 
+						<td align="center"><strong>[공지]</strong></td>
+						<td style="text-align:left;">
+						
+						<a href="/board/board.asp?b_code=2344&Action=content&GotoPage=1&B_CATE=BBS1">
+						
+						<strong>[ISR] 최근 게재 논문 목록 (2023-현재)</strong></a>		
+											
+						</td>
+						<td align="center"><strong>사무국2</strong></td>
+						<td align="center"><strong>2023-11-02</strong></td>
+						<td align="center"><strong>3603</strong></td>
+					</tr>
+					
+					<tr> 
+						<td>87</td>
+						<td style="text-align:left;">
+						
+						<a href="/board/board.asp?b_code=2512&Action=content&GotoPage=1&B_CATE=BBS1">
+						한국로봇학회 2026년도 학회상/특별상 수상후보자 추천 안내 (기한: 8/3(월)까지)</a>		
+							
+						</td>
+						<td>
+						사무국3							
+						</td>
+						<td>2026-04-03</td>
+						<td>126</td>
+					</tr>
+					
+					<tr> 
+						<td>86</td>
+						<td style="text-align:left;">
+						
+						<a href="/board/board.asp?b_code=2496&Action=content&GotoPage=1&B_CATE=BBS1">
+						사무국 출장 안내 - 2/23(월)</a>		
+							
+						</td>
+						<td>
+						사무국3							
+						</td>
+						<td>2026-02-20</td>
+						<td>216</td>
+					</tr>
+					
+					<tr> 
+						<td>85</td>
+						<td style="text-align:left;">
+						
+						<a href="/board/board.asp?b_code=2495&Action=content&GotoPage=1&B_CATE=BBS1">
+						KRoC 2026 학술대회 기간 중 사무국 운영 안내</a>		
+							
+						</td>
+						<td>
+						사무국3							
+						</td>
+						<td>2026-02-02</td>
+						<td>611</td>
+					</tr>
+					
+					<tr> 
+						<td>84</td>
+						<td style="text-align:left;">
+						
+						<a href="/board/board.asp?b_code=2494&Action=content&GotoPage=1&B_CATE=BBS1">
+						사무국 출장 안내 - 1/20(화) 오후</a>		
+							
+						</td>
+						<td>
+						사무국1							
+						</td>
+						<td>2026-01-19</td>
+						<td>279</td>
+					</tr>
+					
+					<tr> 
+						<td>83</td>
+						<td style="text-align:left;">
+						
+						<a href="/board/board.asp?b_code=2489&Action=content&GotoPage=1&B_CATE=BBS1">
+						2026년 연회비 납부 안내</a>		
+							
+						</td>
+						<td>
+						사무국3							
+						</td>
+						<td>2026-01-02</td>
+						<td>1283</td>
+					</tr>
+					
+					<tr> 
+						<td>82</td>
+						<td style="text-align:left;">
+						
+						<a href="/board/board.asp?b_code=2482&Action=content&GotoPage=1&B_CATE=BBS1">
+						사무국 출장 안내 - 12/22(월)</a>		
+							
+						</td>
+						<td>
+						사무국1							
+						</td>
+						<td>2025-12-19</td>
+						<td>278</td>
+					</tr>
+					
+					<tr> 
+						<td>81</td>
+						<td style="text-align:left;">
+						
+						<a href="/board/board.asp?b_code=2481&Action=content&GotoPage=1&B_CATE=BBS1">
+						2025년도 정기총회 개최 안내 - 12/5(금)</a>		
+							
+						</td>
+						<td>
+						사무국1							
+						</td>
+						<td>2025-12-01</td>
+						<td>572</td>
+					</tr>
+					
+					<tr> 
+						<td>80</td>
+						<td style="text-align:left;">
+						
+						<a href="/board/board.asp?b_code=2470&Action=content&GotoPage=1&B_CATE=BBS1">
+						사무국 휴무 안내 - 9/9(화) 창립기념일	</a>		
+							
+						</td>
+						<td>
+						사무국3							
+						</td>
+						<td>2025-09-02</td>
+						<td>424</td>
+					</tr>
+					
+					<tr> 
+						<td>79</td>
+						<td style="text-align:left;">
+						
+						<a href="/board/board.asp?b_code=2462&Action=content&GotoPage=1&B_CATE=BBS1">
+						Intelligent Service Robotics 저널 Robotics 분야 Q2 랭크(+최근 게재 논문 목록) </a>		
+							
+						</td>
+						<td>
+						사무국3							
+						</td>
+						<td>2025-06-23</td>
+						<td>2231</td>
+					</tr>
+					
+					<tr> 
+						<td>78</td>
+						<td style="text-align:left;">
+						
+						<a href="/board/board.asp?b_code=2455&Action=content&GotoPage=1&B_CATE=BBS1">
+						사무국 출장 안내 - 5/29(목)</a>		
+							
+						</td>
+						<td>
+						사무국3							
+						</td>
+						<td>2025-05-28</td>
+						<td>607</td>
+					</tr>
+					
+					</tbody>
+
+					<tfoot>
+						<tr>
+							<td colspan="5"> <b>1</b>    <a href='Board.asp?gotoPage=2&b_Cate=BBS1'>2</a>   <a href='Board.asp?gotoPage=3&b_Cate=BBS1'>3</a>   <a href='Board.asp?gotoPage=4&b_Cate=BBS1'>4</a>   <a href='Board.asp?gotoPage=5&b_Cate=BBS1'>5</a>   <a href='Board.asp?gotoPage=6&b_Cate=BBS1'>6</a>   <a href='Board.asp?gotoPage=7&b_Cate=BBS1'>7</a>   <a href='Board.asp?gotoPage=8&b_Cate=BBS1'>8</a>   <a href='Board.asp?gotoPage=9&b_Cate=BBS1'>9</a>  </strong></td>
+						</tr>
+					</tfoot>
+				</table>
+<!--  -->
+						<div align="right">
+								
+<!--  -->
+				<table align="center" width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+					<tr>
+						<td height="15"></td>
+					</tr>
+					<tr> 
+
+
+					<td colspan="5">
+						<form name='search_form' method='get' action='/Board/board.asp?b_code=2455&Action=content&GotoPage=1&B_CATE=BBS1'> 
+						<table width="98%" border="0" cellpadding="0" cellspacing="1" bgcolor="#D4D4D4" align="center" class="board_form">
+							<tr> 
+								<td height="55" align="center" bgcolor="#FFFFFF"> 
+								<table width="98%" height="38" border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td align="center" class="table_title01">
+										<select name="search_kind" align="absmiddle">
+											<option value="b_title" selected>제목</option>
+											<option value="b_comment">내용</option>
+											<option value="b_name">작성자</option>
+										</select>
+										<select name="date_area"  align="absmiddle">
+											<option value="1" selected>최근 1개월</option>
+											<option value="3">최근 3개월</option>
+											<option value="all">전체</option>
+										</select>
+										<input type="hidden" name="B_Cate" value="BBS1">
+										</td>
+									<td><input type="text" name="search_name" class="search01" align="absmiddle" ></td>
+									<td width="85"><a href="Javascript:search_form(document.search_form)" ><img src="/images/sub/btn_list_06.gif" width="51" height="20" align="absmiddle" /></a></td>
+									</tr>
+								</table>
+								</td>
+							</tr>
+						</table>
+						<input type="hidden" name="Action" value="search">
+						</form>  
+					</td>
+
+
+					</tr>
+				</table>
+	      </table>
+										
+									
+				<!------------------------------------------------------------------------------------------------------------->
+
+						</td>
+                    </tr>
+                  </table>
+
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+  </div>
+<!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+		  <div class="col-lg-2 col-md-6 footer-links">
+            <h4>학회소개</h4>
+            <ul>
+				<li><a href="/intro/sub_intro01.asp">학회소개</a></li>
+				<li><a href="/intro/sub_intro02.asp">회장 인사말</a></li>
+				<li><a href="/intro/sub_intro03.asp">학회연혁</a></li>
+				<li><a href="/intro/sub_intro04.asp">학회정관 및 규정</a></li>
+				<li><a href="/intro/sub_intro05.asp">포상제도</a></li>
+				<li><a href="/intro/sub_intro06.asp">임원진 및 위원회</a></li>
+				<li><a href="/intro/sub_intro07.asp">연구회/지부</a></li>
+				<li><a href="/intro/sub_intro08.asp">위치 및 연락처</a></li>
+            </ul>
+          </div>
+
+		  <div class="col-lg-3 col-md-6 footer-links">
+            <h4>학술대회</h4>
+            <ul>
+				<li><a href="/conference/conference01_1.asp?AC=0">국내학술대회</a></li>
+				<li><a href="/conference/conference01_1.asp?AC=1">국제학술대회</a></li>
+				<li><a href="/conference/conference01_1.asp?AC=2">인공지능 및 로보틱스 여름/겨울학교</a></li>
+				<li><a href="/conference/conference01_1.asp?AC=4">전문가 심포지엄</a></li>
+				<li><a href="/conference/conference01_1.asp?AC=3">워크샵</a></li>
+            </ul>
+          </div>
+
+		  <div class="col-lg-3 col-md-6 footer-links">
+            <h4>간행물</h4>
+            <ul>
+				<li><a href="/journal/journal01.asp">학회지</a></li>
+				<li><a href="/journal/journal03.asp">로봇학회 논문지</a></li>
+				<!-- <li><a href="/Board/Board.asp?b_Cate=BBS9">로봇학회 논문지 열람</a></li>
+					<li><a href="/Board/Board.asp?b_Cate=BBS8">로봇학회 논문지 특집논문 안내</a></li> -->
+				<li><a href="http://www.springer.com/engineering/robotics/journal/11370" target="_blank">Intelligent Service Robotics</a></li>
+            </ul>
+          </div>
+
+		  <div class="col-lg-2 col-md-6 footer-links">
+            <h4>학회소식</h4>
+            <ul>
+					<li><a href="/Board/Board.asp?b_Cate=BBS1">학회소식</a></li>
+					<li><a href="/Board/Board.asp?b_Cate=BBS5">뉴스레터</a></li>
+					<!-- <li><a href="/Board/Board.asp?b_Cate=BBS7">지식나눔 </a></li> -->
+					<li><a href="/Board/Board.asp?b_Cate=BBS2">행사안내</a></li>
+					<li><a href="/Board/Board.asp?b_Cate=BBS6">채용공고</a></li>
+
+            </ul>
+          </div>
+
+		 <!-- <div class="col-lg-2 col-md-6 footer-links">
+            <h4>라이브러리</h4>
+            <ul>
+					<li><a href="/information/information01.asp">로봇역사</a></li>
+
+            </ul>
+          </div>-->
+
+		  <div class="col-lg-2 col-md-6 footer-links">
+            <h4>회원안내</h4>
+            <ul>
+				<li><a href="/member/member01.asp">회원가입 안내</a></li>
+				<li><a href="/member/member01_2.asp">특별회원</a></li>
+				<li><a href="/member/member01_4.asp">단체회원</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+		<div class="row">
+			<div class="col-lg-2 col-md-12 footer-links">
+				<img src="/images/main/bottom_logo.png" class="bottom_logo">
+			</div>
+			<div class="col-lg-10 col-md-12 footer-links">
+				<div class="copyright">
+
+					<strong>(사)한국로봇학회 - KROS : Korea Robotics Society</strong><br/><br/>
+					
+					(06130) 서울특별시 강남구 테헤란로 7길 22 (역삼동 635-4) 한국과학기술회관 1관 506호<br/>
+					Tel. 02-783-0305(6), Email. kros@kros.org . 고유번호 : 214-82-07990, 대표자 : 최종석 <br/><br/>
+					COPYRIGHT(C) Korea Robotics Society (KROS). ALL RIGHTS RESERVED.
+			</div>
+
+		  
+		  
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  
+
+</body>
+</html>

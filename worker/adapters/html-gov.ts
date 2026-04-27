@@ -28,7 +28,10 @@ export const htmlGovAdapter: CrawlerAdapter = {
         return [];
       }
 
-      const html = await res.text();
+      // EUC-KR 등 비-UTF8 사이트는 SITE_CONFIGS.encoding으로 명시
+      const encoding = siteConfig?.encoding ?? "utf-8";
+      const buffer = await res.arrayBuffer();
+      const html = new TextDecoder(encoding).decode(buffer);
       const $ = cheerio.load(html);
       const baseUrl = (siteConfig?.base ?? config.url).replace(/\/$/, "");
 
@@ -51,7 +54,7 @@ export const htmlGovAdapter: CrawlerAdapter = {
 
 /** 사이트별 올바른 URL과 베이스 설정 */
 /** SROME과 KEIT의 입찰은 다름 — SROME은 R&D 과제공고 */
-const SITE_CONFIGS: Record<string, { url: string; base: string }> = {
+const SITE_CONFIGS: Record<string, { url: string; base: string; encoding?: string }> = {
   srome: {
     url: "https://srome.keit.re.kr/srome/biz/perform/opnnPrpsl/retrieveTaskAnncmListView.do?prgmId=XPG201040000",
     base: "https://srome.keit.re.kr",
@@ -63,6 +66,24 @@ const SITE_CONFIGS: Record<string, { url: string; base: string }> = {
   kiria: {
     url: "https://www.kiria.org/portal/info/portalInfoBusinessList.do",
     base: "https://www.kiria.org",
+  },
+  kiria_noti: {
+    url: "https://www.kiria.org/portal/info/portalInfoNotiList.do",
+    base: "https://www.kiria.org",
+  },
+  korea_robot_assoc: {
+    url: "https://www.korearobot.or.kr/information/notice.htm",
+    base: "https://www.korearobot.or.kr",
+  },
+  kros: {
+    url: "https://kros.org/Board/Board.asp?b_Cate=BBS1",
+    base: "https://kros.org",
+    encoding: "euc-kr",
+  },
+  kros_bbs2: {
+    url: "https://kros.org/Board/Board.asp?b_Cate=BBS2",
+    base: "https://kros.org",
+    encoding: "euc-kr",
   },
   kiat: {
     url: "https://www.kiat.or.kr/front/board/boardContentsListAjax.do?board_id=90",
@@ -188,6 +209,124 @@ const siteSpecificParsers: Record<string, SiteParser> = {
     });
     return items;
   },
+
+  // KIRIA 공지사항: 사업공고와 같은 portal CMS, ID prefix만 NOTI_*
+  kiria_noti: ($, baseUrl, config) => {
+    const items: RawItem[] = [];
+    $("table.default_board_01 tbody tr").each((_, tr) => {
+      const $tr = $(tr);
+      const cells = $tr.find("td");
+      if (cells.length < 3) return;
+
+      const $a = cells.find("a").first();
+      const title = $a.text().trim();
+      if (!title) return;
+
+      // onclick="javascript:fn_detail('NOTI_000000000001063')"
+      const linkAttr = $a.attr("onclick") ?? $a.attr("href") ?? "";
+      const idMatch = linkAttr.match(/['"]([A-Za-z0-9_-]+)['"]/);
+      const url = idMatch
+        ? `${baseUrl}/portal/info/portalInfoNotiDetail.do?notiSeq=${idMatch[1]}`
+        : `${baseUrl}/portal/info/portalInfoNotiList.do`;
+
+      // 작성일 컬럼 — YYYY-MM-DD 패턴 매치
+      let publishedAt: string | undefined;
+      cells.each((_, td) => {
+        const text = $(td).text().trim();
+        const dateMatch = text.match(/^(\d{4}-\d{2}-\d{2})$/);
+        if (dateMatch && !publishedAt) {
+          publishedAt = dateMatch[1];
+        }
+      });
+
+      items.push({
+        sourceId: config.id,
+        title,
+        url,
+        publishedAt: publishedAt ? new Date(publishedAt).toISOString() : undefined,
+        agency: "KIRIA",
+      });
+    });
+    return items;
+  },
+
+  // 한국AI로봇산업협회: <table> + 제목 td <span> 옆 <a href="/information/notice_view.htm?idx=...">
+  korea_robot_assoc: ($, baseUrl, config) => {
+    const items: RawItem[] = [];
+    $("table tbody tr").each((_, tr) => {
+      const $tr = $(tr);
+      const cells = $tr.find("td");
+      if (cells.length < 3) return;
+
+      // 제목 td: <span>제목</span><a href="..." class="hover_link"></a>
+      const $titleCell = cells.filter(".tal").first();
+      const title = $titleCell.find("span").first().text().trim();
+      if (!title) return;
+
+      const href = $titleCell.find("a").attr("href") ?? "";
+      const url = href ? new URL(href, baseUrl).toString() : `${baseUrl}/information/notice.htm`;
+
+      // 등록일 — YYYY.MM.DD 형식
+      let publishedAt: string | undefined;
+      cells.each((_, td) => {
+        const text = $(td).text().trim();
+        const dateMatch = text.match(/^(\d{4})\.(\d{2})\.(\d{2})$/);
+        if (dateMatch && !publishedAt) {
+          publishedAt = `${dateMatch[1]}-${dateMatch[2]}-${dateMatch[3]}`;
+        }
+      });
+
+      items.push({
+        sourceId: config.id,
+        title,
+        url,
+        publishedAt: publishedAt ? new Date(publishedAt).toISOString() : undefined,
+        agency: "한국AI로봇산업협회",
+      });
+    });
+    return items;
+  },
+
+  // 한국로봇학회 KROS: ASP 게시판 <table class="board01">
+  // 제목 a href="/board/board.asp?b_code={N}&Action=content&GotoPage=1&B_CATE=BBS1"
+  // 페이지 자체는 EUC-KR (SITE_CONFIGS에서 encoding 지정)
+  kros: ($, baseUrl, config) => {
+    const items: RawItem[] = [];
+    $("table.board01 tbody tr").each((_, tr) => {
+      const $tr = $(tr);
+      const cells = $tr.find("td");
+      if (cells.length < 3) return;
+
+      const $a = cells.find("a[href*='board.asp']").first();
+      const title = $a.text().trim();
+      if (!title) return;
+
+      const href = $a.attr("href") ?? "";
+      const url = href ? new URL(href, baseUrl).toString() : `${baseUrl}/Board/Board.asp?b_Cate=BBS1`;
+
+      // 작성일 — YYYY-MM-DD 형식
+      let publishedAt: string | undefined;
+      cells.each((_, td) => {
+        const text = $(td).text().trim();
+        const dateMatch = text.match(/^(\d{4}-\d{2}-\d{2})$/);
+        if (dateMatch && !publishedAt) {
+          publishedAt = dateMatch[1];
+        }
+      });
+
+      items.push({
+        sourceId: config.id,
+        title,
+        url,
+        publishedAt: publishedAt ? new Date(publishedAt).toISOString() : undefined,
+        agency: "한국로봇학회",
+      });
+    });
+    return items;
+  },
+
+  // KROS 게시판 BBS2 — 동일 구조, 카테고리만 다름
+  kros_bbs2: (...args) => siteSpecificParsers.kros(...args),
 
   // KIAT: AJAX 응답 HTML (테이블)
   kiat: ($, baseUrl, config) => {

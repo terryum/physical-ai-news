@@ -16,6 +16,14 @@ export const ROBOT_AUTOMATION = [
   "자동화", "automation", "automated",
   "협동로봇", "cobot", "AMR", "AGV",
   "매니퓰레이터", "manipulator",
+  "휴머노이드", "humanoid",
+];
+
+/** K-휴머노이드 컨소시엄 (코스맥스 가입사) (+20) */
+export const K_HUMANOID = [
+  "K-휴머노이드", "K휴머노이드", "K-humanoid",
+  "휴머노이드 얼라이언스", "humanoid alliance",
+  "K-휴머노이드 얼라이언스",
 ];
 
 export const MANUFACTURING = [
@@ -98,6 +106,7 @@ export const POLITICS_NOISE = [
 export const T0_KEYWORDS = [
   ...PHYSICAL_AI_DIRECT,
   "제조 로봇", "공장 자동화 AI", "산업용 로봇 AI",
+  "휴머노이드", "휴머노이드 로봇", "humanoid robot", "humanoid",
 ];
 
 /** T1 키워드 (스마트팩토리/제조자동화 넓은 범위) */
