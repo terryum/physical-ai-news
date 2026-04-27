@@ -7,10 +7,20 @@
  *
  * 실행: npx tsx scripts/verify-trending-coverage.ts 2026-04-15 2026-04-21 2026-04-25
  */
+import * as fs from "node:fs";
+import * as path from "node:path";
+import { fileURLToPath } from "node:url";
+import YAML from "yaml";
 import { loadItemsForDateWindow, type HistoricalItem } from "./sample-historical-items";
 
 // ─────────────────────────────────────────────────────────────────────
 // 설정
+
+const __dirnameCompat =
+  typeof __dirname !== "undefined"
+    ? __dirname
+    : path.dirname(fileURLToPath(import.meta.url));
+const PROJECT_ROOT = path.resolve(__dirnameCompat, "..");
 
 const DEFAULT_DATES = ["2026-04-15", "2026-04-21", "2026-04-25"];
 
@@ -47,16 +57,37 @@ const SOURCE_MAP: Record<string, string[]> = {
   reddit_artificial: [],
 };
 
-// Reddit 우리 어댑터 임계값 (worker/adapters/reddit.ts:34)
-const REDDIT_MIN_UPS = 100;
+// Reddit 우리 어댑터 임계값 (worker/adapters/reddit.ts MIN_UPS).
+// 어댑터 값과 sync 유지. 2026-04-27 보강에서 100 → 50 으로 완화.
+const REDDIT_MIN_UPS = 50;
 
-// HN 어댑터 키워드 (config/sources.yaml hackernews.keywords)
-// hackernews adapter 가 이 키워드들로만 Algolia 검색하므로, 매칭되지 않는 글은
-// 애초에 items.json 후보로 들어오지 않는다.
-const HN_QUERY_KEYWORDS = [
-  "humanoid", "robotics", "physical ai", "embodied", "manipulation",
-  "llm agent", "foundation model",
-];
+// HN 어댑터 키워드 — sources.yaml 에서 동적 로드. 실제 어댑터가 검색에 쓰는
+// 키워드와 항상 sync 돼야 갭 분류 (HN_QUERY_FILTER) 가 정확함.
+function loadHnQueryKeywords(): string[] {
+  const fallback = [
+    // 보강 후 (2026-04-27 기준) 폴백 — sources.yaml 못 읽을 때
+    "humanoid", "robotics", "physical ai", "embodied", "manipulation",
+    "llm agent", "foundation model",
+    "gpt", "claude", "gemini", "openai", "anthropic", "deepmind",
+    "ai agent", "ai model",
+  ];
+  try {
+    const yamlPath = path.join(PROJECT_ROOT, "config", "sources.yaml");
+    const text = fs.readFileSync(yamlPath, "utf-8");
+    const sources = YAML.parse(text) as Array<{
+      id: string;
+      keywords?: string[];
+    }>;
+    const hn = sources.find((s) => s.id === "hackernews");
+    const kws = hn?.keywords ?? [];
+    if (kws.length === 0) return fallback;
+    return kws.map((k) => k.toLowerCase());
+  } catch {
+    return fallback;
+  }
+}
+
+const HN_QUERY_KEYWORDS = loadHnQueryKeywords();
 
 // ─────────────────────────────────────────────────────────────────────
 // Ground-truth 타입
