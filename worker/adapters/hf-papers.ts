@@ -46,6 +46,8 @@ interface HfPaperLite {
     title?: string;
     publishedAt?: string;
     upvotes?: number;
+    thumbnail?: string;
+    thumbnailUrl?: string;
   };
   numComments?: number;
 }
@@ -67,6 +69,7 @@ function parseFromNextData(html: string, sourceId: string): RawItem[] {
     for (const entry of list) {
       const p = entry.paper;
       if (!p?.id || !p?.title) continue;
+      const thumb = p.thumbnail ?? p.thumbnailUrl;
       items.push({
         sourceId,
         title: p.title.trim(),
@@ -75,6 +78,7 @@ function parseFromNextData(html: string, sourceId: string): RawItem[] {
         points: p.upvotes ?? 0,
         commentCount: entry.numComments ?? 0,
         lang: "en",
+        thumbnailUrl: thumb && /^https?:\/\//.test(thumb) ? thumb : undefined,
       });
     }
     return items;

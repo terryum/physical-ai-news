@@ -39,6 +39,7 @@ export interface Item {
   commentCount?: number;
   lang?: "ko" | "en";
   titleKo?: string; // 트렌딩 한국어 번역 캐시
+  thumbnailUrl?: string; // OG/preview 이미지. 트렌딩에 우선 사용, 없으면 source initial fallback
 }
 
 export type SortBy = "latest" | "deadline" | "popular";

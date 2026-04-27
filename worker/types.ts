@@ -13,6 +13,7 @@ export interface RawItem {
   commentCount?: number;
   lang?: "ko" | "en";
   titleKo?: string;
+  thumbnailUrl?: string;
 }
 
 export interface SourceConfig {

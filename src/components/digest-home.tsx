@@ -4,6 +4,8 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { Item } from "@/data/types";
 import { useLocalStorage } from "@/hooks/use-local-storage";
+import { TrendingThumb } from "@/components/trending-thumb";
+import { TrendingHelp } from "@/components/trending-help";
 
 const HOURS_72 = 72 * 60 * 60 * 1000;
 const HOURS_48 = 48 * 60 * 60 * 1000;
@@ -264,27 +266,37 @@ function TrendingRow({ item, idx, lang }: { item: Item; idx: number; lang: "ko" 
   const showKo = lang === "ko" && item.titleKo;
   const displayTitle = showKo ? item.titleKo! : item.title;
   return (
-    <div className="px-4 py-2 border-b border-line-default last:border-b-0 transition-colors hover:bg-bg-base/50">
-      <div className="flex items-baseline gap-2">
-        <span className="shrink-0 text-xs text-text-muted w-5 text-right">{idx + 1}.</span>
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sm text-text-primary hover:text-accent transition-colors"
-        >
-          {displayTitle}
-        </a>
-      </div>
-      {showKo && (
-        <div className="mt-0.5 pl-7 text-[11px] text-text-muted truncate" title={item.title}>
-          {item.title}
+    <div className="px-4 py-2.5 border-b border-line-default last:border-b-0 transition-colors hover:bg-bg-base/50">
+      <div className="flex items-start gap-3">
+        <span className="shrink-0 text-xs text-text-muted w-5 text-right pt-1">
+          {idx + 1}.
+        </span>
+        <TrendingThumb
+          thumbnailUrl={item.thumbnailUrl}
+          sourceName={item.sourceName}
+          alt={displayTitle}
+          size="sm"
+        />
+        <div className="flex-1 min-w-0">
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-text-primary hover:text-accent transition-colors leading-snug"
+          >
+            {displayTitle}
+          </a>
+          {showKo && (
+            <div className="mt-0.5 text-[11px] text-text-muted truncate" title={item.title}>
+              {item.title}
+            </div>
+          )}
+          <div className="mt-1 flex items-center gap-x-2 gap-y-0.5 flex-wrap text-xs text-text-muted">
+            <span>{item.sourceName}</span>
+            {item.points ? <span>▲ {item.points}</span> : null}
+            {item.commentCount ? <span>💬 {item.commentCount}</span> : null}
+          </div>
         </div>
-      )}
-      <div className="mt-0.5 flex items-center gap-2 text-xs text-text-muted pl-7">
-        <span>{item.sourceName}</span>
-        {item.points ? <span>▲ {item.points}</span> : null}
-        {item.commentCount ? <span>💬 {item.commentCount}</span> : null}
       </div>
     </div>
   );
@@ -350,7 +362,10 @@ function DigestSectionCard({
         count={section.items.length}
         rightSlot={
           isTrending ? (
-            <LangToggle lang={trendingLang} onChange={onTrendingLangChange} />
+            <div className="flex items-center gap-2">
+              <LangToggle lang={trendingLang} onChange={onTrendingLangChange} />
+              <TrendingHelp />
+            </div>
           ) : undefined
         }
       />

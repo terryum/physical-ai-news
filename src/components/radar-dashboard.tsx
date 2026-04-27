@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { FilterBar } from "./filter-bar";
 import { ItemRow } from "./item-row";
+import { TrendingHelp } from "./trending-help";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import type { Filters, Item } from "@/data/types";
 import { DEFAULT_FILTERS } from "@/data/types";
@@ -205,13 +206,16 @@ export function RadarDashboard({
         onTrendingLangChange={setTrendingLangStored}
       />
 
-      <div className="flex items-center justify-between px-1">
+      <div className="flex items-center justify-between gap-3 px-1">
         <p className="text-sm text-text-secondary">
           {visibleItems.length}건 표시 / 큐레이션 {filteredItems.length}건
         </p>
-        <p className="text-xs text-text-muted">
-          {formatLastUpdated(lastUpdated, dataSource)}
-        </p>
+        <div className="flex items-center gap-2 shrink-0">
+          <p className="text-xs text-text-muted">
+            {formatLastUpdated(lastUpdated, dataSource)}
+          </p>
+          {filters.itemType === "trending" && <TrendingHelp />}
+        </div>
       </div>
 
       <div className="space-y-2">

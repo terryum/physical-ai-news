@@ -1,6 +1,7 @@
 "use client";
 
 import type { Item } from "@/data/types";
+import { TrendingThumb } from "@/components/trending-thumb";
 
 const priorityLabel: Record<string, string> = {
   P0: "필독",
@@ -84,6 +85,14 @@ export function ItemRow({ item, onToggleRead, onToggleStar, trendingLang = "ko" 
             {item.starred ? "★" : "☆"}
           </button>
         </div>
+
+        {isTrending && (
+          <TrendingThumb
+            thumbnailUrl={item.thumbnailUrl}
+            sourceName={item.sourceName}
+            alt={displayTitle}
+          />
+        )}
 
         <div className="flex-1 min-w-0">
           <div className="flex items-baseline gap-2 flex-wrap">

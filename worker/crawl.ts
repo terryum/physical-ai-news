@@ -17,6 +17,7 @@ import { scoreItems, ScoredItem } from "./pipeline/scorer";
 import { dedup } from "./pipeline/dedup";
 import { normalizeUrl, parseDate } from "./pipeline/normalize";
 import { translateTrending } from "./pipeline/translate";
+import { enrichTrendingThumbnails } from "./pipeline/og-image";
 
 // ESM/CJS 호환 __dirname 결정
 const __dirnameCompat =
@@ -171,19 +172,24 @@ export async function crawl(phase: "fast" | "slow" | "all" = "all"): Promise<voi
     }
 
     // fast crawl은 전체 교체 (이전 중복이 다시 들어오는 것 방지)
-    // 단, read/starred 상태와 기존 titleKo 캐시는 유지
+    // 단, read/starred 상태, titleKo, thumbnailUrl 캐시는 유지
     const existingItems = loadExistingItems(outputPath);
     const readState = new Map<string, { read: boolean; starred: boolean }>();
     const prevTranslations = new Map<string, string>();
+    const prevThumbnails = new Map<string, string>();
     for (const item of existingItems) {
       if (item.read || item.starred) {
         readState.set(item.id, { read: item.read, starred: item.starred });
       }
       if (item.titleKo) prevTranslations.set(item.id, item.titleKo);
+      if (item.thumbnailUrl) prevThumbnails.set(item.id, item.thumbnailUrl);
     }
 
+    // 트렌딩 썸네일 enrichment (어댑터 추출 + 캐시 + OG fetch)
+    const withThumbnails = await enrichTrendingThumbnails(outputItems, prevThumbnails);
+
     // 트렌딩 한국어 번역 (캡 적용 후 ≤100건만 대상). API key 미설정 시 스킵.
-    const translated = await translateTrending(outputItems, prevTranslations);
+    const translated = await translateTrending(withThumbnails, prevTranslations);
 
     const final = translated.map((item) => {
       const state = readState.get(item.id);
@@ -245,6 +251,7 @@ function toOutputItem(
     commentCount: item.commentCount,
     lang: item.lang,
     titleKo: item.titleKo,
+    thumbnailUrl: item.thumbnailUrl,
     links: [{ label: "원문", url: item.url, kind: "canonical" as const }],
     relatedArticles: item.relatedArticles?.map((ra) => ({
       title: ra.title,
@@ -274,6 +281,7 @@ interface OutputItem {
   commentCount?: number;
   lang?: "ko" | "en";
   titleKo?: string;
+  thumbnailUrl?: string;
   links: Array<{ label: string; url: string; kind: string }>;
   relatedArticles?: Array<{ title: string; url: string; sourceName: string }>;
   read: boolean;
