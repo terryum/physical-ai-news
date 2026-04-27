@@ -15,6 +15,7 @@ import {
   T0_KEYWORDS,
   T1_KEYWORDS,
   K_HUMANOID,
+  M_AX,
 } from "./keywords";
 
 export type Tier = "T0" | "T1" | "T2" | "T3";
@@ -129,10 +130,16 @@ export function scoreItem(item: RawItem): ScoredItem {
     matchedKeywords.push("정부지원");
   }
 
-  // +20: K-휴머노이드 컨소시엄 (코스맥스 가입사)
+  // +30: K-휴머노이드 컨소시엄 (코스맥스 가입사) — P0 도달 보장
   if (matchesAny(text, K_HUMANOID)) {
-    score += 20;
+    score += 30;
     matchedKeywords.push("K휴머노이드");
+  }
+
+  // +30: KIRIA M.AX 시리즈 (서비스/제조 로봇 AX 실증) — 코스맥스 우선 모니터링
+  if (matchesAny(text, M_AX)) {
+    score += 30;
+    matchedKeywords.push("M.AX");
   }
 
   // +15: 화장품 제조 키워드

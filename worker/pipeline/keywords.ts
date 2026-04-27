@@ -19,11 +19,20 @@ export const ROBOT_AUTOMATION = [
   "휴머노이드", "humanoid",
 ];
 
-/** K-휴머노이드 컨소시엄 (코스맥스 가입사) (+20) */
+/** K-휴머노이드 컨소시엄 (코스맥스 가입사) (+30) */
 export const K_HUMANOID = [
   "K-휴머노이드", "K휴머노이드", "K-humanoid",
   "휴머노이드 얼라이언스", "humanoid alliance",
   "K-휴머노이드 얼라이언스",
+];
+
+/** KIRIA M.AX 시리즈 (서비스로봇/제조로봇 AX 실증) (+30) */
+export const M_AX = [
+  "M.AX", "m.ax",
+  "S-M.AX", "s-m.ax",
+  "M-AX", "m-ax",
+  "서비스로봇 AX", "제조로봇 AX",
+  "Manufacturing AX",
 ];
 
 export const MANUFACTURING = [
