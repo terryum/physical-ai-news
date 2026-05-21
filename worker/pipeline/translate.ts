@@ -1,5 +1,3 @@
-import OpenAI from "openai";
-
 interface Translatable {
   id: string;
   title: string;
@@ -17,18 +15,17 @@ Rules:
 Respond with JSON: {"items":[{"id":"...","titleKo":"..."}, ...]} matching the input ids.`;
 
 /**
- * 트렌딩 항목 중 titleKo가 비어 있는 것만 골라 BizRouter OpenAI로 번역.
+ * 트렌딩 항목 중 titleKo가 비어 있는 것만 골라 Anthropic으로 번역.
  * 캐시(prevTranslations)에 같은 ID가 있으면 재사용. 환경변수 미설정 시 전체 스킵.
  */
 export async function translateTrending<
   T extends Translatable & { itemType?: string; sourceName?: string },
 >(items: T[], prevTranslations: Map<string, string>): Promise<T[]> {
-  const baseURL = process.env.BIZROUTER_BASE_URL ?? "https://api.bizrouter.ai/v1";
-  const apiKey = process.env.BIZROUTER_API_KEY;
-  const model = process.env.BIZROUTER_TRANSLATE_MODEL ?? "openai/gpt-5-mini";
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  const model = process.env.ANTHROPIC_TRANSLATE_MODEL ?? "claude-haiku-4-5-20251001";
 
   if (!apiKey) {
-    console.log(`[translate] BIZROUTER_API_KEY 미설정 — 번역 스킵`);
+    console.log(`[translate] ANTHROPIC_API_KEY 미설정 — 번역 스킵`);
     return items;
   }
 
@@ -59,7 +56,6 @@ export async function translateTrending<
     `[translate] ${items.filter((i) => i.itemType === "trending").length}건 중 신규 ${targets.length}건 번역 시작 (캐시 hit ${cacheHits}, model=${model})`,
   );
 
-  const client = new OpenAI({ baseURL, apiKey });
   const idToTitleKo = new Map<string, string>();
 
   for (let i = 0; i < targets.length; i += BATCH_SIZE) {
@@ -69,16 +65,31 @@ export async function translateTrending<
     });
 
     try {
-      const res = await client.chat.completions.create({
-        model,
-        messages: [
-          { role: "system", content: SYSTEM_PROMPT },
-          { role: "user", content: userPayload },
-        ],
-        response_format: { type: "json_object" },
+      const response = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "anthropic-version": "2023-06-01",
+          "x-api-key": apiKey,
+        },
+        body: JSON.stringify({
+          model,
+          max_tokens: 2048,
+          system: SYSTEM_PROMPT,
+          messages: [{ role: "user", content: userPayload }],
+        }),
       });
 
-      const content = res.choices[0]?.message?.content;
+      const raw = await response.text();
+      if (!response.ok) {
+        if (isCreditOrQuotaError(response.status, raw)) {
+          throw new Error(`Anthropic credit/quota exhausted: ${raw.slice(0, 300)}`);
+        }
+        throw new Error(`Anthropic status ${response.status}: ${raw.slice(0, 300)}`);
+      }
+
+      const json = JSON.parse(raw) as { content?: Array<{ type: string; text?: string }> };
+      const content = json.content?.find((part) => part.type === "text")?.text;
       if (!content) continue;
 
       const parsed = JSON.parse(content) as { items?: Array<{ id: string; titleKo: string }> };
@@ -86,6 +97,10 @@ export async function translateTrending<
         if (r.id && r.titleKo) idToTitleKo.set(r.id, r.titleKo);
       }
     } catch (err) {
+      if ((err as Error).message.includes("credit/quota exhausted")) {
+        console.log(`[translate] Anthropic credit/quota exhausted — stopping without fallback`);
+        return items;
+      }
       console.log(
         `[translate] 배치 ${i}/${targets.length} 에러:`,
         (err as Error).message,
@@ -103,4 +118,9 @@ export async function translateTrending<
     `[translate] 완료 — 신규 번역 ${idToTitleKo.size}/${targets.length}건`,
   );
   return items;
+}
+
+function isCreditOrQuotaError(status: number, body: string): boolean {
+  if (status !== 402 && status !== 429) return false;
+  return /credit|quota|billing|balance|spend|limit/i.test(body);
 }
