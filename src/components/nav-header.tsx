@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { SubstackSubscribe } from "@/components/substack-subscribe";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const NAV_ITEMS = [
@@ -31,7 +30,6 @@ export function NavHeader() {
             </span>
           </Link>
           <div className="flex items-center gap-2 shrink-0">
-            <SubstackSubscribe variant="header" />
             <ThemeToggle />
           </div>
         </div>

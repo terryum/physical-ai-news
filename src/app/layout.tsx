@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { NavHeader } from "@/components/nav-header";
-import { SubstackSubscribe } from "@/components/substack-subscribe";
 import "./globals.css";
 
 const inter = Inter({
@@ -40,11 +39,6 @@ export default function RootLayout({
         <main className="mx-auto w-full max-w-4xl px-4 md:px-6 lg:px-8 py-10 flex-1">
           {children}
         </main>
-        <footer className="border-t border-line-default">
-          <div className="mx-auto max-w-4xl px-4 md:px-6 lg:px-8 py-8">
-            <SubstackSubscribe variant="footer" />
-          </div>
-        </footer>
       </body>
     </html>
   );

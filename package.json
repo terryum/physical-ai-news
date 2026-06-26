@@ -6,10 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "digest": "tsx scripts/send-digest.ts",
-    "digest:preview": "tsx scripts/send-digest.ts --preview",
-    "digest:dry-run": "tsx scripts/send-digest.ts --dry-run"
+    "lint": "eslint"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

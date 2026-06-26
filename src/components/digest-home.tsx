@@ -532,10 +532,6 @@ export function DigestHome({ items, lastUpdated }: DigestHomeProps) {
         )}
       </div>
 
-      <p className="text-xs text-text-muted -mt-3">
-        매일 오전 8시 Substack으로 발행되는 뉴스레터와 동일한 내용입니다
-      </p>
-
       {allEmpty ? (
         <div className="rounded-xl border border-line-default bg-bg-surface py-16 text-center text-text-muted">
           {isToday ? "오늘은 주요 항목이 없습니다." : "이 날짜에는 항목이 없습니다."}

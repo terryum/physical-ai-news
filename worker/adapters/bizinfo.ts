@@ -5,17 +5,54 @@
  *
  * RSS에 마감일이 없으므로, 각 공고 상세 페이지에서 "신청기간"을 파싱하여 마감일 추출.
  */
-import Parser from "rss-parser";
 import * as cheerio from "cheerio";
 import { CrawlerAdapter } from "./interface";
 import { SourceConfig, RawItem } from "../types";
-
-const parser = new Parser();
 
 const BIZINFO_KEYWORDS = [
   "AI", "로봇", "자동화", "스마트팩토리", "스마트공장",
   "제조혁신", "디지털전환", "디지털트윈",
 ];
+const RSS_TIMEOUT_MS = 12000;
+
+interface RssEntry {
+  title: string;
+  link: string;
+  pubDate?: string;
+  description?: string;
+  author?: string;
+}
+
+function parseBizinfoRss(xml: string): RssEntry[] {
+  const $ = cheerio.load(xml, { xmlMode: true });
+  const entries: RssEntry[] = [];
+
+  $("item").each((_, el) => {
+    const childText = (selector: string) =>
+      $(el).find(selector).first().text().trim() || undefined;
+    const title = childText("title");
+    const link = childText("link");
+    if (!title || !link) return;
+    entries.push({
+      title,
+      link,
+      pubDate: childText("pubDate"),
+      description: childText("description"),
+      author: childText("author") ?? childText("dc\\:creator"),
+    });
+  });
+
+  return entries;
+}
+
+async function fetchRssEntries(url: string): Promise<RssEntry[]> {
+  const res = await fetch(url, {
+    headers: { "User-Agent": "PhysicalAIRadar/1.0" },
+    signal: AbortSignal.timeout(RSS_TIMEOUT_MS),
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return parseBizinfoRss(await res.text());
+}
 
 /** 상세 페이지에서 신청기간의 마감일을 추출 */
 async function fetchDeadline(detailUrl: string): Promise<string | undefined> {
@@ -59,9 +96,9 @@ export const bizinfoAdapter: CrawlerAdapter = {
     for (const keyword of BIZINFO_KEYWORDS) {
       try {
         const url = `https://www.bizinfo.go.kr/uss/rss/bizinfoApi.do?crtfcKey=${apiKey}&dataType=rss&searchCnt=30&hashtags=${encodeURIComponent(keyword)}`;
-        const feed = await parser.parseURL(url);
+        const entries = await fetchRssEntries(url);
 
-        for (const entry of feed.items) {
+        for (const entry of entries) {
           if (!entry.title || !entry.link) continue;
           if (seenUrls.has(entry.link)) continue;
           seenUrls.add(entry.link);
@@ -70,13 +107,13 @@ export const bizinfoAdapter: CrawlerAdapter = {
             sourceId: config.id,
             title: entry.title.trim(),
             url: entry.link.trim(),
-            publishedAt: entry.pubDate ?? entry.isoDate,
-            description: entry.contentSnippet ?? entry.content,
-            agency: entry.creator ?? entry.author,
+            publishedAt: entry.pubDate,
+            description: entry.description,
+            agency: entry.author,
           });
         }
 
-        console.log(`[${config.id}] 키워드="${keyword}" → ${feed.items.length}건`);
+        console.log(`[${config.id}] 키워드="${keyword}" → ${entries.length}건`);
       } catch (err) {
         console.log(`[${config.id}] 키워드="${keyword}" 에러: ${(err as Error).message}`);
       }

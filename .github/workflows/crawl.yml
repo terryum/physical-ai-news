@@ -9,10 +9,14 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: crawl-sources
+  cancel-in-progress: false
+
 jobs:
   crawl:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
 
@@ -39,3 +43,14 @@ jobs:
           git add public/data/items.json
           git diff --staged --quiet || git commit -m "data: daily crawl $(date -u +%Y-%m-%dT%H:%M:%SZ)"
           git push
+
+      - name: Build static site
+        run: npm run build
+
+      - name: Deploy to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          DEPLOY_SHA="$(git rev-parse HEAD)"
+          npx wrangler@latest pages deploy out --project-name=physical-ai-news --branch=main --commit-dirty=true --commit-hash="$DEPLOY_SHA" --commit-message="$DEPLOY_SHA"
