@@ -160,7 +160,7 @@
     "itemType": "gov",
     "title": "2026년 산업혁신기반구축사업 제조 특화 온디바이스 AI 기반 자율제조 실증 기반 구축사업 기업지원 프로그램(애로기술 지원) 수혜기업 상시모집 공고",
     "publishedAt": "2026-09-16T15:00:00.000Z",
-    "deadlineAt": "2026-10-02",
+    "deadlineAt": "2027-01-28",
     "sourceName": "bizinfo",
     "tier": "T2",
     "priority": "P1",
@@ -206,31 +206,6 @@
     "starred": false
   },
   {
-    "id": "bizinfo-x92hke",
-    "itemType": "gov",
-    "title": "2026년 광명시 기업박람회(GM TECH EXPO 2026) 참가기업 모집 공고",
-    "publishedAt": "2026-09-01T15:00:00.000Z",
-    "deadlineAt": "2026-09-22",
-    "sourceName": "bizinfo",
-    "tier": "T2",
-    "priority": "P1",
-    "score": 45,
-    "matchedKeywords": [
-      "로봇+제조",
-      "정부지원"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126072",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
     "id": "bizinfo-x934ps",
     "itemType": "gov",
     "title": "물류영역 서비스로봇 공통플랫폼구축 사업 기업 지원 모집 공고",
@@ -260,7 +235,7 @@
     "itemType": "gov",
     "title": "2026년 중고로봇 재제조 로봇리퍼브센터 기반구축 기업지원사업(기술지도) 모집 공고",
     "publishedAt": "2026-07-07T15:00:00.000Z",
-    "deadlineAt": "2026-09-30",
+    "deadlineAt": "2026-09-28",
     "sourceName": "bizinfo",
     "tier": "T0",
     "priority": "P0",
@@ -310,7 +285,7 @@
     "itemType": "gov",
     "title": "2026년 로봇 재제조산업 기업지원사업(기술 자문) 공고",
     "publishedAt": "2026-04-05T15:00:00.000Z",
-    "deadlineAt": "2026-10-02",
+    "deadlineAt": "2027-01-28",
     "sourceName": "bizinfo",
     "tier": "T2",
     "priority": "P1",
@@ -451,6 +426,70 @@
         "label": "원문",
         "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126558",
         "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "bizinfo-x92xvi",
+    "itemType": "gov",
+    "title": "중소제조 특화 Multi AI Agent 개발(R&D) 점프업 Track 시행계획 공고",
+    "publishedAt": "2026-08-30T15:00:00.000Z",
+    "deadlineAt": "2026-10-30",
+    "sourceName": "bizinfo",
+    "tier": "T2",
+    "priority": "P2",
+    "score": 40,
+    "matchedKeywords": [
+      "정부지원",
+      "크로스소스+2"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125978",
+        "kind": "canonical"
+      }
+    ],
+    "relatedArticles": [
+      {
+        "title": "중소제조 특화 Multi AI Agent 개발(R&D) 점프업 Track 시행계획 공고",
+        "url": "https://www.smtech.go.kr/javascript:goMove()",
+        "sourceName": "smtech"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "motie-m7qu9t",
+    "itemType": "gov",
+    "title": "2026년도 소재부품기술개발사업(4차) 신규지원 대상과제 공고",
+    "publishedAt": "2026-09-22T00:00:00.000Z",
+    "deadlineAt": "2026-10-21",
+    "sourceName": "motie",
+    "tier": "T3",
+    "priority": "P2",
+    "score": 40,
+    "matchedKeywords": [
+      "정부지원",
+      "크로스소스+2"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.motir.go.kr/kor/article/ATCLc01b2801b/71333/view?mno=&pageIndex=1",
+        "kind": "canonical"
+      }
+    ],
+    "relatedArticles": [
+      {
+        "title": "2026년도 소재부품기술개발사업(4차) 신규지원 대상과제 공고",
+        "url": "https://srome.keit.re.kr/srome/biz/perform/opnnPrpsl/retrieveTaskAnncmDetailView.do?taskAnncmSeq=I24237&bsnsYear=2026",
+        "sourceName": "srome"
       }
     ],
     "read": false,
@@ -723,6 +762,30 @@
     "starred": false
   },
   {
+    "id": "bizinfo-x92cio",
+    "itemType": "gov",
+    "title": "2026년 1차년도 산업혁신기반구축사업 초정밀 나노기술 적용 전자유리 부품소재 상용화 기반구축사업 수혜기업 모집 공고",
+    "publishedAt": "2026-09-21T15:00:00.000Z",
+    "deadlineAt": "2026-10-02",
+    "sourceName": "bizinfo",
+    "tier": "T2",
+    "priority": "P2",
+    "score": 25,
+    "matchedKeywords": [
+      "정부지원"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126713",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
     "id": "bizinfo-x92da9",
     "itemType": "gov",
     "title": "[서울] 2026년 뿌리기업 산업박람회 공동관 참여기업 모집공고",
@@ -847,7 +910,7 @@
     "itemType": "gov",
     "title": "2026년 중소기업 정보보호 특화지원사업 수요기업 모집 공고",
     "publishedAt": "2026-07-08T15:00:00.000Z",
-    "deadlineAt": "2026-12-31",
+    "deadlineAt": "2026-09-30",
     "sourceName": "bizinfo",
     "tier": "T2",
     "priority": "P2",
@@ -1160,7 +1223,7 @@
     "itemType": "gov",
     "title": "[전북] 군산시 2026년 2차 AX얼라이언스 산ㆍ학ㆍ연 종합프로그램 지원 수혜기업 모집 공고(군산국가산업단지 스마트그린 AX실증산단 구축사업)",
     "publishedAt": "2026-06-16T15:00:00.000Z",
-    "deadlineAt": "2026-10-02",
+    "deadlineAt": "2027-01-28",
     "sourceName": "bizinfo",
     "tier": "T0",
     "priority": "P1",
@@ -1206,9 +1269,9 @@
     "starred": false
   },
   {
-    "id": "motie-m7qu9t",
+    "id": "motie-s89la6",
     "itemType": "gov",
-    "title": "2026년도 소재부품기술개발사업(4차) 신규지원 대상과제 공고",
+    "title": "비영리법인 설립허가 공고(사단법인 지방주도성장 충청연구원)",
     "publishedAt": "2026-09-22T00:00:00.000Z",
     "sourceName": "motie",
     "tier": "T3",
@@ -1221,7 +1284,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.motir.go.kr/kor/article/ATCLc01b2801b/71333/view?mno=&pageIndex=1",
+        "url": "https://www.motir.go.kr/kor/article/ATCLc01b2801b/71334/view?mno=&pageIndex=1",
         "kind": "canonical"
       }
     ],
@@ -1314,29 +1377,6 @@
       {
         "label": "원문",
         "url": "https://www.motir.go.kr/kor/article/ATCLc01b2801b/71327/view?mno=&pageIndex=1",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "motie-2qjeld",
-    "itemType": "gov",
-    "title": "비영리법인 설립허가 공고 (사단법인 주한덴마크상공회의소)",
-    "publishedAt": "2026-09-17T00:00:00.000Z",
-    "sourceName": "motie",
-    "tier": "T3",
-    "priority": "P2",
-    "score": 25,
-    "matchedKeywords": [
-      "정부지원"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.motir.go.kr/kor/article/ATCLc01b2801b/71322/view?mno=&pageIndex=1",
         "kind": "canonical"
       }
     ],
@@ -1825,10 +1865,10 @@
   {
     "id": "smtech-rr38nn",
     "itemType": "gov",
-    "title": "중소제조 특화 Multi AI Agent 개발(R&D) 점프업 Track 시행계획 공고",
-    "publishedAt": "2026-08-31T00:00:00.000Z",
+    "title": "(특화형, 재평가 2차) 스케일업 팁스 R&D 지원계획 공고",
+    "publishedAt": "2026-07-10T00:00:00.000Z",
     "sourceName": "smtech",
-    "tier": "T2",
+    "tier": "T3",
     "priority": "P2",
     "score": 25,
     "matchedKeywords": [
@@ -1846,7 +1886,7 @@
     "starred": false
   },
   {
-    "id": "smtech-254705",
+    "id": "smtech-vgy1wq",
     "itemType": "gov",
     "title": "2026년도 제3차 중소벤처기업부 혁신제품 지정기간 연장(2차) 공고",
     "publishedAt": "2026-09-21T00:00:00.000Z",
@@ -1861,7 +1901,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.smtech.go.kr/front/ifg/no/notice02_detail.do;jsessionid=oc0rfPrEe47YIiWJRNZ5buAIudnkLyJSaneQnK1DeyBFP45ETwoeaPYBmMdYgh0Y.smwas4_servlet_engine3?buclYy=&ancmId=S02879&buclCd=S9112&dtlAncmSn=1&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1",
+        "url": "https://www.smtech.go.kr/front/ifg/no/notice02_detail.do;jsessionid=PyQRu7sXdac2cnD96wkkvXlG6aqbvRSmIXjTeuZrB8UsjFqkTi1nR27SauDBLYm6.smwas1_servlet_engine3?buclYy=&ancmId=S02879&buclCd=S9112&dtlAncmSn=1&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1",
         "kind": "canonical"
       }
     ],
@@ -1869,7 +1909,7 @@
     "starred": false
   },
   {
-    "id": "smtech-55w4y2",
+    "id": "smtech-w95o47",
     "itemType": "gov",
     "title": "2026년도 제4차 중소벤처기업부 혁신제품 지정기간 연장(1차) 공고",
     "publishedAt": "2026-09-21T00:00:00.000Z",
@@ -1884,7 +1924,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.smtech.go.kr/front/ifg/no/notice02_detail.do;jsessionid=oc0rfPrEe47YIiWJRNZ5buAIudnkLyJSaneQnK1DeyBFP45ETwoeaPYBmMdYgh0Y.smwas4_servlet_engine3?buclYy=&ancmId=S02878&buclCd=S9112&dtlAncmSn=1&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1",
+        "url": "https://www.smtech.go.kr/front/ifg/no/notice02_detail.do;jsessionid=PyQRu7sXdac2cnD96wkkvXlG6aqbvRSmIXjTeuZrB8UsjFqkTi1nR27SauDBLYm6.smwas1_servlet_engine3?buclYy=&ancmId=S02878&buclCd=S9112&dtlAncmSn=1&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1",
         "kind": "canonical"
       }
     ],
@@ -1892,7 +1932,7 @@
     "starred": false
   },
   {
-    "id": "smtech-psq321",
+    "id": "smtech-7tc5uu",
     "itemType": "gov",
     "title": "2026년 중소기업 연구인력지원사업(파견) 9월 공고",
     "publishedAt": "2026-09-01T00:00:00.000Z",
@@ -1907,14 +1947,14 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.smtech.go.kr/front/ifg/no/notice02_detail.do;jsessionid=oc0rfPrEe47YIiWJRNZ5buAIudnkLyJSaneQnK1DeyBFP45ETwoeaPYBmMdYgh0Y.smwas4_servlet_engine3?buclYy=&ancmId=S02847&buclCd=S6041&dtlAncmSn=8&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1",
+        "url": "https://www.smtech.go.kr/front/ifg/no/notice02_detail.do;jsessionid=PyQRu7sXdac2cnD96wkkvXlG6aqbvRSmIXjTeuZrB8UsjFqkTi1nR27SauDBLYm6.smwas1_servlet_engine3?buclYy=&ancmId=S02847&buclCd=S6041&dtlAncmSn=8&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1",
         "kind": "canonical"
       }
     ],
     "relatedArticles": [
       {
         "title": "2026년 중소기업 연구인력지원사업(파견) 8월 공고",
-        "url": "https://www.smtech.go.kr/front/ifg/no/notice02_detail.do;jsessionid=oc0rfPrEe47YIiWJRNZ5buAIudnkLyJSaneQnK1DeyBFP45ETwoeaPYBmMdYgh0Y.smwas4_servlet_engine3?buclYy=&ancmId=S02847&buclCd=S6041&dtlAncmSn=7&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1",
+        "url": "https://www.smtech.go.kr/front/ifg/no/notice02_detail.do;jsessionid=PyQRu7sXdac2cnD96wkkvXlG6aqbvRSmIXjTeuZrB8UsjFqkTi1nR27SauDBLYm6.smwas1_servlet_engine3?buclYy=&ancmId=S02847&buclCd=S6041&dtlAncmSn=7&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1",
         "sourceName": "smtech"
       }
     ],
@@ -1922,7 +1962,7 @@
     "starred": false
   },
   {
-    "id": "smtech-ukf234",
+    "id": "smtech-31n6tr",
     "itemType": "gov",
     "title": "2026년 제6차 중소기업 R&D 전담은행 투자지원 추천기업(방산 및 전략기술) 모집 공고",
     "publishedAt": "2026-09-03T00:00:00.000Z",
@@ -1937,7 +1977,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.smtech.go.kr/front/ifg/no/notice02_detail.do;jsessionid=oc0rfPrEe47YIiWJRNZ5buAIudnkLyJSaneQnK1DeyBFP45ETwoeaPYBmMdYgh0Y.smwas4_servlet_engine3?buclYy=&ancmId=S02877&buclCd=S9171&dtlAncmSn=1&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1",
+        "url": "https://www.smtech.go.kr/front/ifg/no/notice02_detail.do;jsessionid=PyQRu7sXdac2cnD96wkkvXlG6aqbvRSmIXjTeuZrB8UsjFqkTi1nR27SauDBLYm6.smwas1_servlet_engine3?buclYy=&ancmId=S02877&buclCd=S9171&dtlAncmSn=1&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1",
         "kind": "canonical"
       }
     ],
@@ -1945,7 +1985,7 @@
     "starred": false
   },
   {
-    "id": "smtech-r72oyh",
+    "id": "smtech-6ezjye",
     "itemType": "gov",
     "title": "2026년도 하반기 중소벤처기업부 혁신제품 신규지정 수정공고",
     "publishedAt": "2026-07-10T00:00:00.000Z",
@@ -1960,7 +2000,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.smtech.go.kr/front/ifg/no/notice02_detail.do;jsessionid=oc0rfPrEe47YIiWJRNZ5buAIudnkLyJSaneQnK1DeyBFP45ETwoeaPYBmMdYgh0Y.smwas4_servlet_engine3?buclYy=&ancmId=S02874&buclCd=S9111&dtlAncmSn=1&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1",
+        "url": "https://www.smtech.go.kr/front/ifg/no/notice02_detail.do;jsessionid=PyQRu7sXdac2cnD96wkkvXlG6aqbvRSmIXjTeuZrB8UsjFqkTi1nR27SauDBLYm6.smwas1_servlet_engine3?buclYy=&ancmId=S02874&buclCd=S9111&dtlAncmSn=1&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1",
         "kind": "canonical"
       }
     ],
@@ -1968,7 +2008,7 @@
     "starred": false
   },
   {
-    "id": "smtech-m0ji5l",
+    "id": "smtech-feiawo",
     "itemType": "gov",
     "title": "2026년도 중소기업 R&D 우수성과 50선 모집 공고",
     "publishedAt": "2026-06-30T00:00:00.000Z",
@@ -1983,14 +2023,14 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.smtech.go.kr/front/ifg/no/notice02_detail.do;jsessionid=oc0rfPrEe47YIiWJRNZ5buAIudnkLyJSaneQnK1DeyBFP45ETwoeaPYBmMdYgh0Y.smwas4_servlet_engine3?buclYy=&ancmId=S02871&buclCd=S9161&dtlAncmSn=1&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1",
+        "url": "https://www.smtech.go.kr/front/ifg/no/notice02_detail.do;jsessionid=PyQRu7sXdac2cnD96wkkvXlG6aqbvRSmIXjTeuZrB8UsjFqkTi1nR27SauDBLYm6.smwas1_servlet_engine3?buclYy=&ancmId=S02871&buclCd=S9161&dtlAncmSn=1&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1",
         "kind": "canonical"
       }
     ],
     "relatedArticles": [
       {
         "title": "2026년도 중소기업 R&D 우수성과 50선 모집 공고(한계재도전)",
-        "url": "https://www.smtech.go.kr/front/ifg/no/notice02_detail.do;jsessionid=oc0rfPrEe47YIiWJRNZ5buAIudnkLyJSaneQnK1DeyBFP45ETwoeaPYBmMdYgh0Y.smwas4_servlet_engine3?buclYy=&ancmId=S02871&buclCd=S9161&dtlAncmSn=2&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1",
+        "url": "https://www.smtech.go.kr/front/ifg/no/notice02_detail.do;jsessionid=PyQRu7sXdac2cnD96wkkvXlG6aqbvRSmIXjTeuZrB8UsjFqkTi1nR27SauDBLYm6.smwas1_servlet_engine3?buclYy=&ancmId=S02871&buclCd=S9161&dtlAncmSn=2&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1",
         "sourceName": "smtech"
       }
     ],
@@ -2142,30 +2182,6 @@
     "starred": false
   },
   {
-    "id": "srome-4vzdor",
-    "itemType": "gov",
-    "title": "2026년도 제2차 조선해양산업기술개발사업 신규지원 대상과제 공고",
-    "publishedAt": "2026-06-12T00:00:00.000Z",
-    "deadlineAt": "2026-07-13",
-    "sourceName": "srome",
-    "tier": "T3",
-    "priority": "P2",
-    "score": 25,
-    "matchedKeywords": [
-      "정부지원"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://srome.keit.re.kr/srome/biz/perform/opnnPrpsl/retrieveTaskAnncmDetailView.do?taskAnncmSeq=I22434&bsnsYear=2026",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
     "id": "srome-rt69hh",
     "itemType": "gov",
     "title": "2026년도 제2차 국가표준기술력향상사업 신규지원 대상과제 공고",
@@ -2190,6 +2206,30 @@
     "starred": false
   },
   {
+    "id": "srome-4vzdor",
+    "itemType": "gov",
+    "title": "2026년도 제2차 조선해양산업기술개발사업 신규지원 대상과제 공고",
+    "publishedAt": "2026-06-12T00:00:00.000Z",
+    "deadlineAt": "2026-07-13",
+    "sourceName": "srome",
+    "tier": "T3",
+    "priority": "P2",
+    "score": 25,
+    "matchedKeywords": [
+      "정부지원"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://srome.keit.re.kr/srome/biz/perform/opnnPrpsl/retrieveTaskAnncmDetailView.do?taskAnncmSeq=I22434&bsnsYear=2026",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
     "id": "srome-t5a05e",
     "itemType": "gov",
     "title": "2026년도 K-온디바이스 AI반도체 기술개발사업 신규 지원대상 연구개발과제 공고",
@@ -2207,30 +2247,6 @@
       {
         "label": "원문",
         "url": "https://srome.keit.re.kr/srome/biz/perform/opnnPrpsl/retrieveTaskAnncmDetailView.do?taskAnncmSeq=I22194&bsnsYear=2026",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "srome-asckpi",
-    "itemType": "gov",
-    "title": "2026년도 제2차 제품안전관리기술개발및실증사업 신규지원 대상과제 공고",
-    "publishedAt": "2026-05-29T00:00:00.000Z",
-    "deadlineAt": "2026-06-30",
-    "sourceName": "srome",
-    "tier": "T3",
-    "priority": "P2",
-    "score": 25,
-    "matchedKeywords": [
-      "정부지원"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://srome.keit.re.kr/srome/biz/perform/opnnPrpsl/retrieveTaskAnncmDetailView.do?taskAnncmSeq=I21894&bsnsYear=2026",
         "kind": "canonical"
       }
     ],
@@ -2372,7 +2388,7 @@
     "itemType": "gov",
     "title": "2026년 헬스케어 제품 멀티모달형 AI 플랫폼 기반 구축 사업(IR 투자유치 역량강화) 기업 모집 공고(바이오산업 개방형 상태계 조성 촉진 사업)",
     "publishedAt": "2026-09-20T15:00:00.000Z",
-    "deadlineAt": "2026-10-02",
+    "deadlineAt": "2027-01-28",
     "sourceName": "bizinfo",
     "tier": "T3",
     "priority": "P2",
@@ -2504,7 +2520,7 @@
   {
     "id": "mss-xs9izt",
     "itemType": "gov",
-    "title": "중소기업자 우선조달 계약 범위를 확대하는 「판로지원법」 개정안 국무회의 의결",
+    "title": "티메프 피해기업, 정책자금 상환부담 덜어드립니다",
     "publishedAt": "2026-09-22T00:00:00.000Z",
     "sourceName": "mss",
     "tier": "T3",
@@ -3050,10 +3066,10 @@
     "starred": false
   },
   {
-    "id": "smtech-smyxjt",
+    "id": "smtech-m92r8h",
     "itemType": "gov",
-    "title": "2026년도 제1차 한국무역보험공사 연계 수출지원프로그램 시행계획 안내",
-    "publishedAt": "2026-07-06T00:00:00.000Z",
+    "title": "2026년도 중소벤처기업부 혁신제품 3차 규격추가 모집 안내문",
+    "publishedAt": "2026-09-22T00:00:00.000Z",
     "sourceName": "smtech",
     "tier": "T3",
     "priority": "P2",
@@ -3063,7 +3079,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.smtech.go.kr/front/ifg/no/notice02_detail.do;jsessionid=oc0rfPrEe47YIiWJRNZ5buAIudnkLyJSaneQnK1DeyBFP45ETwoeaPYBmMdYgh0Y.smwas4_servlet_engine3?buclYy=&ancmId=S02873&buclCd=S9121&dtlAncmSn=1&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1",
+        "url": "https://www.smtech.go.kr/front/ifg/no/notice02_detail.do;jsessionid=PyQRu7sXdac2cnD96wkkvXlG6aqbvRSmIXjTeuZrB8UsjFqkTi1nR27SauDBLYm6.smwas1_servlet_engine3?buclYy=&ancmId=S02880&buclCd=S9111&dtlAncmSn=1&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1",
         "kind": "canonical"
       }
     ],
@@ -3246,31 +3262,6 @@
     "starred": false
   },
   {
-    "id": "bizinfo-x92ffs",
-    "itemType": "gov",
-    "title": "2026년 AI 융합 에스테틱 의료기기 글로벌 사업화  기반구축 사업(1차년도) 참여기업 통합모집 재공고 (바이오산업 개방형 생태계 조성 촉진)",
-    "publishedAt": "2026-09-08T15:00:00.000Z",
-    "deadlineAt": "2026-09-22",
-    "sourceName": "bizinfo",
-    "tier": "T3",
-    "priority": "P2",
-    "score": -5,
-    "matchedKeywords": [
-      "정부지원",
-      "비관련지역(감점)"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126331",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
     "id": "bizinfo-x92g24",
     "itemType": "gov",
     "title": "2026년 LX세미콘ㆍ충남창조경제혁신센터 Nexus Connect 오픈이노베이션 밋업 데이 참여기업 모집 공고",
@@ -3400,7 +3391,6 @@
     "itemType": "gov",
     "title": "[부산ㆍ울산ㆍ경남] 2026년 동남 정보보호클러스터 보안 테스팅 지원사업 공고",
     "publishedAt": "2026-06-24T15:00:00.000Z",
-    "deadlineAt": "2026-11-30",
     "sourceName": "bizinfo",
     "tier": "T1",
     "priority": "P2",
@@ -3425,7 +3415,7 @@
     "itemType": "gov",
     "title": "[충북] 2026년 중소기업 경영애로 전문가 컨설팅서비스 참여기업 모집 공고",
     "publishedAt": "2026-05-21T15:00:00.000Z",
-    "deadlineAt": "2026-09-22",
+    "deadlineAt": "2026-12-31",
     "sourceName": "bizinfo",
     "tier": "T1",
     "priority": "P2",
@@ -3525,7 +3515,7 @@
     "itemType": "gov",
     "title": "[경남] 진주시 2026년 발달장애인 가족창업 컨설팅 지원 모집 공고",
     "publishedAt": "2026-08-30T15:00:00.000Z",
-    "deadlineAt": "2026-09-22",
+    "deadlineAt": "2026-12-31",
     "sourceName": "bizinfo",
     "tier": "T3",
     "priority": "P2",
@@ -3844,7 +3834,7 @@
     "starred": false
   },
   {
-    "id": "smtech-n9eq4x",
+    "id": "smtech-acniry",
     "itemType": "gov",
     "title": "2026년 제5차 중소기업 R&D 전담은행 투자지원 추천기업(강원충청권) 모집 공고",
     "publishedAt": "2026-08-03T00:00:00.000Z",
@@ -3860,8 +3850,38 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.smtech.go.kr/front/ifg/no/notice02_detail.do;jsessionid=oc0rfPrEe47YIiWJRNZ5buAIudnkLyJSaneQnK1DeyBFP45ETwoeaPYBmMdYgh0Y.smwas4_servlet_engine3?buclYy=&ancmId=S02876&buclCd=S9171&dtlAncmSn=1&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1",
+        "url": "https://www.smtech.go.kr/front/ifg/no/notice02_detail.do;jsessionid=PyQRu7sXdac2cnD96wkkvXlG6aqbvRSmIXjTeuZrB8UsjFqkTi1nR27SauDBLYm6.smwas1_servlet_engine3?buclYy=&ancmId=S02876&buclCd=S9171&dtlAncmSn=1&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1",
         "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "kiria_noti-1ywpdo",
+    "itemType": "gov",
+    "title": "실외이동로봇 운행안전인증 제품 인증서 반납 공표  (KIRIA-01-24-007-03, (주)우아한형제들 - 실내·외 자율주행..",
+    "publishedAt": "2026-09-22T00:00:00.000Z",
+    "sourceName": "kiria_noti",
+    "tier": "T3",
+    "priority": "P2",
+    "score": -15,
+    "matchedKeywords": [
+      "주가IR(감점)"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.kiria.org/portal/info/portalInfoNotiDetail.do?notiSeq=NOTI_000000000001109",
+        "kind": "canonical"
+      }
+    ],
+    "relatedArticles": [
+      {
+        "title": "실외이동로봇 운행안전인증 제품 인증서 반납 공표  (KIRIA-01-24-003-01, 에이알247(주) - 실외 배송 로봇)",
+        "url": "https://www.kiria.org/portal/info/portalInfoNotiDetail.do?notiSeq=NOTI_000000000001097",
+        "sourceName": "kiria_noti"
       }
     ],
     "read": false,
@@ -3884,36 +3904,6 @@
       {
         "label": "원문",
         "url": "https://www.kiria.org/portal/info/portalInfoNotiDetail.do?notiSeq=NOTI_000000000001099",
-        "kind": "canonical"
-      }
-    ],
-    "relatedArticles": [
-      {
-        "title": "실외이동로봇 운행안전인증 제품 공표 (KIRIA-01-24-001-04, ㈜로보티즈AI-자율주행 실외이동로봇 개미, GAEMI..",
-        "url": "https://www.kiria.org/portal/info/portalInfoNotiDetail.do?notiSeq=NOTI_000000000001095",
-        "sourceName": "kiria_noti"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "kiria_noti-1ywouo",
-    "itemType": "gov",
-    "title": "실외이동로봇 운행안전인증 제품 인증서 반납 공표  (KIRIA-01-24-003-01, 에이알247(주) - 실외 배송 로봇)",
-    "publishedAt": "2026-09-04T00:00:00.000Z",
-    "sourceName": "kiria_noti",
-    "tier": "T3",
-    "priority": "P2",
-    "score": -15,
-    "matchedKeywords": [
-      "주가IR(감점)"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.kiria.org/portal/info/portalInfoNotiDetail.do?notiSeq=NOTI_000000000001097",
         "kind": "canonical"
       }
     ],
@@ -3960,6 +3950,32 @@
       {
         "label": "원문",
         "url": "https://kros.org/board/board.asp?b_code=2516&Action=content&GotoPage=1&B_CATE=BBS2",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "bizinfo-x92cjd",
+    "itemType": "gov",
+    "title": "[충남] AI 국방 로봇 신속 실증ㆍ시범 개발 지원 사업 모집 공고(충남ㆍ논산방산혁신클러스터)",
+    "publishedAt": "2026-09-21T15:00:00.000Z",
+    "deadlineAt": "2026-10-15",
+    "sourceName": "bizinfo",
+    "tier": "T3",
+    "priority": "P2",
+    "score": -20,
+    "matchedKeywords": [
+      "정부지원",
+      "주가IR(감점)",
+      "비관련지역(감점)"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126709",
         "kind": "canonical"
       }
     ],
@@ -4023,7 +4039,7 @@
     "itemType": "gov",
     "title": "2026년 경남 수도권 투자유치 거점센터 데모데이ㆍ멘토링 데이 참기기업 모집 공고",
     "publishedAt": "2026-02-24T15:00:00.000Z",
-    "deadlineAt": "2026-09-22",
+    "deadlineAt": "2026-12-31",
     "sourceName": "bizinfo",
     "tier": "T3",
     "priority": "P2",
@@ -4071,39 +4087,82 @@
     "starred": false
   },
   {
-    "id": "naver_news-1o719d",
+    "id": "naver_news-ro4hrn",
     "itemType": "news",
-    "title": "피지컬 AI 시대 핵심주 싹 담는다 …미래에셋, 'TIGER 현대차LG전자고정...",
-    "publishedAt": "2026-09-22T00:18:00.000Z",
+    "title": "[건설레이더] SK에코플랜트·금호건설·대우건설·GS건설·IPARK현대산업...",
+    "publishedAt": "2026-09-22T09:40:00.000Z",
     "sourceName": "naver_news",
     "tier": "T0",
     "priority": "P0",
-    "score": 90,
+    "score": 115,
     "matchedKeywords": [
       "피지컬AI직접",
       "로봇+제조",
-      "정부지원",
       "기업+생산",
-      "크로스소스+2"
+      "physicalAI(en)",
+      "robotics/llm(en)",
+      "크로스소스+2",
+      "정부지원",
+      "비관련지역(감점)",
+      "크로스소스+4"
     ],
     "matchedCompanies": [],
     "links": [
       {
         "label": "원문",
-        "url": "https://www.thefairnews.co.kr/news/articleView.html?idxno=88797",
+        "url": "https://www.finomy.com/news/articleView.html?idxno=262221",
         "kind": "canonical"
       }
     ],
     "relatedArticles": [
       {
-        "title": "현대차그룹, 휴머노이드 로봇 생산현장 투입 속도 … 美 HMGMA에 '로보틱...",
-        "url": "https://www.worktoday.co.kr/news/articleView.html?idxno=89595",
+        "title": "Beyond Appearance Shifts: Task-Semantic Action Calibration for VLA Models",
+        "url": "https://arxiv.org/abs/2609.23650",
+        "sourceName": "arxiv_cs_ro"
+      },
+      {
+        "title": "InSight: Self-Guided Skill Acquisition via Steerable VLAs",
+        "url": "https://arxiv.org/abs/2606.24884",
+        "sourceName": "arxiv_cs_ro"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-kkfsr",
+    "itemType": "news",
+    "title": "보스턴다이나믹스, '로봇 학교' RMAC 가동…내년 규모 10배로 확대",
+    "publishedAt": "2026-09-22T09:00:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 100,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조",
+      "기업+생산",
+      "비관련지역(감점)",
+      "크로스소스+3"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.smarttimes.co.kr/news/articleView.html?idxno=49214",
+        "kind": "canonical"
+      }
+    ],
+    "relatedArticles": [
+      {
+        "title": "보스턴다이나믹스, 미 조지아에 ‘휴머노이드 로봇 훈련소’ 개소..피지...",
+        "url": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62637",
         "sourceName": "naver_news"
       },
       {
-        "title": "현대차·기아 공장에 '아틀라스' 2만5000대 투입…美서 제조훈련 돌입",
-        "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1725242",
-        "sourceName": "naver_news"
+        "title": "LS일렉트릭, 보스턴다이나믹스 ‘스팟’ 도입 스마트팩토리 속도 - inthenews.co.kr",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1SOWVLc0xYWXNGNUFvNk1aR05UWWJIN1Jnd3ZLamVtSkZtRHVWMEJMbHR1Vm9FbnFvU3ZEYmljc3ZxNVI2cFR5eDhldk5GZ3hLS0Jjbk1JU1pqSXNJdGRmZGhRelI?oc=5",
+        "sourceName": "google_news_physicalai"
       }
     ],
     "read": false,
@@ -4136,10 +4195,10 @@
     "starred": false
   },
   {
-    "id": "naver_news-1q3q5d",
+    "id": "naver_news-jy76er",
     "itemType": "news",
-    "title": "현대차그룹, '아틀라스 2만5000대' 공장 배치…미국 로봇 학교 10배 키운...",
-    "publishedAt": "2026-09-21T23:58:00.000Z",
+    "title": "아틀라스, 현대차 美 공장 '인턴' 발령",
+    "publishedAt": "2026-09-22T19:10:00.000Z",
     "sourceName": "naver_news",
     "tier": "T0",
     "priority": "P0",
@@ -4148,101 +4207,28 @@
       "피지컬AI직접",
       "로봇+제조",
       "기업+생산",
+      "정부지원",
+      "비관련지역(감점)",
       "크로스소스+2"
     ],
     "matchedCompanies": [],
     "links": [
       {
         "label": "원문",
-        "url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5064939",
+        "url": "https://www.mt.co.kr/industry/2026/09/23/2026092219451876712",
         "kind": "canonical"
       }
     ],
     "relatedArticles": [
       {
-        "title": "현대차 美공장에 아틀라스 '훈련장'…휴머노이드 2만5000대 배치 준비",
-        "url": "https://www.fnnews.com/news/202609220841142574",
+        "title": "현대차·LG전자 25%씩 담았다…미래운용, '피지컬 AI 밸류체인' ETF 상장",
+        "url": "https://www.apnews.kr/news/articleView.html?idxno=3051469",
         "sourceName": "naver_news"
       },
       {
-        "title": "미래에셋운용, 현대차·LG전자 고정 편입 ETF 상장… 로봇 만드는 두 축...",
-        "url": "https://www.womentimes.co.kr/news/articleView.html?idxno=106384",
+        "title": "아틀라스 '로봇 학교' 가동…현대차, 휴머노이드 2만5000대 투입 속도",
+        "url": "https://www.newsway.co.kr/news/view?ud=2026092220432311228",
         "sourceName": "naver_news"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-w2j36x",
-    "itemType": "news",
-    "title": "산업부, M.AX CEO 해커톤 개최…네이버클라우드·대창 등 구성 6조 1등 차...",
-    "publishedAt": "2026-09-21T12:38:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 80,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "기업+생산",
-      "M.AX"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.viva100.com/article/20260921501407",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-z4gthd",
-    "itemType": "news",
-    "title": "미소정보기술, 정부 'M.AX 전문기업' 선정…제조 AI 사업 확대",
-    "publishedAt": "2026-09-18T06:52:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 80,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조",
-      "M.AX"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://zdnet.co.kr/view?no=20260918155053",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-77n406",
-    "itemType": "news",
-    "title": "미소정보기술, 공장이 스스로 판단하고 움직이게…M.AX 제조 AI 전문기업...",
-    "publishedAt": "2026-09-18T06:16:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 80,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조",
-      "M.AX"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.venturesquare.net/1115202",
-        "kind": "canonical"
       }
     ],
     "read": false,
@@ -4275,10 +4261,10 @@
     "starred": false
   },
   {
-    "id": "naver_news-keme7e",
+    "id": "naver_news-th7jda",
     "itemType": "news",
-    "title": "'휴머노이드 서밋 서울 2026' 22일 개막...글로벌 피지컬AI '한자리'",
-    "publishedAt": "2026-09-21T23:32:00.000Z",
+    "title": "핑거, 세아FSI 인수…제조업 사업 확대",
+    "publishedAt": "2026-09-22T23:50:00.000Z",
     "sourceName": "naver_news",
     "tier": "T0",
     "priority": "P0",
@@ -4292,7 +4278,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.newstree.kr/newsView/ntr202609210017",
+        "url": "https://www.nbntv.co.kr/news/articleView.html?idxno=4025245",
         "kind": "canonical"
       }
     ],
@@ -4300,10 +4286,10 @@
     "starred": false
   },
   {
-    "id": "naver_news-98x1pa",
+    "id": "naver_news-q91u77",
     "itemType": "news",
-    "title": "글로벌 로봇 회의 ‘휴머노이드 써밋 서울’ 22일 개막",
-    "publishedAt": "2026-09-21T23:32:00.000Z",
+    "title": "아크릴, 650억 피지컬 AI 국책과제서 로봇 검증 맡는다",
+    "publishedAt": "2026-09-22T23:26:00.000Z",
     "sourceName": "naver_news",
     "tier": "T0",
     "priority": "P0",
@@ -4317,7 +4303,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.dailian.co.kr/news/view/1693089?sc=Naver",
+        "url": "https://www.medigatenews.com/news/2909563707",
         "kind": "canonical"
       }
     ],
@@ -4325,10 +4311,10 @@
     "starred": false
   },
   {
-    "id": "naver_news-axsxnn",
+    "id": "naver_news-dg1jva",
     "itemType": "news",
-    "title": "통신 3사, '피지컬 AI' 선점 경쟁...로봇·제조 대공세",
-    "publishedAt": "2026-09-21T22:30:00.000Z",
+    "title": "[더벨][i-point] 핑거, 세아FSI 인수 추진",
+    "publishedAt": "2026-09-22T23:22:00.000Z",
     "sourceName": "naver_news",
     "tier": "T0",
     "priority": "P0",
@@ -4342,7 +4328,32 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=702102",
+        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609230810299520103331",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-l11mni",
+    "itemType": "news",
+    "title": "어펄마캐피탈, ‘서룡전자 자회사’ 핑거에 세아FSI 매각… 거래가 1550...",
+    "publishedAt": "2026-09-22T09:26:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 75,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조",
+      "정부지원"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://biz.chosun.com/stock/stock_general/2026/09/22/ODXMARYKMFCNXMWDQ6L57NLCN4",
         "kind": "canonical"
       }
     ],
@@ -4450,60 +4461,10 @@
     "starred": false
   },
   {
-    "id": "google_news_physicalai-r553zm",
+    "id": "naver_news-l462am",
     "itemType": "news",
-    "title": "아이엘, 휴머노이드 '아이엘봇' 천안 스마트팩토리서 피지컬AI 실증 - 머니투데이 - 머니투데이",
-    "publishedAt": "2026-07-22T07:00:00.000Z",
-    "sourceName": "google_news_physicalai",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 75,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조",
-      "정부지원"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5odUNsMEYxQTUtSUVVSlJNaV9ENXdhTGRXQVlwTTBUVGptTkllbEN3cWxwelBKanpyd1Qyb0J3dWNMa3prQkJiRlBfMXVJbThqWlVtYUItNEhwazc3dTg4WkxfX3ZJNVdm0gFuQVVfeXFMTlRoOUN5UEFWZ3J5bmFwa3B1RDNKNFFrNVZaTFVra0VNQ2Utb184YnRHVWIyQUJxeWwzd0poQkQtZ0J4NWF2VVh3aFpMeXRVbGJIMVpCVUhoNnZuclFUNFI0QXp3Um9LdnpZQkkxeXc?oc=5",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "google_news_physicalai-qo0nva",
-    "itemType": "news",
-    "title": "아이엘, 휴머노이드 '아이엘봇' 공급 확산…\"천안 스마트팩토리서 피지컬AI 실증 본격화\" - 프라임경제",
-    "publishedAt": "2026-07-22T07:00:00.000Z",
-    "sourceName": "google_news_physicalai",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 75,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조",
-      "정부지원"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1WVngtT0NvNlhtYVNUYzJ3bDFiU3F6bjBGNGhObS1LNkJ3MjRfcFo5anFReGZ2eENuaS12cXdGWU84V1ZmdVdhYVNJQkNodlExaW9JaFgxX0VNTmlYN2MwM3BONHROSlI1dU5nZ0JwamxfQQ?oc=5",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-smdg58",
-    "itemType": "news",
-    "title": "로봇이 공장일 배운다…보스턴다이나믹스, 로봇 학습 시설 열어",
-    "publishedAt": "2026-09-22T00:14:00.000Z",
+    "title": "[창간기획] LG전자 '관절'·두산로보틱스 '지능'…피지컬 AI, 현장서 통할...",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "naver_news",
     "tier": "T0",
     "priority": "P0",
@@ -4517,19 +4478,19 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://daily.hankooki.com/news/articleView.html?idxno=1408711",
+        "url": "https://www.ezyeconomy.com/news/articleView.html?idxno=240062",
         "kind": "canonical"
       }
     ],
     "relatedArticles": [
       {
-        "title": "보스턴다이나믹스, 美 HMGMA에 로봇 학습 거점 구축",
-        "url": "https://www.pointdaily.co.kr/news/articleView.html?idxno=320145",
+        "title": "[LG그룹 포커스] LG·LG전자·LG에너지솔루션, 차세대 AI 인프라 시장 공...",
+        "url": "https://www.thevaluenews.co.kr/news/view.php?idx=201816",
         "sourceName": "naver_news"
       },
       {
-        "title": "공장 투입 준비 척척 …보스턴다이나믹스, 美 아틀라스 훈련센터 가동",
-        "url": "https://www.ajunews.com/view/20260922084812884",
+        "title": "[투데이온] LG전자, 인도에 500억루피 가전공장 신설…'3대 생산축' 완성",
+        "url": "https://www.the-today.com/news/articleView.html?idxno=90633",
         "sourceName": "naver_news"
       }
     ],
@@ -4537,10 +4498,10 @@
     "starred": false
   },
   {
-    "id": "naver_news-qpq5en",
+    "id": "naver_news-haf3w8",
     "itemType": "news",
-    "title": "모든 업무, AI로 통한다…연구실·공장 넘어 인사평가까지",
-    "publishedAt": "2026-09-21T19:05:00.000Z",
+    "title": "걷고 나르고 순서 맞춰 정리…로봇 인턴 “우리 곧 발령나요”",
+    "publishedAt": "2026-09-22T13:03:00.000Z",
     "sourceName": "naver_news",
     "tier": "T0",
     "priority": "P0",
@@ -4554,7 +4515,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.edaily.co.kr/News/Read?newsId=01479286645582744&mediaCodeNo=257",
+        "url": "https://www.khan.co.kr/article/202609222203025",
         "kind": "canonical"
       }
     ],
@@ -4562,10 +4523,10 @@
     "starred": false
   },
   {
-    "id": "naver_news-fyaext",
+    "id": "naver_news-youitm",
     "itemType": "news",
-    "title": "'인재경영' 정의선 회장, 실리콘밸리서 AI·로봇 '두뇌' 확보전",
-    "publishedAt": "2026-09-21T09:02:00.000Z",
+    "title": "차세대 휴머노이드로 피지컬 AI 선점한다",
+    "publishedAt": "2026-09-22T07:00:00.000Z",
     "sourceName": "naver_news",
     "tier": "T0",
     "priority": "P0",
@@ -4579,7 +4540,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.g-enews.com/view.php?ud=20260921151147406112616b072_1",
+        "url": "https://www.m-joongang.com/news/articleView.html?idxno=403093",
         "kind": "canonical"
       }
     ],
@@ -4587,11 +4548,11 @@
     "starred": false
   },
   {
-    "id": "google_news_physicalai-7tk9iy",
+    "id": "naver_news-yg4atc",
     "itemType": "news",
-    "title": "[스마트팩토리 특집-①] LG전자, 단순 자동화 넘어 ‘AI 팩토리’로 진화…피지컬 AI·로봇 생태계 정조준 - 테크월드",
-    "publishedAt": "2026-07-08T07:00:00.000Z",
-    "sourceName": "google_news_physicalai",
+    "title": "LG, 100조 투자 신화 써내린다…구광모, CEO 40명과 8시간 확정한 'AI 초...",
+    "publishedAt": "2026-09-22T05:08:00.000Z",
+    "sourceName": "naver_news",
     "tier": "T0",
     "priority": "P0",
     "score": 70,
@@ -4604,7 +4565,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ZcHJQY1BTNkZ6ZlMtcFZPMU5sb20wZW1IRlZUZGZtWDFNVzltMzVzVm5fU1hjY3ZscU4wSmZOdFh5eTNyd2FsTEw5UEZYZHQzLW1BREFHdFY1UnU1NEpQLTNrNUdva2pR?oc=5",
+        "url": "https://www.upkoreanews.kr/news/articleView.html?idxno=100359",
         "kind": "canonical"
       }
     ],
@@ -4612,10 +4573,35 @@
     "starred": false
   },
   {
-    "id": "naver_news-y5rqj9",
+    "id": "naver_news-1kg3f6",
     "itemType": "news",
-    "title": "[AI 브리프] 리얼월드, CJ대한통운과 물류 특화 피지컬 AI 협력 확대",
-    "publishedAt": "2026-09-21T08:14:00.000Z",
+    "title": "노타, 글로벌 반도체 협력 속 로보틱스 영역 확장",
+    "publishedAt": "2026-09-22T23:14:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 65,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조",
+      "화장품제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.cstimes.com/news/articleView.html?idxno=721778",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-wdc9ls",
+    "itemType": "news",
+    "title": "창원서 10월 ‘The Next AI 2026’ 개최…제조AI·스마트팩토리 기술 집결",
+    "publishedAt": "2026-09-22T07:16:00.000Z",
     "sourceName": "naver_news",
     "tier": "T0",
     "priority": "P0",
@@ -4629,57 +4615,25 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.itdaily.kr/news/articleView.html?idxno=241763",
+        "url": "https://www.hellot.net/news/article.html?no=115100",
         "kind": "canonical"
       }
     ],
     "relatedArticles": [
       {
-        "title": "리얼월드, CJ대한통운과 물류 특화 피지컬 AI 협력 확대",
-        "url": "https://www.irobotnews.com/news/articleView.html?idxno=48614",
-        "sourceName": "irobotnews"
+        "title": "창원서 10월 ‘The Next AI 2026’ 개최…제조AI·스마트팩토리 기술 집결 - 헬로티",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9SWXlzb3Zyd2oyX0lsWHVpdkJ3bWdJYXpMUThDV2s2dTgtX0dCTmszd0pGX1dSbTdMYXRDTjJpNmJPZkFrWUZmdkZMc295OWJOclh1NlEyal9MZlFXUWRz?oc=5",
+        "sourceName": "google_news_physicalai"
       }
     ],
     "read": false,
     "starred": false
   },
   {
-    "id": "naver_news-btvru0",
+    "id": "naver_news-yq8oj7",
     "itemType": "news",
-    "title": "ETRI, 피지컬 AI 국제표준화 주도한 … 제조·모빌리티 등 산업 확산 기...",
-    "publishedAt": "2026-09-20T03:14:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 65,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.worktoday.co.kr/news/articleView.html?idxno=89513",
-        "kind": "canonical"
-      }
-    ],
-    "relatedArticles": [
-      {
-        "title": "ETRI, 피지컬 AI 국제표준화 주도한다",
-        "url": "https://www.irobotnews.com/news/articleView.html?idxno=48627",
-        "sourceName": "irobotnews"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-twc3ej",
-    "itemType": "news",
-    "title": "“로봇부터 들이지 않는다”…GS건설, 건설현장 ‘피지컬 AI’ 실전 검증...",
-    "publishedAt": "2026-09-22T00:21:00.000Z",
+    "title": "GS건설, 용인 기술연구소에 건설로봇 사전검증센터 조성",
+    "publishedAt": "2026-09-22T12:32:00.000Z",
     "sourceName": "naver_news",
     "tier": "T0",
     "priority": "P0",
@@ -4693,7 +4647,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.sportsseoul.com/news/read/1636942",
+        "url": "https://www.koreareport.co.kr/news/articleView.html?idxno=53182",
         "kind": "canonical"
       }
     ],
@@ -4851,89 +4805,10 @@
     "starred": false
   },
   {
-    "id": "naver_news-h7y8z1",
+    "id": "naver_news-dyxxe7",
     "itemType": "news",
-    "title": "우리 공장 문제 , AI로 해결…CEO가 이끄는 M.AX",
-    "publishedAt": "2026-09-21T08:27:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 60,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "M.AX"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609210189&t=NNv",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-zbgb4s",
-    "itemType": "news",
-    "title": "우리 공장 뭐부터 AI로? …산업부, 제조업 CEO와 'M.AX 해커톤'",
-    "publishedAt": "2026-09-21T07:13:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 60,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "M.AX"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.nocutnews.co.kr/news/6581464",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "google_news_physicalai-7ij07n",
-    "itemType": "news",
-    "title": "알체라, KEIT 'M.AX 전문기업' 선정…제조·피지컬 AI 데이터 역량 인정 - 전자신문",
-    "publishedAt": "2026-09-04T07:00:00.000Z",
-    "sourceName": "google_news_physicalai",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 60,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "M.AX"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9keURxd1g1TTBKYXd1eC0tM1h0RFpZUXJQa3Rlc2ZGUUdXc0FEVUdNSVRRUUx2TWx5bVB3SDhJa09wc0VNeHQzbUJCYjdfdw?oc=5",
-        "kind": "canonical"
-      }
-    ],
-    "relatedArticles": [
-      {
-        "title": "알체라, KEIT ‘M.AX 전문기업’ 선정…제조·피지컬 AI 데이터 시장 정조준 - 서울경제TV",
-        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBtZS1Ec0pNUzB0cmNPM3Y0TTYxVXVQOU1FZkxDbUROd0wwTm9WR21tTWpuQzJSR2pQaXRnWWJnUnFBQlZrTm5IZTdLY0ZRWHBFX0ZYLTNOcVpmSzgzb1h4SXBYeWE?oc=5",
-        "sourceName": "google_news_physicalai"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-axsyis",
-    "itemType": "news",
-    "title": "제논, 코스닥 상장예비심사 승인…IPO 절차 본격화",
-    "publishedAt": "2026-09-22T00:18:00.000Z",
+    "title": "[추석특집] 대한민국 미래산업의 새 축…피지컬AI로 특별해지는 전주",
+    "publishedAt": "2026-09-22T23:02:00.000Z",
     "sourceName": "naver_news",
     "tier": "T0",
     "priority": "P0",
@@ -4946,43 +4821,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=702257",
-        "kind": "canonical"
-      }
-    ],
-    "relatedArticles": [
-      {
-        "title": "제논, 코스닥 상장예비심사 승인…AI·AX로 지속 성장 예고",
-        "url": "https://www.etnews.com/20260922000095",
-        "sourceName": "naver_news"
-      },
-      {
-        "title": "제논, 코스닥 상장예비심사 승인",
-        "url": "https://www.newsis.com/view/NISX20260922_0003799585",
-        "sourceName": "naver_news"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-utr5cr",
-    "itemType": "news",
-    "title": "피지컬 AI 글로벌 서밋, 실리콘밸리 이어 서울 상륙",
-    "publishedAt": "2026-09-21T23:30:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 55,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "정부지원"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.yna.co.kr/view/AKR20260921147800017?input=1195m",
+        "url": "https://www.jjan.kr/article/20260917500560",
         "kind": "canonical"
       }
     ],
@@ -4990,85 +4829,38 @@
     "starred": false
   },
   {
-    "id": "naver_news-6wyvg2",
+    "id": "naver_news-wqwnbs",
     "itemType": "news",
-    "title": "[인텔리빅스 IPO] ②공모 자금 65% R D 투입, 피지컬AI 사업확장 '자신감...",
-    "publishedAt": "2026-09-21T22:00:00.000Z",
+    "title": "LS일렉트릭, 생산현장에 4족 보행로봇 도입…제조 경쟁력 대폭 강화",
+    "publishedAt": "2026-09-22T04:54:00.000Z",
     "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 55,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "정부지원"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.fetv.co.kr/news/articleView.html?idxno=310582",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-crqehi",
-    "itemType": "news",
-    "title": "AI 모듈형 데이터센터 제조기업 HDMS, 전주시에 '첫 신호탄'",
-    "publishedAt": "2026-09-21T10:05:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 55,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "정부지원"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.enewstoday.co.kr/news/articleView.html?idxno=2473111",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-unsydp",
-    "itemType": "news",
-    "title": "삼성전자 AI칩·LG 스마트팩토리 강점 … 휴머노이드 전반에서 현대차 ...",
-    "publishedAt": "2026-09-20T08:38:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
+    "tier": "T2",
+    "priority": "P1",
     "score": 55,
     "matchedKeywords": [
       "로봇+제조",
       "기업+생산",
+      "비관련지역(감점)",
       "크로스소스+2"
     ],
     "matchedCompanies": [],
     "links": [
       {
         "label": "원문",
-        "url": "https://www.mk.co.kr/article/12157567",
+        "url": "https://www.e-platform.net/news/articleView.html?idxno=105605",
         "kind": "canonical"
       }
     ],
     "relatedArticles": [
       {
-        "title": "삼성전자 AI칩·LG 스마트팩토리 강점 … 휴머노이드 전반에서 현대차 약진 - 매일경제",
-        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1ZRE1QR3JCRDZZZ0ZmZVU0UXFwT2FfXzBSdmJQXzFQN1Y0SHpKM1VYQ0hlcTZ1SWZCZXZkTXdiOFQ2a0dtdWhEZGRRMTlmQQ?oc=5",
+        "title": "LS일렉트릭, 생산현장에 4족 보행로봇 투입…스마트팩토리 전환 속도 - Queen 이코노미퀸",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE00QzFtWGFRdjIxanJlS3hhZEM5b1pjYWpGZEZ4NmdWRE4xQWRYREVZekxibE40TkJtY0p5OC1SRk1GV2dlY2hWM09QR1BTc3V0Zk5qNkxmVllSalZkZ1lra1hsZmZYSGRP?oc=5",
         "sourceName": "google_news_physicalai"
       },
       {
-        "title": "삼성전자 AI칩·LG 스마트팩토리 강점… 휴머노이드 전반에서 현대차 약진 - v.daum.net",
-        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5lY0U3VWk3LXBXVC1KTE1ORHdsdkFvclRZNFdlZWJDb3hvSHR2T2MzcFQ0WkRpT0YxRWRYeVlzcUd5N2VnNnZmbmt5STdrSjBpSFdNQg?oc=5",
-        "sourceName": "google_news_physicalai"
+        "title": "LS일렉트릭, 생산현장에 4족 보행로봇 투입…스마트팩토리 전환 속도",
+        "url": "https://www.queen.co.kr/news/articleView.html?idxno=463764",
+        "sourceName": "naver_news"
       }
     ],
     "read": false,
@@ -6065,11 +5857,11 @@
     "starred": false
   },
   {
-    "id": "google_news_physicalai-whqd4q",
+    "id": "irobotnews-fxlclq",
     "itemType": "news",
-    "title": "아이엘봇, 천안 스마트팩토리서 피지컬AI 실증 본격화 - 전자신문",
-    "publishedAt": "2026-07-22T07:00:00.000Z",
-    "sourceName": "google_news_physicalai",
+    "title": "아크릴, 레인보우로보틱스 등과 650억원 규모 피지컬 AI 국책과제 진행",
+    "publishedAt": "2026-09-22T05:11:47.000Z",
+    "sourceName": "irobotnews",
     "tier": "T0",
     "priority": "P0",
     "score": 55,
@@ -6081,7 +5873,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1BOGFRUHpHWmRVWWV2Ukl2ZG5UdkZ1cWhGYjg3a0NRdldtQWpvLXRibFA4eEZ3bDFoRl9KUXpfMV9kV2hiRHZuTnVGemFtUQ?oc=5",
+        "url": "https://www.irobotnews.com/news/articleView.html?idxno=48635",
         "kind": "canonical"
       }
     ],
@@ -6089,10 +5881,10 @@
     "starred": false
   },
   {
-    "id": "naver_news-rw8kpa",
+    "id": "naver_news-3kxsru",
     "itemType": "news",
-    "title": "GS건설, 건설로봇 사전검증센터 구축…피지컬 AI 현장 확산 속도",
-    "publishedAt": "2026-09-22T00:20:00.000Z",
+    "title": "대신증권, 반도체·로봇·우주 중소형주 기업설명회 진행… 신사업·성...",
+    "publishedAt": "2026-09-22T23:50:00.000Z",
     "sourceName": "naver_news",
     "tier": "T0",
     "priority": "P0",
@@ -6105,7 +5897,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.pointdaily.co.kr/news/articleView.html?idxno=320149",
+        "url": "https://www.paxetv.com/news/articleView.html?idxno=282628",
         "kind": "canonical"
       }
     ],
@@ -6113,10 +5905,10 @@
     "starred": false
   },
   {
-    "id": "naver_news-9x2qv3",
+    "id": "naver_news-67j42l",
     "itemType": "news",
-    "title": "보스턴다이내믹스 아틀라스 로봇학교 문 열었다…내년엔 10배로",
-    "publishedAt": "2026-09-22T00:12:00.000Z",
+    "title": "LG그룹, 글로벌 AI 동맹 넓힌다…냉각·전력부터 피지컬 AI까지",
+    "publishedAt": "2026-09-22T23:00:00.000Z",
     "sourceName": "naver_news",
     "tier": "T0",
     "priority": "P0",
@@ -6129,7 +5921,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.yna.co.kr/view/AKR20260922039000003?input=1195m",
+        "url": "https://www.pointe.co.kr/news/articleView.html?idxno=85106",
         "kind": "canonical"
       }
     ],
@@ -6137,10 +5929,10 @@
     "starred": false
   },
   {
-    "id": "naver_news-k16ms6",
+    "id": "naver_news-iveh7m",
     "itemType": "news",
-    "title": "구광모·젠슨 황 AI 동맹, 한달 만에 다시 현장으로···LG전자·엔솔 엔...",
-    "publishedAt": "2026-09-22T00:10:00.000Z",
+    "title": "어펄마, 성호전자 계열 핑거에 세아FSI 매각 [시그널]",
+    "publishedAt": "2026-09-22T22:01:00.000Z",
     "sourceName": "naver_news",
     "tier": "T0",
     "priority": "P0",
@@ -6153,7 +5945,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.smartbizn.com/news/articleView.html?idxno=154569",
+        "url": "https://www.sedaily.com/article/20094205",
         "kind": "canonical"
       }
     ],
@@ -6161,10 +5953,10 @@
     "starred": false
   },
   {
-    "id": "naver_news-xphcm4",
+    "id": "naver_news-91r67n",
     "itemType": "news",
-    "title": "스마트큐브, 中 휴머노이드 로봇기업 LimX와 공식 파트너 계약 체결…로...",
-    "publishedAt": "2026-09-22T00:01:00.000Z",
+    "title": "우주정거장서 AI 로봇 조종한다 … 日, '우주 AI 로봇 대회' 2027년 개최",
+    "publishedAt": "2026-09-22T21:26:00.000Z",
     "sourceName": "naver_news",
     "tier": "T0",
     "priority": "P0",
@@ -6177,7 +5969,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.etnews.com/20260921000196",
+        "url": "https://www.g-enews.com/view.php?ud=2026092222245576010c8c1c064d_1",
         "kind": "canonical"
       }
     ],
@@ -6185,10 +5977,10 @@
     "starred": false
   },
   {
-    "id": "naver_news-54ncwz",
+    "id": "naver_news-ncn1eg",
     "itemType": "news",
-    "title": "보스턴다이나믹스, 美 조지아에 아틀라스 학습·검증 거점 'RMAC' 가동",
-    "publishedAt": "2026-09-21T23:52:00.000Z",
+    "title": "[인터뷰] LG·삼성·HD현대와 피지컬 AI 개척하는 ‘스킬드 AI’… 아비나...",
+    "publishedAt": "2026-09-22T21:01:00.000Z",
     "sourceName": "naver_news",
     "tier": "T0",
     "priority": "P0",
@@ -6201,14 +5993,38 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.econonews.co.kr/news/articleView.html?idxno=444701",
+        "url": "https://biz.chosun.com/it-science/ict/2026/09/23/7KH3FYHEHNCOLDJGOUQYN3O6DI",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-ibcmij",
+    "itemType": "news",
+    "title": "부품 배치 ‘척척’ 무거운 짐도 ‘사뿐’… 아틀라스 2.5만대 로봇 학교...",
+    "publishedAt": "2026-09-22T20:04:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.seoul.co.kr/news/economy/industry/2026/09/23/20260923031003?wlog_tag3=naver",
         "kind": "canonical"
       }
     ],
     "relatedArticles": [
       {
-        "title": "보스턴다이나믹스, 美 로봇 학습시설 마련… 제조현장 투입 준비",
-        "url": "https://www.sentv.co.kr/article/view/sentv202609220011",
+        "title": "부품 배치 ‘척척’ 무거운 짐도 ‘사뿐’…아틀라스 2.5만대 로봇 학교...",
+        "url": "https://www.seoul.co.kr/news/economy/car/2026/09/22/20260922500280?wlog_tag3=naver",
         "sourceName": "naver_news"
       }
     ],
@@ -6216,10 +6032,10 @@
     "starred": false
   },
   {
-    "id": "naver_news-77n09u",
+    "id": "naver_news-jvip91",
     "itemType": "news",
-    "title": "삼쩜삼캠퍼스, 출범 1년 만에 14만명…260만번 본 투자 리포트 오프라인...",
-    "publishedAt": "2026-09-21T23:31:00.000Z",
+    "title": "LG, MS와 데이터센터 중심 AI 파트너십 강화",
+    "publishedAt": "2026-09-22T15:34:00.000Z",
     "sourceName": "naver_news",
     "tier": "T0",
     "priority": "P0",
@@ -6232,7 +6048,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://www.venturesquare.net/1115712",
+        "url": "https://www.chosun.com/economy/industry-company/2026/09/23/VJMKOLX6PNHQZMQ6LKPZSELSGU",
         "kind": "canonical"
       }
     ],
@@ -6240,488 +6056,658 @@
     "starred": false
   },
   {
-    "id": "naver_news-kbpcik",
+    "id": "naver_news-x597fm",
     "itemType": "news",
-    "title": "유니켐, '美 로봇 촉각' 전문가 품는다…피지컬AI 신사업 본격화",
-    "publishedAt": "2026-09-21T23:30:00.000Z",
+    "title": "‘전력은 LG엔솔, 냉각은 LG전자’… 엔비디아·MS AI 데이터센터 생태계...",
+    "publishedAt": "2026-09-22T09:32:00.000Z",
     "sourceName": "naver_news",
     "tier": "T0",
     "priority": "P0",
     "score": 50,
     "matchedKeywords": [
       "피지컬AI직접",
-      "로봇+제조"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.fnnews.com/news/202609220704345999",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-3mahcr",
-    "itemType": "news",
-    "title": "[오늘의 신문] 추석 선물값 66%↑·귀성길 사고 1.4배…美 금리·AI 투자...",
-    "publishedAt": "2026-09-21T23:02:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 50,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://kor.theasian.asia/archives/416197",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-77oxvn",
-    "itemType": "news",
-    "title": "“3년 만에 세계 1위 애지봇, 비결은 데이터였다”…김묵현 화인로보틱...",
-    "publishedAt": "2026-09-21T23:01:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 50,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.venturesquare.net/1112653",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-rlofqv",
-    "itemType": "news",
-    "title": "[K-지능열전] ⑦ 데이터는 움직이기 싫다···HBM부터 K-멜로디까지",
-    "publishedAt": "2026-09-21T23:00:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 50,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.womaneconomy.co.kr/news/articleView.html?idxno=258952",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-3mslcs",
-    "itemType": "news",
-    "title": "[오늘의 이슈]휴머노이드 서밋 서울 개막…피지컬 AI 현주소 점검",
-    "publishedAt": "2026-09-21T22:12:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 50,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.newskr.kr/news/articleView.html?idxno=106566",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-ivf38n",
-    "itemType": "news",
-    "title": "“中 로봇 ‘폭풍성장’ 전야…전기차·배터리가 굴기 밑거름”[정다은...",
-    "publishedAt": "2026-09-21T22:01:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 50,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.sedaily.com/article/20093397",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-9h23ud",
-    "itemType": "news",
-    "title": "'로봇 눈'의 진화…슈퍼브AI, 'K-엑사원 데이터 공장' 가동",
-    "publishedAt": "2026-09-21T21:10:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 50,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.news1.kr/industry/sb-founded/6297859",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-cpa6x5",
-    "itemType": "news",
-    "title": "“전 부쳐 주는 로봇 없나요”… ‘가사 로봇’ 언제쯤 우리 집에 올까",
-    "publishedAt": "2026-09-21T21:01:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 50,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://biz.chosun.com/industry/company/2026/09/22/6C3HPXDHKJADFMH7PSQUVEWPTE",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-66n70y",
-    "itemType": "news",
-    "title": "中 하이건, 데이터센터 넘어 '로봇·엣지 전용' 차세대 칩 전격 공개",
-    "publishedAt": "2026-09-21T20:36:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 50,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.g-enews.com/view.php?ud=2026092117125593630c8c1c064d_1",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-7yyhjl",
-    "itemType": "news",
-    "title": "[특집]“AI, 이제 현실 세계로”⋯원주서 펼쳐진 ‘피지컬AI’의 미래",
-    "publishedAt": "2026-09-21T15:07:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 50,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.kwnews.co.kr/article/20260921500004",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-wdca7y",
-    "itemType": "news",
-    "title": "[봇규의 헬로BOT] 피지컬 AI의 착각과 현실 ② | 봇, 걷고 잡는다고 끝 ...",
-    "publishedAt": "2026-09-21T10:30:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 50,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.hellot.net/news/article.html?no=115058",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-gdyv2y",
-    "itemType": "news",
-    "title": "[과학에세이] 자동화의 세상에서 지능화의 세계로",
-    "publishedAt": "2026-09-21T10:03:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 50,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.kookje.co.kr/news2011/asp/newsbody.asp?code=1700&key=20260922.22018007276",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-yy9yvl",
-    "itemType": "news",
-    "title": "전주시 '피지컬AI 특별도시' 밑그림 그리기",
-    "publishedAt": "2026-09-21T09:36:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 50,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.jjn.co.kr/news/articleView.html?idxno=1052836",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-w2jmcq",
-    "itemType": "news",
-    "title": "[신간]안종배 국제미래학회장, ‘피지컬 AI 로봇’ 종합서 출간…14개 산...",
-    "publishedAt": "2026-09-21T05:52:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 50,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.viva100.com/article/20260921500955",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-h52bo6",
-    "itemType": "news",
-    "title": "[TECH한주] 중국산 시각 센서 저가 공세 꺾는 초정밀 광학의 힘… '픽셀...",
-    "publishedAt": "2026-09-20T23:00:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 50,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.epnc.co.kr/news/articleView.html?idxno=407157",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-ivf4so",
-    "itemType": "news",
-    "title": "AI 속도전 나선 재계…LG·포스코·LS 총수 일제히 “혁신 서두르자”",
-    "publishedAt": "2026-09-20T20:55:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 50,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.sedaily.com/article/20093165",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-oy0q5h",
-    "itemType": "news",
-    "title": "D램값 뛰고 피지컬 AI 뜬다…반도체 성장축 확대 [위클리반도체]",
-    "publishedAt": "2026-09-19T22:53:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 50,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.ddaily.co.kr/page/view/2026092000365588060",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "naver_news-2ngikn",
-    "itemType": "news",
-    "title": "포항시, 피지컬 AI․제조AX로 산업혁신 미래 연다…‘2026 스마트 제조 ...",
-    "publishedAt": "2026-09-19T12:10:00.000Z",
-    "sourceName": "naver_news",
-    "tier": "T0",
-    "priority": "P0",
-    "score": 50,
-    "matchedKeywords": [
-      "피지컬AI직접",
-      "로봇+제조"
-    ],
-    "matchedCompanies": [],
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.sentv.co.kr/article/view/sentv202609180075",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ro-5ajcrs",
-    "itemType": "trending",
-    "title": "From Pretraining to Proficiency: Real-World Subtask RL for Long-Horizon Manipulation with Minimal Human Intervention",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ro",
-    "tier": "T0",
-    "priority": "P1",
-    "score": 120,
-    "matchedKeywords": [
-      "physicalAI(en)",
-      "robotics/llm(en)",
-      "크로스소스+3",
-      "크로스소스+2",
-      "피지컬AI직접",
-      "로봇+제조",
       "기업+생산",
-      "비관련지역(감점)",
-      "크로스소스+4"
+      "로봇+제조",
+      "비관련지역(감점)"
     ],
     "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21788",
+        "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000016628&cp=nv",
         "kind": "canonical"
       }
     ],
     "relatedArticles": [
       {
-        "title": "FOCAL-VLA: Subtask-Guided Geometry Distillation and Implicit World Modeling for Vision-Language-Action Models",
-        "url": "https://arxiv.org/abs/2609.21228",
-        "sourceName": "arxiv_cs_ai"
+        "title": "결실 맺는 구광모 ‘빅테크 동맹’… LG, MS와 손 잡고 엔비디아 AI 팩토...",
+        "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000016706&cp=nv",
+        "sourceName": "naver_news"
       },
       {
-        "title": "HERMES: A Holistic End-to-End Risk-Aware Multimodal Embodied System with Vision-Language Models for Long-Tail Autonomous Driving",
-        "url": "https://arxiv.org/abs/2602.00993",
-        "sourceName": "arxiv_cs_ai"
+        "title": "LG “더 높은 미래로 비상”… 엔비디아 이어 MS와도 ‘AI 동맹’",
+        "url": "https://www.segye.com/newsView/20260922516024?OutUrl=naver",
+        "sourceName": "naver_news"
       }
     ],
     "read": false,
     "starred": false
   },
   {
-    "id": "arxiv_cs_ai-59hli7",
+    "id": "naver_news-zgcp23",
+    "itemType": "news",
+    "title": "로봇 부품부터 그룹주까지… ETF 상장",
+    "publishedAt": "2026-09-22T15:00:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3076325",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-6gul7h",
+    "itemType": "news",
+    "title": "[기자의 눈] '만년 2위' AMD 시총 1조달러 달성 시사점",
+    "publishedAt": "2026-09-22T12:58:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.00news.co.kr/news/articleView.html?idxno=106737",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-5tk8eg",
+    "itemType": "news",
+    "title": "완주군, 피지컬AI 육성…지자체 협치 시급",
+    "publishedAt": "2026-09-22T12:38:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8669789",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-kkf7z",
+    "itemType": "news",
+    "title": "GS건설, 로봇 투입 전 '모의 현장'서 검증…사전검증센터 구축",
+    "publishedAt": "2026-09-22T11:40:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.smarttimes.co.kr/news/articleView.html?idxno=49180",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-oyt16",
+    "itemType": "news",
+    "title": "[인터뷰…공감] 표준 모듈러 플랫폼으로 우뚝서는 ‘브릴스’ 전진 대표",
+    "publishedAt": "2026-09-22T11:32:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.kyeongin.com/article/1771399",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-snqydz",
+    "itemType": "news",
+    "title": "새 로봇 사지 마세요 … 카본식스, 기존 팔에 지능만 얹는다",
+    "publishedAt": "2026-09-22T11:02:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.newscj.com/news/articleView.html?idxno=3434933",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-fi0fvi",
+    "itemType": "news",
+    "title": "제조 작업 배우는 ‘아틀라스’… 훈련센터 본격 가동",
+    "publishedAt": "2026-09-22T10:42:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.segye.com/newsView/20260922516042?OutUrl=naver",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-7b7uj0",
+    "itemType": "news",
+    "title": "[주식마감] '퀄컴 NPU서 로봇 AI 최적화' 노타 상한가... 셀리드, 더블유...",
+    "publishedAt": "2026-09-22T10:40:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.ggilbo.com/news/articleView.html?idxno=1183438",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-zhfen4",
+    "itemType": "news",
+    "title": "KES 2026 이노베이션 어워즈, 6개 분야 42개 혁신 제품·기술 선정… 10월...",
+    "publishedAt": "2026-09-22T10:28:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://kr.aving.net/news/articleView.html?idxno=1814702",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-pt6jkm",
+    "itemType": "news",
+    "title": "한국 진출 30년 엡손,  프린터 넘어 로보틱스·마이크로디바이스 기업으...",
+    "publishedAt": "2026-09-22T09:28:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://it.donga.com/109584",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-o2ovtm",
+    "itemType": "news",
+    "title": "핑거, 1550억원 들여 제조업체 인수…피지컬 AI 사업 확장",
+    "publishedAt": "2026-09-22T09:25:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://zdnet.co.kr/view?no=20260922182323",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-93cbeo",
+    "itemType": "news",
+    "title": "[현장] 로봇에 ‘손맛’ 가르친 카본식스…“공장에선 일해야 한다”",
+    "publishedAt": "2026-09-22T09:20:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202609221341024120148",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-k16lg5",
+    "itemType": "news",
+    "title": "GS건설, 건설로봇 '현장 투입' 전 검증부터···PoC센터 가동",
+    "publishedAt": "2026-09-22T09:12:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.smartbizn.com/news/articleView.html?idxno=154702",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-axszvt",
+    "itemType": "news",
+    "title": "[데일리픽] 비트코인, 8만5000달러 돌파…통신 3사, '피지컬 AI' 선점 경...",
+    "publishedAt": "2026-09-22T08:06:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=702405",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-g3xwus",
+    "itemType": "news",
+    "title": "실리콘 기반 단파장 적외선(SWIR) 이미지센서 개발… 고가 화합물 반도...",
+    "publishedAt": "2026-09-22T07:24:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.mtnews.net/news/articleView.html?idxno=26037",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-2n6wi0",
+    "itemType": "news",
+    "title": "AI가 스스로 공격하는 시대, '피지컬 AI 보안'이 뜬다…아우토크립트의...",
+    "publishedAt": "2026-09-22T07:18:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.businesskorea.co.kr/news/articleView.html?idxno=277556",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "irobotnews-fxlcmk",
+    "itemType": "news",
+    "title": "LS일렉트릭, 4족보행 로봇 ‘스팟’ 도입…스마트팩토리 고도화 나선다",
+    "publishedAt": "2026-09-22T07:10:43.000Z",
+    "sourceName": "irobotnews",
+    "tier": "T1",
+    "priority": "P1",
+    "score": 50,
+    "matchedKeywords": [
+      "로봇+제조",
+      "비관련지역(감점)",
+      "크로스소스+2",
+      "크로스소스+2"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.irobotnews.com/news/articleView.html?idxno=48644",
+        "kind": "canonical"
+      }
+    ],
+    "relatedArticles": [
+      {
+        "title": "LS일렉트릭, 4족보행 로봇 ‘스팟’ 도입…스마트팩토리 고도화 나선다 - 로봇신문",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBiQVRoZXdSbUVVVndpR1UyeXpqN0NsUUxONUc0OEJmaW9GMkpSbUNGX1h1cVZlaFdhT3RWUmJscUlwZGp2LWlJUzdRMmcwLWpBN3J5MGd5bEE5QzJQUzExRGFKX0JTV0V5cWtSTw?oc=5",
+        "sourceName": "google_news_physicalai"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-wgct6l",
+    "itemType": "news",
+    "title": "LG CNS도 'AI 인프라 운용사업' 추진,  설계자에서 운용자로 전환",
+    "publishedAt": "2026-09-22T05:44:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.newspim.com/news/view/20260922000724",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-c3czid",
+    "itemType": "news",
+    "title": "이억원 “피지컬 AI, 연구실 아닌 제조현장에서 완성된다”",
+    "publishedAt": "2026-09-22T05:35:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.joseilbo.com/news/news_read.php?uid=576215&class=18&grp=",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-k16m5z",
+    "itemType": "news",
+    "title": "구광모·나델라 만났다···LG, MS와 AI 데이터센터·피지컬 AI 협력 확...",
+    "publishedAt": "2026-09-22T02:08:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.smartbizn.com/news/articleView.html?idxno=154612",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-latxs8",
+    "itemType": "news",
+    "title": "LG “전문가 AI가 고른 종목, S＆P500보다 수익률 20% 앞서”",
+    "publishedAt": "2026-09-14T20:05:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.seoul.co.kr/news/economy/industry/2026/09/15/20260915032001?wlog_tag3=naver",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-l62ing",
+    "itemType": "news",
+    "title": "AI ETF 수익률 S＆P500 상회·탈모 후보물질 42만 개도 하루 만에 검토…...",
+    "publishedAt": "2026-09-14T08:31:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.seoul.co.kr/news/economy/industry/2026/09/14/20260914500281?wlog_tag3=naver",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-wpggxn",
+    "itemType": "news",
+    "title": "산업계, AI·디지털 전환 경쟁력 강화…신사업부터 IPO·보안까지 속도",
+    "publishedAt": "2026-09-22T05:48:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.popcornnews.net/news/articleView.html?idxno=133877",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-xoe7jz",
+    "itemType": "news",
+    "title": "[유통24시] CJ대한통운, 리얼월드와 물류 피지컬AI 공동 개발 外",
+    "publishedAt": "2026-09-21T01:02:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "기업+생산"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://news.dealsitetv.com/articles/176206",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "naver_news-9h0o0z",
+    "itemType": "news",
+    "title": "로봇의 눈과 뇌 잇는다 …엔닷라이트, 피지컬 AI 밸류체인 연결",
+    "publishedAt": "2026-09-18T02:14:00.000Z",
+    "sourceName": "naver_news",
+    "tier": "T0",
+    "priority": "P0",
+    "score": 50,
+    "matchedKeywords": [
+      "피지컬AI직접",
+      "로봇+제조"
+    ],
+    "matchedCompanies": [],
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.news1.kr/industry/sb-founded/6295091",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-59ywzy",
     "itemType": "trending",
-    "title": "VLA-Precision: Asymmetric Co-Bootstrapping for Efficient Real-World Online RL of Vision-Language-Action Models",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
+    "title": "HuRo: Robotizing Human Videos for Scalable VLA Pretraining",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
     "score": 90,
@@ -6738,59 +6724,19 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.04355",
+        "url": "https://arxiv.org/abs/2609.10706",
         "kind": "canonical"
       }
     ],
     "relatedArticles": [
       {
-        "title": "Fewer Steps, Better Actions: Rethinking Flow-Matching Inference for VLA Policies",
-        "url": "https://arxiv.org/abs/2609.21216",
-        "sourceName": "arxiv_cs_ai"
+        "title": "Think Like a World Model, Act Like a VLA: Distilling World-Model Representations into Compact Robot Policies",
+        "url": "https://arxiv.org/abs/2609.24682",
+        "sourceName": "arxiv_cs_ro"
       },
       {
-        "title": "VLA-Scope: Shift-Aware Failure Prediction for Vision-Language-Action Models",
-        "url": "https://arxiv.org/abs/2609.21246",
-        "sourceName": "arxiv_cs_ai"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-5ajahs",
-    "itemType": "trending",
-    "title": "AtomEgo: Exploring Ego-Robot Integration for Embodied Foundation Model Pretraining",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T0",
-    "priority": "P1",
-    "score": 75,
-    "matchedKeywords": [
-      "physicalAI(en)",
-      "robotics/llm(en)",
-      "크로스소스+2",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21461",
-        "kind": "canonical"
-      }
-    ],
-    "relatedArticles": [
-      {
-        "title": "Touvigation: Embodied Adaptive Object Acquisition for Blind and Low-Vision Users in Unfamiliar Indoor Environments",
-        "url": "https://arxiv.org/abs/2609.21828",
-        "sourceName": "arxiv_cs_ai"
-      },
-      {
-        "title": "Embodied Agents Take Control: Minimal-Interface Zero-Shot Agents Rival Industrial-Scale Policies in Vision-and-Language Navigation",
-        "url": "https://arxiv.org/abs/2607.26148",
+        "title": "Scaling Sim-to-Real VLA Reinforcement Learning with Generative 3D Worlds",
+        "url": "https://arxiv.org/abs/2603.18532",
         "sourceName": "arxiv_cs_ro"
       }
     ],
@@ -6798,11 +6744,11 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ai-5ajbu8",
+    "id": "arxiv_cs_ro-59zk23",
     "itemType": "trending",
-    "title": "Potential-Field Action Representation for Reinforcement Learning in Contact-Rich Manipulation",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
+    "title": "Organizational Principles Enable Collective Intelligence in Embodied AI",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
     "score": 75,
@@ -6818,19 +6764,59 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21609",
+        "url": "https://arxiv.org/abs/2609.11737",
         "kind": "canonical"
       }
     ],
     "relatedArticles": [
       {
-        "title": "ForceTwin: Physics-informed Digital Twins for Robotic Manipulation from Instrumented Human Interaction",
-        "url": "https://arxiv.org/abs/2609.21751",
+        "title": "AtomEgo: Exploring Ego-Robot Integration for Embodied Foundation Model Pretraining",
+        "url": "https://arxiv.org/abs/2609.21461",
         "sourceName": "arxiv_cs_ai"
       },
       {
-        "title": "AntiGrounding: Executable Robot Trajectories as Visual Prompts for VLM-Guided Manipulation",
-        "url": "https://arxiv.org/abs/2506.12374",
+        "title": "Touvigation: Embodied Adaptive Object Acquisition for Blind and Low-Vision Users in Unfamiliar Indoor Environments",
+        "url": "https://arxiv.org/abs/2609.21828",
+        "sourceName": "arxiv_cs_ai"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5a3xa2",
+    "itemType": "trending",
+    "title": "Acting in Meters: Learning Metric Interactions for Precise Robotic Manipulation",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 75,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)",
+      "크로스소스+2",
+      "크로스소스+2"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.18243",
+        "kind": "canonical"
+      }
+    ],
+    "relatedArticles": [
+      {
+        "title": "Potential-Field Action Representation for Reinforcement Learning in Contact-Rich Manipulation",
+        "url": "https://arxiv.org/abs/2609.21609",
+        "sourceName": "arxiv_cs_ai"
+      },
+      {
+        "title": "ForceTwin: Physics-informed Digital Twins for Robotic Manipulation from Instrumented Human Interaction",
+        "url": "https://arxiv.org/abs/2609.21751",
         "sourceName": "arxiv_cs_ai"
       }
     ],
@@ -6850,8 +6836,8 @@
       "robotics/llm(en)"
     ],
     "matchedCompanies": [],
-    "points": 734,
-    "commentCount": 275,
+    "points": 739,
+    "commentCount": 285,
     "lang": "en",
     "links": [
       {
@@ -6864,11 +6850,11 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ai-5aj8x6",
+    "id": "arxiv_cs_ro-5alade",
     "itemType": "trending",
-    "title": "KnowDemo: Knowledge-Guided Robot Demonstration Generation from Human Videos",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
+    "title": "PredActor: Predictive Action Diffusion for Steerable Onboard Humanoid Control",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
     "score": 60,
@@ -6883,7 +6869,46 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21229",
+        "url": "https://arxiv.org/abs/2609.24840",
+        "kind": "canonical"
+      }
+    ],
+    "relatedArticles": [
+      {
+        "title": "HIGenNTO: Scalable Humanoid Interaction Generation via Noise-Space Trajectory Optimization",
+        "url": "https://arxiv.org/abs/2609.22611",
+        "sourceName": "arxiv_cs_ro"
+      },
+      {
+        "title": "EmoPose: Vision-Language Model Guided Emotion-Aware Gesture Generation for Humanoid Robots",
+        "url": "https://arxiv.org/abs/2609.23414",
+        "sourceName": "arxiv_cs_ro"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5ajz0i",
+    "itemType": "trending",
+    "title": "StateMem: Single-State Residual Memory with Adaptive Inference for Vision-Language-Action Policies",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 60,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)",
+      "크로스소스+2"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.22684",
         "kind": "canonical"
       }
     ],
@@ -6891,11 +6916,11 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ai-5ajbyj",
+    "id": "arxiv_cs_ro-5ak18k",
     "itemType": "trending",
-    "title": "Outcome-Conditioned End-Effector Geometry Across Vision-Language-Action Policies",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
+    "title": "Connectivity-Aware Exploration of Robotic Grasp Spaces",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
     "score": 60,
@@ -6910,7 +6935,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21659",
+        "url": "https://arxiv.org/abs/2609.22983",
         "kind": "canonical"
       }
     ],
@@ -6918,11 +6943,11 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ai-9dbuu2",
+    "id": "arxiv_cs_ro-5aknfo",
     "itemType": "trending",
-    "title": "PAVE: Predictive Alignment and Value-Guided Evolution for World-Action Policies",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
+    "title": "Grounded Action Model: 3D Grounding as a Foundation for Robotics",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
     "score": 60,
@@ -6937,7 +6962,291 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2608.30378",
+        "url": "https://arxiv.org/abs/2609.23863",
+        "kind": "canonical"
+      }
+    ],
+    "relatedArticles": [
+      {
+        "title": "Grounded Action Model: 3D Grounding as a Foundation for Robotics",
+        "url": "https://huggingface.co/papers/2609.23863",
+        "sourceName": "hf_daily_papers"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5aknhg",
+    "itemType": "trending",
+    "title": "HumynexSurg-1: A Curated Expert Liposuction Dataset",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 60,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)",
+      "크로스소스+2"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.23885",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5al546",
+    "itemType": "trending",
+    "title": "CARE: Experience-Guided Atomic Corrective Execution for Vision-Language-Action Policies",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 60,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)",
+      "크로스소스+2"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.24118",
+        "kind": "canonical"
+      }
+    ],
+    "relatedArticles": [
+      {
+        "title": "CARE: Experience-Guided Atomic Corrective Execution for Vision-Language-Action Policies",
+        "url": "https://huggingface.co/papers/2609.24118",
+        "sourceName": "hf_daily_papers"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5al8ub",
+    "itemType": "trending",
+    "title": "Learning tactile perception from high-bandwidth single-point sensing",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 60,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)",
+      "크로스소스+2"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.24621",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5al9my",
+    "itemType": "trending",
+    "title": "D-JEPA: A Decision-Aligned Latent World Model",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 60,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)",
+      "크로스소스+2"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.24749",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-wak9hy",
+    "itemType": "trending",
+    "title": "Learning to Fold: prizewinning solution at LeHome Challenge 2026 (1st place online, 2nd offline)",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 60,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)",
+      "크로스소스+2"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2606.27163",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-9ez48m",
+    "itemType": "trending",
+    "title": "GraRe: Grasp Candidate Re-Ranking for Frozen 6-DoF Grasp Detectors",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 60,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)",
+      "크로스소스+2"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2608.00946",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-9eb00s",
+    "itemType": "trending",
+    "title": "Teach and Grow: An Agent-Centered Architecture for General Robot Learning",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 60,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)",
+      "크로스소스+2"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2608.17209",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-9dpuht",
+    "itemType": "trending",
+    "title": "$N_0$-Foundation: Towards the Age of Tactile Intelligence",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 60,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)",
+      "크로스소스+2"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2608.29601",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5a3zfl",
+    "itemType": "trending",
+    "title": "ActiveScale: Scaling Active Perception for Robots across Model, Data, and Hardware",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 60,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)",
+      "크로스소스+2"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.18514",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-o2qk7x",
+    "itemType": "trending",
+    "title": "BadWAM: When World-Action Models Dream Right but Act Wrong",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 60,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)",
+      "크로스소스+2"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2607.15207",
         "kind": "canonical"
       }
     ],
@@ -6955,14 +7264,74 @@
     "score": 50,
     "matchedKeywords": [],
     "matchedCompanies": [],
-    "points": 583,
-    "commentCount": 685,
+    "points": 587,
+    "commentCount": 687,
     "lang": "en",
     "links": [
       {
         "label": "원문",
         "url": "https://openai.com/index/astra-for-law",
         "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "hackernews-2ls4s1",
+    "itemType": "trending",
+    "title": "GPT-6 Sol and Luna",
+    "publishedAt": "2026-09-22T18:00:34Z",
+    "sourceName": "hackernews",
+    "tier": "T2",
+    "priority": "P2",
+    "score": 50,
+    "matchedKeywords": [],
+    "matchedCompanies": [],
+    "points": 1078,
+    "commentCount": 562,
+    "lang": "en",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "hackernews-iwcf43",
+    "itemType": "trending",
+    "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
+    "publishedAt": "2026-09-22T13:52:15Z",
+    "sourceName": "hackernews",
+    "tier": "T2",
+    "priority": "P2",
+    "score": 50,
+    "matchedKeywords": [],
+    "matchedCompanies": [],
+    "points": 537,
+    "commentCount": 354,
+    "lang": "en",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+        "kind": "canonical"
+      }
+    ],
+    "relatedArticles": [
+      {
+        "title": "OpenAI is well positioned to fast-follow Jev",
+        "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch",
+        "sourceName": "hackernews"
+      },
+      {
+        "title": "Did OpenAI solve the wrong Navier-Stokes problem?",
+        "url": "https://www.scientificamerican.com/article/did-openai-solve-the-wrong-navier-stokes-problem",
+        "sourceName": "hackernews"
       }
     ],
     "read": false,
@@ -6979,7 +7348,7 @@
     "score": 50,
     "matchedKeywords": [],
     "matchedCompanies": [],
-    "points": 969,
+    "points": 970,
     "commentCount": 404,
     "lang": "en",
     "thumbnailUrl": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/09/image1-1.webp",
@@ -6987,6 +7356,30 @@
       {
         "label": "원문",
         "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "hackernews-51dpya",
+    "itemType": "trending",
+    "title": "What Sun got wrong",
+    "publishedAt": "2026-09-21T14:03:18Z",
+    "sourceName": "hackernews",
+    "tier": "T3",
+    "priority": "P2",
+    "score": 50,
+    "matchedKeywords": [],
+    "matchedCompanies": [],
+    "points": 674,
+    "commentCount": 388,
+    "lang": "en",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong",
         "kind": "canonical"
       }
     ],
@@ -7004,8 +7397,8 @@
     "score": 50,
     "matchedKeywords": [],
     "matchedCompanies": [],
-    "points": 612,
-    "commentCount": 320,
+    "points": 614,
+    "commentCount": 325,
     "lang": "en",
     "links": [
       {
@@ -7028,7 +7421,7 @@
     "score": 50,
     "matchedKeywords": [],
     "matchedCompanies": [],
-    "points": 585,
+    "points": 586,
     "commentCount": 271,
     "lang": "en",
     "thumbnailUrl": "https://media.wired.com/photos/6aa9a89861c11f99a88f271a/191:100/w_1280,c_limit/Security_Hackers%20Got%20Inside%20a%20Flock%20Camera.%20Its%20Data%20Shows%20How%20the%20System%20Really%20Works.jpg",
@@ -7043,25 +7436,32 @@
     "starred": false
   },
   {
-    "id": "hackernews-dygppj",
+    "id": "hackernews-nticso",
     "itemType": "trending",
-    "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
-    "publishedAt": "2026-09-15T12:31:10Z",
+    "title": "Claude Opus 5.5",
+    "publishedAt": "2026-09-22T16:29:05Z",
     "sourceName": "hackernews",
-    "tier": "T3",
+    "tier": "T2",
     "priority": "P2",
     "score": 50,
     "matchedKeywords": [],
     "matchedCompanies": [],
-    "points": 2388,
-    "commentCount": 267,
+    "points": 1115,
+    "commentCount": 770,
     "lang": "en",
-    "thumbnailUrl": "https://repository-images.githubusercontent.com/1294088656/7d2dbd8d-ec72-4781-8363-f4f5b9afc352",
+    "thumbnailUrl": "https://www-cdn.anthropic.com/images/4zrzovbb/website/f4d37a1d1f582f53f4e89440062b649b6273a093-1200x630.jpg",
     "links": [
       {
         "label": "원문",
-        "url": "https://github.com/arnegiacomo/fugleramme",
+        "url": "https://www.anthropic.com/claude-opus-5-5",
         "kind": "canonical"
+      }
+    ],
+    "relatedArticles": [
+      {
+        "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
+        "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
+        "sourceName": "hackernews"
       }
     ],
     "read": false,
@@ -7078,8 +7478,8 @@
     "score": 50,
     "matchedKeywords": [],
     "matchedCompanies": [],
-    "points": 734,
-    "commentCount": 199,
+    "points": 737,
+    "commentCount": 200,
     "lang": "en",
     "thumbnailUrl": "https://opengraph.githubassets.com/44b077f25060ff5738d322fd59c5ffd1840358c6c78acce5e17c7974c63845bf/asciimoo/hister",
     "links": [
@@ -7093,73 +7493,24 @@
     "starred": false
   },
   {
-    "id": "hackernews-wtxiyw",
+    "id": "hackernews-f0jgmt",
     "itemType": "trending",
-    "title": "Introducing System One Models and Jev",
-    "publishedAt": "2026-09-15T19:25:03Z",
+    "title": "Transformers Explained Visually",
+    "publishedAt": "2026-09-21T19:43:49Z",
     "sourceName": "hackernews",
     "tier": "T3",
     "priority": "P2",
     "score": 50,
     "matchedKeywords": [],
     "matchedCompanies": [],
-    "points": 1943,
-    "commentCount": 511,
+    "points": 595,
+    "commentCount": 87,
     "lang": "en",
-    "thumbnailUrl": "https://framerusercontent.com/images/RtIGTDwO43jR4ZDilesXiR5znc.jpg",
+    "thumbnailUrl": "https://poloclub.github.io/transformer-explainer/preview/summary.png",
     "links": [
       {
         "label": "원문",
-        "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "hackernews-xxtnra",
-    "itemType": "trending",
-    "title": "Gemini 3.8 Live and 3.8 Live Extended Thinking",
-    "publishedAt": "2026-09-15T17:38:18Z",
-    "sourceName": "hackernews",
-    "tier": "T2",
-    "priority": "P2",
-    "score": 49,
-    "matchedKeywords": [],
-    "matchedCompanies": [],
-    "points": 490,
-    "commentCount": 327,
-    "lang": "en",
-    "thumbnailUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_3-8_live___keyword__blog-social.width-1300.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "hackernews-51dpya",
-    "itemType": "trending",
-    "title": "What Sun got wrong",
-    "publishedAt": "2026-09-21T14:03:18Z",
-    "sourceName": "hackernews",
-    "tier": "T3",
-    "priority": "P2",
-    "score": 48,
-    "matchedKeywords": [],
-    "matchedCompanies": [],
-    "points": 487,
-    "commentCount": 271,
-    "lang": "en",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong",
+        "url": "https://poloclub.github.io/transformer-explainer",
         "kind": "canonical"
       }
     ],
@@ -7174,12 +7525,12 @@
     "sourceName": "hackernews",
     "tier": "T2",
     "priority": "P2",
-    "score": 48,
+    "score": 49,
     "matchedKeywords": [
       "robotics/llm(en)"
     ],
     "matchedCompanies": [],
-    "points": 488,
+    "points": 490,
     "commentCount": 208,
     "lang": "en",
     "thumbnailUrl": "https://www.hacktron.ai/_astro/CwjuS_y3.png",
@@ -7201,10 +7552,35 @@
     "starred": false
   },
   {
+    "id": "hackernews-arrp2h",
+    "itemType": "trending",
+    "title": "Kev: Tiny Jev-like family of decision models built on top of Qwen3.5",
+    "publishedAt": "2026-09-21T07:11:55Z",
+    "sourceName": "hackernews",
+    "tier": "T3",
+    "priority": "P2",
+    "score": 45,
+    "matchedKeywords": [],
+    "matchedCompanies": [],
+    "points": 452,
+    "commentCount": 199,
+    "lang": "en",
+    "thumbnailUrl": "https://opengraph.githubassets.com/528358382edc5be971eca28caffff4926bde872eb9f261148276f3762487ed7e/jaredpalmer/kev",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://github.com/jaredpalmer/kev/tree/main",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
     "id": "arxiv_cs_ai-5aj9nr",
     "itemType": "trending",
     "title": "LEGIT: Credentialing Protocol for Trustworthy AI Agent Marketplaces",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "arxiv_cs_ai",
     "tier": "T0",
     "priority": "P1",
@@ -7227,50 +7603,17 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ai-5aiqiw",
+    "id": "arxiv_cs_ai-5aj8x6",
     "itemType": "trending",
-    "title": "BI-Agent and BI-Bench: Towards Automating End-to-End Business Intelligence",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 45,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+3"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2609.20886",
-        "kind": "canonical"
-      }
-    ],
-    "relatedArticles": [
-      {
-        "title": "BI-Agent and BI-Bench: Towards Automating End-to-End Business Intelligence",
-        "url": "https://huggingface.co/papers/2609.20886",
-        "sourceName": "hf_daily_papers"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-5ajb46",
-    "itemType": "trending",
-    "title": "2nd Place Solution to the HANDS 2026 Workshop Challenge-Dexterous Grasp Motion Track: Single-Shot Trajectory Warping for Grasp Motion Generation",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
+    "title": "KnowDemo: Knowledge-Guided Robot Demonstration Generation from Human Videos",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "arxiv_cs_ai",
     "tier": "T0",
     "priority": "P1",
     "score": 45,
     "matchedKeywords": [
       "physicalAI(en)",
-      "크로스소스+2"
+      "robotics/llm(en)"
     ],
     "matchedCompanies": [],
     "lang": "en",
@@ -7278,7 +7621,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21511",
+        "url": "https://arxiv.org/abs/2609.21229",
         "kind": "canonical"
       }
     ],
@@ -7286,10 +7629,62 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ro-5aj84i",
+    "id": "arxiv_cs_ai-5ajbyj",
     "itemType": "trending",
-    "title": "Dynamics-Induced Commitment in Learning-Based Robotic Penalty Kicks",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
+    "title": "Outcome-Conditioned End-Effector Geometry Across Vision-Language-Action Policies",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ai",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.21659",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ai-9dbuu2",
+    "itemType": "trending",
+    "title": "PAVE: Predictive Alignment and Value-Guided Evolution for World-Action Policies",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ai",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2608.30378",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5ajw0z",
+    "itemType": "trending",
+    "title": "DeViGrasp: Robust Visual Mobile Grasping for Quadruped Manipulators under Degraded Perception",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
@@ -7304,7 +7699,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21100",
+        "url": "https://arxiv.org/abs/2609.22278",
         "kind": "canonical"
       }
     ],
@@ -7312,49 +7707,10 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ro-5aj84p",
+    "id": "arxiv_cs_ro-5ajxhc",
     "itemType": "trending",
-    "title": "Learning Scene-Aware Humanoid Locomotion through 3D Clutter from Immersive Human Demonstrations",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ro",
-    "tier": "T0",
-    "priority": "P1",
-    "score": 45,
-    "matchedKeywords": [
-      "physicalAI(en)",
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21107",
-        "kind": "canonical"
-      }
-    ],
-    "relatedArticles": [
-      {
-        "title": "FootQuery: Future-Touchdown-Guided Retrieval from Depth History for Perceptive Humanoid Locomotion",
-        "url": "https://arxiv.org/abs/2609.21447",
-        "sourceName": "arxiv_cs_ro"
-      },
-      {
-        "title": "ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation",
-        "url": "https://arxiv.org/abs/2603.03279",
-        "sourceName": "arxiv_cs_ro"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ro-5aj873",
-    "itemType": "trending",
-    "title": "SAGE: Safety-Aligned Gradient Enforcement for Human--Robot Collaboration",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
+    "title": "VLPSA: Vision-Language-Poisson-Safe Actions for Full-Body Safety of Learned Policies",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
@@ -7369,7 +7725,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21130",
+        "url": "https://arxiv.org/abs/2609.22462",
         "kind": "canonical"
       }
     ],
@@ -7377,10 +7733,10 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ro-5aj8w3",
+    "id": "arxiv_cs_ro-5ajyal",
     "itemType": "trending",
-    "title": "Stochastic Neural Signed Swept Volume for Real-time Chance-Constrained Trajectory Optimization",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
+    "title": "REBOOT: From Failure to Recovery - A Dataset and Benchmark for Precision Assembly",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
@@ -7395,7 +7751,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21211",
+        "url": "https://arxiv.org/abs/2609.22591",
         "kind": "canonical"
       }
     ],
@@ -7403,10 +7759,10 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ro-5aj8wx",
+    "id": "arxiv_cs_ro-5ajytq",
     "itemType": "trending",
-    "title": "Safe Real-Time Policy Steering via Noise-Space Trajectory Optimization for One-Step Generative Policies",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
+    "title": "Becoming a Fruit Ninja: Real-Time Probabilistic Kinodynamic Planning for Manipulator Projectile Interception",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
@@ -7421,7 +7777,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21220",
+        "url": "https://arxiv.org/abs/2609.22608",
         "kind": "canonical"
       }
     ],
@@ -7429,10 +7785,10 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ro-5aj9n0",
+    "id": "arxiv_cs_ro-5ajz0f",
     "itemType": "trending",
-    "title": "LEMCA: LLM-Guided Synthesis of Efficient Mode-Switching Control Architectures",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
+    "title": "A Direct Rigid Transmission 2-DoF Wrist Extension for Tendon-Driven Hand",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
@@ -7447,7 +7803,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21319",
+        "url": "https://arxiv.org/abs/2609.22681",
         "kind": "canonical"
       }
     ],
@@ -7455,10 +7811,10 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ro-5aj9qf",
+    "id": "arxiv_cs_ro-5ajzms",
     "itemType": "trending",
-    "title": "FAN: Foresight Action Normalization for Continual Adaptation of Vision-Language-Action Models",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
+    "title": "BEACON: Belief-Enabled Adaptive CONtrol for Imitation Learning under Uncertainty",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
@@ -7473,7 +7829,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21358",
+        "url": "https://arxiv.org/abs/2609.22730",
         "kind": "canonical"
       }
     ],
@@ -7481,10 +7837,10 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ro-5ajag9",
+    "id": "arxiv_cs_ro-5ajzs6",
     "itemType": "trending",
-    "title": "Robotic Multiphase Interaction: Manipulating Coupled Liquid and Solid Dynamics with a World Model",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
+    "title": "Expert-Play Contouring Control: Faster-than-Demonstration Planning from Slow Expert and Fast Play",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
@@ -7499,7 +7855,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21448",
+        "url": "https://arxiv.org/abs/2609.22798",
         "kind": "canonical"
       }
     ],
@@ -7507,10 +7863,10 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ro-5ajb3e",
+    "id": "arxiv_cs_ro-5ak0f9",
     "itemType": "trending",
-    "title": "DPed-VLN: A Benchmark for Socially Compliant Vision-and-Language Navigation in Dynamic Pedestrian Environments",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
+    "title": "Physical-Touch Observability from Wrist Wrench in Granular Scooping",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
@@ -7525,7 +7881,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21504",
+        "url": "https://arxiv.org/abs/2609.22852",
         "kind": "canonical"
       }
     ],
@@ -7533,10 +7889,10 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ro-5ajcpv",
+    "id": "arxiv_cs_ro-5ak0fb",
     "itemType": "trending",
-    "title": "CRISP: Contact-Rich Robotic Simulation Platform with Extensive Geometries and Contact Solvers",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
+    "title": "SmoLSTM: A Compact Vision-Language-Action Model with Recurrent Memory that Persists",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
@@ -7551,7 +7907,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21761",
+        "url": "https://arxiv.org/abs/2609.22854",
         "kind": "canonical"
       }
     ],
@@ -7559,10 +7915,10 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ro-5ajdbg",
+    "id": "arxiv_cs_ro-5ak13h",
     "itemType": "trending",
-    "title": "Contact-Rich Motion Planning via GPU-Parallel Mode Evaluation",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
+    "title": "Embodied Snap: Octopus-Inspired Distributed Reach-and-Attach with a Speed-Limited Soft Arm",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
@@ -7577,7 +7933,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21803",
+        "url": "https://arxiv.org/abs/2609.22926",
         "kind": "canonical"
       }
     ],
@@ -7585,10 +7941,10 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ro-5aje5q",
+    "id": "arxiv_cs_ro-5ak17p",
     "itemType": "trending",
-    "title": "GALA: Geometry-Aware Latent Action Modeling for Vision-Language-Action Model Pretraining across Embodiments",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
+    "title": "An Empirical Study and Open Testbed for Federated Fine-Tuning of Vision-Language-Action Models",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
@@ -7603,7 +7959,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21948",
+        "url": "https://arxiv.org/abs/2609.22973",
         "kind": "canonical"
       }
     ],
@@ -7611,10 +7967,10 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ro-5ajuik",
+    "id": "arxiv_cs_ro-5aki3n",
     "itemType": "trending",
-    "title": "Gripper-Aware Automatic Dense Packing of Irregular Objects",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
+    "title": "DiagGen: Agentic Generation of Deformable Assets with Sim-based Diagnostics for Robotic Simulation",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
@@ -7629,7 +7985,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.22062",
+        "url": "https://arxiv.org/abs/2609.23103",
         "kind": "canonical"
       }
     ],
@@ -7637,10 +7993,10 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ro-5ail55",
+    "id": "arxiv_cs_ro-5akkeh",
     "itemType": "trending",
-    "title": "AnyviewMeter: Adapting Robotic Reward Models with Camera Geometry and Multi-View Attention",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
+    "title": "Receding-Horizon Pushing with Composable Object-Centric Policies",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
@@ -7655,7 +8011,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.20106",
+        "url": "https://arxiv.org/abs/2609.23439",
         "kind": "canonical"
       }
     ],
@@ -7663,10 +8019,10 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ro-5ajaiq",
+    "id": "arxiv_cs_ro-5akkip",
     "itemType": "trending",
-    "title": "MT-WAM: Reorienting the One-Pass Predictive Representation Toward Action Generation",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
+    "title": "Cognitive Action Reasoning for Proactive Robots from Human-Centered Multimodal Observations",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
@@ -7681,7 +8037,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21474",
+        "url": "https://arxiv.org/abs/2609.23486",
         "kind": "canonical"
       }
     ],
@@ -7689,10 +8045,10 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ro-twkrry",
+    "id": "arxiv_cs_ro-5akl6r",
     "itemType": "trending",
-    "title": "Robotic Tele-Operation for Upper Aerodigestive Tract Microsurgery: System Design and Validation",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
+    "title": "PINGU: Extending Air-Bearing Spacecraft Emulators with Open-Source Actuators and Learned Control for Contact-Rich Proximity Operations",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
@@ -7707,7 +8063,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2601.06617",
+        "url": "https://arxiv.org/abs/2609.23554",
         "kind": "canonical"
       }
     ],
@@ -7715,10 +8071,10 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ro-5a2pfn",
+    "id": "arxiv_cs_ro-5ako4o",
     "itemType": "trending",
-    "title": "Dense to MoE Adaptation for Compact Vision Language Action Policies",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
+    "title": "Topology-Informed Visual Prompting For Vision Language Action Policies",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
@@ -7733,7 +8089,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.16503",
+        "url": "https://arxiv.org/abs/2609.23944",
         "kind": "canonical"
       }
     ],
@@ -7741,10 +8097,10 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_ro-5aimth",
+    "id": "arxiv_cs_ro-5ako92",
     "itemType": "trending",
-    "title": "Navi-Agent: Unlocalized Monocular Navigation Agent",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
+    "title": "RoboTalk: Learning Multi-Robot Communication and Coordination from Multimodal Demonstrations",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "arxiv_cs_ro",
     "tier": "T0",
     "priority": "P1",
@@ -7759,7 +8115,7 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2609.20388",
+        "url": "https://arxiv.org/abs/2609.23997",
         "kind": "canonical"
       }
     ],
@@ -7767,10 +8123,894 @@
     "starred": false
   },
   {
-    "id": "arxiv_cs_lg-hmlypo",
+    "id": "arxiv_cs_ro-5al4hm",
     "itemType": "trending",
-    "title": "Survival Reinforcement Learning: Toward Scalable Self-Supervised RL",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
+    "title": "Safety Control of a Hyper-redundant Robot via Adaptive Weighted Control Barrier Functions",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.24062",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5al55r",
+    "itemType": "trending",
+    "title": "Phrase-Level Robotic Guqin Performance: Bimanual Motion Planning and Audio-Tactile Interaction Monitoring",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.24133",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5al57j",
+    "itemType": "trending",
+    "title": "Object-Centric Conditioning for Visuomotor Flow Matching",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.24155",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5al59z",
+    "itemType": "trending",
+    "title": "GraspTune: Tactile-Driven Execution Refinement for Robust Grasping",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.24180",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5al5a8",
+    "itemType": "trending",
+    "title": "A Topological Representation with Object-Path Graphs for Open-Vocabulary Instance Navigation",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.24189",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5al6os",
+    "itemType": "trending",
+    "title": "LIBERO-VPro: Benchmarking Closed-Loop Visual Robustness of Robotic Foundation Models",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.24350",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5al6ri",
+    "itemType": "trending",
+    "title": "Tactile-JEPA: Topology-Aware Self-Supervised Representation Learning for Distributed Tactile Sensors",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.24385",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5al7c4",
+    "itemType": "trending",
+    "title": "Robotic Valve Turning: Axial Misalignment Correction Using Reaction Torque Feedback",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.24413",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5al7j6",
+    "itemType": "trending",
+    "title": "A Monolithic Force-Proprioception Soft Acutuator Enabled by Single-Material 3D printing",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.24499",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5al82r",
+    "itemType": "trending",
+    "title": "InsertAnything: Generalizable Contact-Rich Precision Insertion from Simulation to Reality",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.24511",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5al83q",
+    "itemType": "trending",
+    "title": "Bridge3D: Enabling Vision-Language-Action Models to See and Act in 3D",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.24525",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5al8xq",
+    "itemType": "trending",
+    "title": "Touch2Robot: Robot Touch in the Human Demonstration Loop",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.24660",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5al9og",
+    "itemType": "trending",
+    "title": "A Switched Adaptive Control Framework for Aerial Manipulators Under Dynamic Transitions",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.24761",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5al9pi",
+    "itemType": "trending",
+    "title": "H2RBench: A Real-to-Sim Benchmark for Evaluating Human-to-Robot Transfer",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.24778",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5alafc",
+    "itemType": "trending",
+    "title": "DualWAM: Dual-System World Action Models for Asynchronous Global Planning and Local Refinement",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.24868",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5alb8k",
+    "itemType": "trending",
+    "title": "Learning Beyond What Humans Can Demonstrate",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.24996",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5ajwo5",
+    "itemType": "trending",
+    "title": "KerColle: Unlocking Fine-Grained GPU Concurrency in Vision-Language-Action Models",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.22335",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5ak16y",
+    "itemType": "trending",
+    "title": "General Collaborative Intelligence: Architecting Cognition for Resilient Multi-Agent Ecosystems",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.22967",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-5zcjj5",
+    "itemType": "trending",
+    "title": "Highly-Efficient Differentiable Simulation for Robotics",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2409.07107",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-2wqc45",
+    "itemType": "trending",
+    "title": "ERUPT: An Open Toolkit for Interfacing with Robot Motion Planners in Extended Reality",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2510.02464",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-qg325m",
+    "itemType": "trending",
+    "title": "NavDreamer: Video Models as Zero-Shot 3D Navigators",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2602.09765",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-brre20",
+    "itemType": "trending",
+    "title": "Observing and Controlling Features in Vision-Language-Action Models",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2603.05487",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-brq1vs",
+    "itemType": "trending",
+    "title": "Stability-Aligned Residual Adaptation for Rapid Recovery from Dynamics Shifts",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2603.07775",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-brpimh",
+    "itemType": "trending",
+    "title": "SAIL: Test-Time Scaling for In-Context Imitation Learning with VLM",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2603.08269",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-hkz9fh",
+    "itemType": "trending",
+    "title": "Visibility-Aware Mobile Grasping in Dynamic Environments",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2605.02487",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-hm2se0",
+    "itemType": "trending",
+    "title": "Action with Visual Primitives",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2605.22183",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-hm63pe",
+    "itemType": "trending",
+    "title": "Colosseum V2: Benchmarking Generalization for Vision-Language-Action Models",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2605.27759",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-wahou6",
+    "itemType": "trending",
+    "title": "AdaReP:Adaptive Re-Planning under Model Mismatch for Neural World-Model Predictive Control",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2606.23079",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-o3aznp",
+    "itemType": "trending",
+    "title": "HALO-WA: Hybrid-Attention Latent-Guided Online Reinforcement Learning for World-Action Models",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2607.04265",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-o2shut",
+    "itemType": "trending",
+    "title": "More than a Manipulator: Planning Propellant-Free Attitude Maneuvers for Free-Floating Spacecraft",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2607.12130",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-o2oipx",
+    "itemType": "trending",
+    "title": "WorldScape Policy 2.0: Empowering Steerable World Action Modeling with Reasoning-Augmented Memory and In-Context Learning",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2607.18840",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-b7vgmh",
+    "itemType": "trending",
+    "title": "3D-MoE: Towards Spatial Intelligence with Mixture-of-Experts for 3D Reasoning and Action Generation",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2501.16698",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-hlicqh",
+    "itemType": "trending",
+    "title": "RankQ: Offline-to-Online Reinforcement Learning via Self-Supervised Action Ranking",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2605.11151",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_ro-9dv197",
+    "itemType": "trending",
+    "title": "Just Noticeable Difference Modeling for Token Compression in Vision-Language-Action Models",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_ro",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2608.21247",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_lg-5ak0h6",
+    "itemType": "trending",
+    "title": "Prioritized Rollouts for Efficient World Model-based Vision-Language-Action Policy Optimization",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
     "sourceName": "arxiv_cs_lg",
     "tier": "T0",
     "priority": "P1",
@@ -7785,7 +9025,161 @@
     "links": [
       {
         "label": "원문",
-        "url": "https://arxiv.org/abs/2605.31273",
+        "url": "https://arxiv.org/abs/2609.22879",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_lg-5akjmo",
+    "itemType": "trending",
+    "title": "CSC: Calibrated Simplicity for Conflict-Aware Social Bot Detection in the LLM Era",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_lg",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.23320",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_lg-5ako76",
+    "itemType": "trending",
+    "title": "UniK: Universal Knowledge Perception for Digital and Physical AI",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_lg",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.23971",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_lg-5al55v",
+    "itemType": "trending",
+    "title": "Data Agents: Agentic Data Systems",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_lg",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2609.24137",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "arxiv_cs_lg-z5o72u",
+    "itemType": "trending",
+    "title": "HumanAgencyBench: Scalable Evaluation of Human Agency Support in AI Assistants",
+    "publishedAt": "2026-09-22T04:00:00.000Z",
+    "sourceName": "arxiv_cs_lg",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://arxiv.org/abs/2509.08494",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "robot_report-z7unsv",
+    "itemType": "trending",
+    "title": "Intel to discuss the infrastructure needed to scale physical AI at RoboBusiness",
+    "publishedAt": "2026-09-22T21:31:19.000Z",
+    "sourceName": "robot_report",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.therobotreport.com/intel-discusses-infrastructure-needed-to-scale-physical-ai-robobusiness",
+        "kind": "canonical"
+      }
+    ],
+    "read": false,
+    "starred": false
+  },
+  {
+    "id": "robot_report-brlmnv",
+    "itemType": "trending",
+    "title": "Intrinsic open sources key parts of its platform for easier development",
+    "publishedAt": "2026-09-22T11:55:37.000Z",
+    "sourceName": "robot_report",
+    "tier": "T0",
+    "priority": "P1",
+    "score": 45,
+    "matchedKeywords": [
+      "physicalAI(en)",
+      "robotics/llm(en)"
+    ],
+    "matchedCompanies": [],
+    "lang": "en",
+    "links": [
+      {
+        "label": "원문",
+        "url": "https://www.therobotreport.com/intrinsic-open-sources-key-parts-platform-easier-development",
         "kind": "canonical"
       }
     ],
@@ -7857,36 +9251,11 @@
     ],
     "matchedCompanies": [],
     "lang": "en",
+    "thumbnailUrl": "https://www.therobotreport.com/wp-content/uploads/2026/09/episode-262-featured.jpg",
     "links": [
       {
         "label": "원문",
         "url": "https://www.therobotreport.com/the-picks-and-shovels-strategy-behind-the-robotics-boom",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "robot_report-m0iobu",
-    "itemType": "trending",
-    "title": "Arm Total Design for Physical AI brings more than 80 developers together",
-    "publishedAt": "2026-09-17T12:30:13.000Z",
-    "sourceName": "robot_report",
-    "tier": "T0",
-    "priority": "P1",
-    "score": 45,
-    "matchedKeywords": [
-      "physicalAI(en)",
-      "robotics/llm(en)"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://www.therobotreport.com/wp-content/uploads/2026/09/armtotaldesign-featured.jpg",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.therobotreport.com/arm-total-design-for-physical-ai-brings-more-than-80-developers-together",
         "kind": "canonical"
       }
     ],
@@ -8017,1346 +9386,6 @@
       {
         "label": "원문",
         "url": "https://spectrum.ieee.org/tactile-data-robots",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "ieee_spectrum_robotics-rmy2jo",
-    "itemType": "trending",
-    "title": "Video Friday: Digit Redecorates",
-    "publishedAt": "2026-09-04T16:00:05.000Z",
-    "sourceName": "ieee_spectrum_robotics",
-    "tier": "T0",
-    "priority": "P1",
-    "score": 45,
-    "matchedKeywords": [
-      "physicalAI(en)",
-      "robotics/llm(en)"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://spectrum.ieee.org/media-library/image.gif?id=67725697&width=1200&height=600&coordinates=0%2C25%2C0%2C25",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://spectrum.ieee.org/video-friday-agility-robotics-digit",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "ieee_spectrum_robotics-d9kv9v",
-    "itemType": "trending",
-    "title": "Video Friday: Meet Microduck",
-    "publishedAt": "2026-08-28T16:00:03.000Z",
-    "sourceName": "ieee_spectrum_robotics",
-    "tier": "T0",
-    "priority": "P1",
-    "score": 45,
-    "matchedKeywords": [
-      "physicalAI(en)",
-      "robotics/llm(en)"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://spectrum.ieee.org/media-library/image.png?id=67687638&width=1200&height=600&coordinates=0%2C5%2C0%2C6",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://spectrum.ieee.org/video-friday-microduck-robot",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "ieee_spectrum_robotics-2laita",
-    "itemType": "trending",
-    "title": "Video Friday: Do We Need Superhuman Humanoid Robots?",
-    "publishedAt": "2026-08-21T16:00:01.000Z",
-    "sourceName": "ieee_spectrum_robotics",
-    "tier": "T0",
-    "priority": "P1",
-    "score": 45,
-    "matchedKeywords": [
-      "physicalAI(en)",
-      "robotics/llm(en)"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://spectrum.ieee.org/media-library/image.png?id=67655329&width=1200&height=600&coordinates=0%2C60%2C0%2C60",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://spectrum.ieee.org/video-friday-unitree-superhuman",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "ieee_spectrum_robotics-hczchu",
-    "itemType": "trending",
-    "title": "Is Shipyard Welding the Right First Job for Humanoid Robots?",
-    "publishedAt": "2026-08-17T15:33:42.000Z",
-    "sourceName": "ieee_spectrum_robotics",
-    "tier": "T0",
-    "priority": "P1",
-    "score": 45,
-    "matchedKeywords": [
-      "physicalAI(en)",
-      "robotics/llm(en)"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://spectrum.ieee.org/media-library/image.jpg?id=67626094&width=1200&height=600&coordinates=0%2C250%2C0%2C250",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://spectrum.ieee.org/persona-ai-humanoid-robot-welding",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "ieee_spectrum_robotics-74zdzv",
-    "itemType": "trending",
-    "title": "Video Friday: Lift Happens",
-    "publishedAt": "2026-08-14T17:00:01.000Z",
-    "sourceName": "ieee_spectrum_robotics",
-    "tier": "T0",
-    "priority": "P1",
-    "score": 45,
-    "matchedKeywords": [
-      "physicalAI(en)",
-      "robotics/llm(en)"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://spectrum.ieee.org/media-library/image.png?id=67615846&width=1200&height=600&coordinates=0%2C62%2C0%2C63",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://spectrum.ieee.org/video-friday-darpa-heavy-lift-challenge",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "ieee_spectrum_robotics-icydg7",
-    "itemType": "trending",
-    "title": "Video Friday: Drones Go Heavy in DARPA Lift Challenge",
-    "publishedAt": "2026-08-07T16:00:01.000Z",
-    "sourceName": "ieee_spectrum_robotics",
-    "tier": "T0",
-    "priority": "P1",
-    "score": 45,
-    "matchedKeywords": [
-      "physicalAI(en)",
-      "robotics/llm(en)"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://spectrum.ieee.org/media-library/image.jpg?id=67585216&width=1200&height=600&coordinates=0%2C166%2C0%2C167",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://spectrum.ieee.org/video-friday-heavy-lift-drone",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "ieee_spectrum_robotics-nr5ii6",
-    "itemType": "trending",
-    "title": "What Robotics Companies Think About the U.S. Foreign Robot Ban",
-    "publishedAt": "2026-08-04T11:00:01.000Z",
-    "sourceName": "ieee_spectrum_robotics",
-    "tier": "T0",
-    "priority": "P1",
-    "score": 45,
-    "matchedKeywords": [
-      "physicalAI(en)",
-      "robotics/llm(en)"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://spectrum.ieee.org/media-library/photo-collage-of-humanoid-quadruped-and-unmanned-ground-vehicle-robots.jpg?id=67563239&width=1200&height=600&coordinates=0%2C1054%2C0%2C196",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://spectrum.ieee.org/fcc-covered-list-mobile-robots",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "ieee_spectrum_robotics-g48d99",
-    "itemType": "trending",
-    "title": "Walden Robotics Partners With Toyota on Practical Humanoids",
-    "publishedAt": "2026-08-03T16:05:39.000Z",
-    "sourceName": "ieee_spectrum_robotics",
-    "tier": "T0",
-    "priority": "P1",
-    "score": 45,
-    "matchedKeywords": [
-      "physicalAI(en)",
-      "robotics/llm(en)"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://spectrum.ieee.org/media-library/image.jpg?id=67568024&width=1200&height=600&coordinates=0%2C125%2C0%2C125",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://spectrum.ieee.org/humanoid-robots-walden-robotics-toyota",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "ieee_spectrum_robotics-kd6gmx",
-    "itemType": "trending",
-    "title": "Video Friday: Meet Google DeepMind’s Gemini Robotics 2",
-    "publishedAt": "2026-07-31T16:00:03.000Z",
-    "sourceName": "ieee_spectrum_robotics",
-    "tier": "T0",
-    "priority": "P1",
-    "score": 45,
-    "matchedKeywords": [
-      "physicalAI(en)",
-      "robotics/llm(en)"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://spectrum.ieee.org/media-library/image.webp?id=67560022&width=1200&height=600&coordinates=0%2C50%2C0%2C50",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://spectrum.ieee.org/video-robot-gemini2-ai-robot",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "ieee_spectrum_robotics-ltneet",
-    "itemType": "trending",
-    "title": "Video Friday: An Italian Humanoid Comes to Life",
-    "publishedAt": "2026-07-24T15:30:01.000Z",
-    "sourceName": "ieee_spectrum_robotics",
-    "tier": "T0",
-    "priority": "P1",
-    "score": 45,
-    "matchedKeywords": [
-      "physicalAI(en)",
-      "robotics/llm(en)"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://spectrum.ieee.org/media-library/image.png?id=67531350&width=1200&height=600&coordinates=0%2C60%2C0%2C60",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://spectrum.ieee.org/video-friday-physical-ai-robotics",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "ieee_spectrum_robotics-csydbq",
-    "itemType": "trending",
-    "title": "This Graduate Student Equips NASA’s Robots With Assembly Skills",
-    "publishedAt": "2026-07-17T18:00:01.000Z",
-    "sourceName": "ieee_spectrum_robotics",
-    "tier": "T0",
-    "priority": "P1",
-    "score": 45,
-    "matchedKeywords": [
-      "physicalAI(en)",
-      "robotics/llm(en)"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://spectrum.ieee.org/media-library/a-young-woman-with-blonde-hair-softly-smiling-next-to-a-pair-of-collaborative-robot-arms.jpg?id=67499761&width=1200&height=600&coordinates=0%2C312%2C0%2C313",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://spectrum.ieee.org/graduate-student-nasas-robots-assembly",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "ieee_spectrum_robotics-me80qn",
-    "itemType": "trending",
-    "title": "Video Friday: Your Robot Surgeon Will See You Now",
-    "publishedAt": "2026-07-17T16:00:01.000Z",
-    "sourceName": "ieee_spectrum_robotics",
-    "tier": "T0",
-    "priority": "P1",
-    "score": 45,
-    "matchedKeywords": [
-      "physicalAI(en)",
-      "robotics/llm(en)"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://spectrum.ieee.org/media-library/image.png?id=67494478&width=1200&height=600&coordinates=0%2C60%2C0%2C60",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://spectrum.ieee.org/video-friday-robotic-surgery",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "ieee_spectrum_robotics-h7c0k8",
-    "itemType": "trending",
-    "title": "Building a Foundation Stack for General-Purpose Robots",
-    "publishedAt": "2026-07-13T10:19:51.000Z",
-    "sourceName": "ieee_spectrum_robotics",
-    "tier": "T0",
-    "priority": "P1",
-    "score": 45,
-    "matchedKeywords": [
-      "physicalAI(en)",
-      "robotics/llm(en)"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://spectrum.ieee.org/media-library/humanoid-robot-folding-laundry-on-a-neatly-made-bed-in-a-sunlit-bedroom.png?id=67111698&width=1200&height=600&coordinates=0%2C42%2C0%2C43",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://spectrum.ieee.org/x-square-robot-embodied-ai-stack",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "ieee_spectrum_robotics-b18m7n",
-    "itemType": "trending",
-    "title": "Video Friday: A World Cup for Robots",
-    "publishedAt": "2026-07-10T16:00:01.000Z",
-    "sourceName": "ieee_spectrum_robotics",
-    "tier": "T0",
-    "priority": "P1",
-    "score": 45,
-    "matchedKeywords": [
-      "physicalAI(en)",
-      "robotics/llm(en)"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://spectrum.ieee.org/media-library/image.jpg?id=67119515&width=1200&height=600&coordinates=0%2C500%2C0%2C500",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://spectrum.ieee.org/video-friday-robot-world-cup",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "hf_daily_papers-kg54ro",
-    "itemType": "trending",
-    "title": "DeformSmith: Physics Harness-Guided Hierarchical Generation of Deformable Assets for Robot Manipulation",
-    "publishedAt": "2026-09-22T00:27:08.928Z",
-    "sourceName": "hf_daily_papers",
-    "tier": "T0",
-    "priority": "P1",
-    "score": 45,
-    "matchedKeywords": [
-      "physicalAI(en)",
-      "robotics/llm(en)"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2609.18620/gradient.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://huggingface.co/papers/2609.18620",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "hackernews-1olrz9",
-    "itemType": "trending",
-    "title": "Building a Linux GPU Driver for the M4 Mac Mini in One Month",
-    "publishedAt": "2026-09-15T19:30:03Z",
-    "sourceName": "hackernews",
-    "tier": "T3",
-    "priority": "P2",
-    "score": 42,
-    "matchedKeywords": [],
-    "matchedCompanies": [],
-    "points": 421,
-    "commentCount": 290,
-    "lang": "en",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://codyho.dev/blog/gpu-driver",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "hackernews-ss0hmt",
-    "itemType": "trending",
-    "title": "ZCode, the GLM coding agent, silently uploads your Git history",
-    "publishedAt": "2026-09-18T10:35:28Z",
-    "sourceName": "hackernews",
-    "tier": "T1",
-    "priority": "P1",
-    "score": 41,
-    "matchedKeywords": [
-      "robotics/llm(en)"
-    ],
-    "matchedCompanies": [],
-    "points": 262,
-    "commentCount": 14,
-    "lang": "en",
-    "thumbnailUrl": "https://tokenstead.ai/og/guides/zcode-silent-git-history-upload.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://tokenstead.ai/guides/zcode-silent-git-history-upload",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "hackernews-4k72oy",
-    "itemType": "trending",
-    "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
-    "publishedAt": "2026-09-19T06:41:44Z",
-    "sourceName": "hackernews",
-    "tier": "T2",
-    "priority": "P2",
-    "score": 39,
-    "matchedKeywords": [],
-    "matchedCompanies": [],
-    "points": 396,
-    "commentCount": 180,
-    "lang": "en",
-    "thumbnailUrl": "https://substackcdn.com/image/fetch/$s_!HCMH!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F87457f63-da00-40a0-a43a-5ef48f6e1364_1080x1146.jpeg",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "hackernews-arrp2h",
-    "itemType": "trending",
-    "title": "Kev: Tiny Jev-like family of decision models built on top of Qwen3.5",
-    "publishedAt": "2026-09-21T07:11:55Z",
-    "sourceName": "hackernews",
-    "tier": "T3",
-    "priority": "P2",
-    "score": 39,
-    "matchedKeywords": [],
-    "matchedCompanies": [],
-    "points": 399,
-    "commentCount": 177,
-    "lang": "en",
-    "thumbnailUrl": "https://opengraph.githubassets.com/528358382edc5be971eca28caffff4926bde872eb9f261148276f3762487ed7e/jaredpalmer/kev",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://github.com/jaredpalmer/kev/tree/main",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "hackernews-5hpoxe",
-    "itemType": "trending",
-    "title": "There's a 100% Chance AI Agents Are Ruining the Internet",
-    "publishedAt": "2026-09-15T16:38:45Z",
-    "sourceName": "hackernews",
-    "tier": "T1",
-    "priority": "P1",
-    "score": 38,
-    "matchedKeywords": [
-      "robotics/llm(en)"
-    ],
-    "matchedCompanies": [],
-    "points": 232,
-    "commentCount": 171,
-    "lang": "en",
-    "thumbnailUrl": "https://storage.ghost.io/c/0f/76/0f76b548-bc58-4f25-abc3-3f5ebca07da4/content/images/size/w1200/2026/09/growtika-0Hjb-YSd3xQ-unsplash.jpg",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.404media.co/theres-a-100-chance-ai-agents-are-already-ruining-the-internet",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "hackernews-m4lhwk",
-    "itemType": "trending",
-    "title": "Show HN: Capsule – Single-file web apps that save their data into SQLite",
-    "publishedAt": "2026-09-15T13:31:40Z",
-    "sourceName": "hackernews",
-    "tier": "T3",
-    "priority": "P2",
-    "score": 37,
-    "matchedKeywords": [],
-    "matchedCompanies": [],
-    "points": 379,
-    "commentCount": 167,
-    "lang": "en",
-    "thumbnailUrl": "https://withcapsule.app/og-image.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://withcapsule.app/",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "hackernews-tbnz69",
-    "itemType": "trending",
-    "title": "Inside ZCode: Silently uploading your Git history to the cloud",
-    "publishedAt": "2026-09-18T06:11:17Z",
-    "sourceName": "hackernews",
-    "tier": "T3",
-    "priority": "P2",
-    "score": 33,
-    "matchedKeywords": [],
-    "matchedCompanies": [],
-    "points": 338,
-    "commentCount": 113,
-    "lang": "en",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://blog.ferstar.org/en/posts/zcode-silent-workspace-snapshot-upload",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "hackernews-y9w1av",
-    "itemType": "trending",
-    "title": "We got admin access to Baseten's production GitHub",
-    "publishedAt": "2026-09-15T18:11:24Z",
-    "sourceName": "hackernews",
-    "tier": "T3",
-    "priority": "P2",
-    "score": 32,
-    "matchedKeywords": [],
-    "matchedCompanies": [],
-    "points": 328,
-    "commentCount": 188,
-    "lang": "en",
-    "thumbnailUrl": "https://www.strix.ai/blog-baseten-cover.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://www.strix.ai/blog/baseten-harbor-github-pat-takeover",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "hackernews-30ctep",
-    "itemType": "trending",
-    "title": "OpenAI expands ChatGPT ads with Sponsored Agents",
-    "publishedAt": "2026-09-16T13:51:15Z",
-    "sourceName": "hackernews",
-    "tier": "T1",
-    "priority": "P1",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)"
-    ],
-    "matchedCompanies": [],
-    "points": 157,
-    "commentCount": 180,
-    "lang": "en",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://openai.com/index/reimagining-advertising-with-ai",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-5aj7lq",
-    "itemType": "trending",
-    "title": "Detecting Hallucination in LLMs: Tracing the Topological Signatures of Impaired Context Sharing",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21096",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-5ajaf8",
-    "itemType": "trending",
-    "title": "GVPO++: Group Variance Policy Optimization for LLM Post-Training and On-Policy Distillation",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21432",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-5ajdgm",
-    "itemType": "trending",
-    "title": "AutoRecLab: Describe the Experiment, Get the Code!",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21863",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-5ajuiq",
-    "itemType": "trending",
-    "title": "CodeMidas: Scaling Agentic Coding RL Environments from Code Itself",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2609.22068",
-        "kind": "canonical"
-      }
-    ],
-    "relatedArticles": [
-      {
-        "title": "CodeMidas: Scaling Agentic Coding RL Environments from Code Itself",
-        "url": "https://huggingface.co/papers/2609.22068",
-        "sourceName": "hf_daily_papers"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-5ajuke",
-    "itemType": "trending",
-    "title": "Designer-RSI: Evolving Procedural Memory from User Traffic for Agentic Graphic Design",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2609.22086",
-        "kind": "canonical"
-      }
-    ],
-    "relatedArticles": [
-      {
-        "title": "Designer-RSI: Evolving Procedural Memory from User Traffic for Agentic Graphic Design",
-        "url": "https://huggingface.co/papers/2609.22086",
-        "sourceName": "hf_daily_papers"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-5aj7gg",
-    "itemType": "trending",
-    "title": "Scaling Discovery through Test-Time Communication",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21032",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-5aj7id",
-    "itemType": "trending",
-    "title": "PlantShade: Predicting Plant Shadows for Lighting-Aware Robotic Agricultural Operation",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21059",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-5aj8c9",
-    "itemType": "trending",
-    "title": "SWE-Proof: Can Language Models Resolve Real-World Issues with Machine-Checked Proofs?",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21190",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-5aj8w4",
-    "itemType": "trending",
-    "title": "Visual Navigation Transformer with Pose Attention",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T3",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "크로스소스+3"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21212",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-5aj8zp",
-    "itemType": "trending",
-    "title": "Verify, Don't Trust: Agentic Model Development for Video Discovery Retrieval at Scale",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21257",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-5aj9st",
-    "itemType": "trending",
-    "title": "Knowledge-Graph-Augmented Chronos-2 for HEC-RAS Surrogate Forecasting",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21381",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-5ajahw",
-    "itemType": "trending",
-    "title": "OmniVChat: Synthesizing, Benchmarking, and Training for Native Audio-Visual Dialogue",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21465",
-        "kind": "canonical"
-      }
-    ],
-    "relatedArticles": [
-      {
-        "title": "OmniVChat: Synthesizing, Benchmarking, and Training for Native Audio-Visual Dialogue",
-        "url": "https://huggingface.co/papers/2609.21465",
-        "sourceName": "hf_daily_papers"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-5ajb7l",
-    "itemType": "trending",
-    "title": "OneBid: A Unified Auto-Bidding Foundation Model for Diverse oCPX Advertising Scenarios",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21550",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-9drvph",
-    "itemType": "trending",
-    "title": "Planetary Prediction Engine: Autonomous Geospatial Prediction via Intelligent Data Selection and Foundation Model Embeddings",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2608.26088",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-5a3yt4",
-    "itemType": "trending",
-    "title": "Disentangling Long-Term Memory via Latent Neuro-Symbolic Reasoning",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2609.18461",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-z6o0h1",
-    "itemType": "trending",
-    "title": "Benchmarking Autonomous Driving Planners Across Leaderboards: A Unified CARLA-Based Evaluation",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2509.22754",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-wa256g",
-    "itemType": "trending",
-    "title": "Understanding Structural Representation in Foundation Models for Polymers",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2512.11881",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-twk1zh",
-    "itemType": "trending",
-    "title": "Large Language Models As Shannon Lossy Compressors Not Solomonoff Induction Estimators: The Singularity Is Not Near Without Symbolic Model Synthesis",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2601.05280",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-twlcjd",
-    "itemType": "trending",
-    "title": "BEAT-Net: Injecting Biomimetic Spatio-Temporal Priors for Interpretable ECG Diagnosis",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2601.07316",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-qfl5s6",
-    "itemType": "trending",
-    "title": "Position: A Dynamical Systems Perspective is Needed to Advance Time Series Modeling",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2602.16864",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-br68n2",
-    "itemType": "trending",
-    "title": "How do LLMs Compute Verbal Confidence",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2603.17839",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-2xrp20",
-    "itemType": "trending",
-    "title": "How a Cooperative-Override Circuit Suppresses Nash Play in Large Language Models",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2604.27167",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-hkxxy0",
-    "itemType": "trending",
-    "title": "REALM: An RGB- and Event-Aligned Latent Manifold for Cross-Modal Perception",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2605.00271",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-w9eaao",
-    "itemType": "trending",
-    "title": "AgenticRL: Agentic Reinforcement Learning with Self-Refinement for Complex UAV Navigation",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2606.03963",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ai-o3di68",
-    "itemType": "trending",
-    "title": "Learning Gait-Aware Quadruped Locomotion with Temporal Logic Specifications",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ai",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2607.00442",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ro-5aj87b",
-    "itemType": "trending",
-    "title": "Diverse and Adaptable Arm Coordination for Octopus-Crawling via Diffusion-Based Uncertainty-Aware Optimization",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ro",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21138",
-        "kind": "canonical"
-      }
-    ],
-    "read": false,
-    "starred": false
-  },
-  {
-    "id": "arxiv_cs_ro-5ajajj",
-    "itemType": "trending",
-    "title": "Adaptive Rollout Truncation Based on Epistemic Uncertainty for Efficient Offline World Model Training",
-    "publishedAt": "2026-09-21T04:00:00.000Z",
-    "sourceName": "arxiv_cs_ro",
-    "tier": "T1",
-    "priority": "P2",
-    "score": 30,
-    "matchedKeywords": [
-      "robotics/llm(en)",
-      "크로스소스+2"
-    ],
-    "matchedCompanies": [],
-    "lang": "en",
-    "thumbnailUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-    "links": [
-      {
-        "label": "원문",
-        "url": "https://arxiv.org/abs/2609.21482",
         "kind": "canonical"
       }
     ],
